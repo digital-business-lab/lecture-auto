@@ -1,0 +1,63 @@
+site_name: Autonomous Logistics Systems and IoT
+site_description: Accompanying self-study material for the Master's course at OTH Amberg-Weiden
+site_author: Prof. Dr. Christoph Pitzl
+site_url: https://digital-business-lab.github.io/lecture-auto/
+
+repo_name: digital-business-lab/lecture-auto
+repo_url: https://github.com/digital-business-lab/lecture-auto
+
+docs_dir: web
+
+theme:
+  name: material
+  language: de
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - def_list
+  - footnotes
+
+nav:
+  - Home: index.md
+  - Block 1 — Foundations:
+    - Overview: block-01/index.md
+    - AGV Fundamentals: block-01/agv-fundamentals.md
+  - Block 2 — Webots:
+    - Overview: block-02/index.md
+  - Block 3 — ROS:
+    - Overview: block-03/index.md
+  - Block 4 — Simulation:
+    - Overview: block-04/index.md
+  - Assessment:
+    - Business Case: assessment/index.md

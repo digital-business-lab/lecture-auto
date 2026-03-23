@@ -250,7 +250,7 @@ Planned work items, updated continuously.
 | AP8 | AGV simulation assignment: wave manufacturing scenario | ⏳ Open |
 | AP9 | Business case template + grading rubric | ⏳ Open |
 | AP10 | Finalise overall concept and align with new semester schedule | ⏳ Open |
-| AP11 | Set up MkDocs companion site for self-study material (Block 1 theory as pilot) | ⏳ Open |
+| AP11 | Set up MkDocs companion site for self-study material (Block 1 theory as pilot) | ✅ Done — `mkdocs.yml`, `web/`, GitHub Actions workflow |
 
 ---
 
