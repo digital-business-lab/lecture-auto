@@ -33,7 +33,7 @@ By the end of this block, you will be able to:
 
 ### Session 2 — AGV Technology (3 h)
 
-- **Group work:** Industry-specific aspects and examples — each group covers one sector (automotive, e-commerce, healthcare, food & beverage, pharma) and reports back
+- **Group work:** Industry-specific aspects and examples — each group analyses assigned case studies from the textbook and presents findings structured around four guiding questions
 - Technology of the overall system: navigation & guidance, fleet management, safety, WMS/ERP integration
 - Technology of the transport vehicles: vehicle types in detail, load handling, energy supply, sensor systems
 
@@ -52,7 +52,7 @@ Both sessions include structured group work with short presentations (2–3 min 
 |---|---|---|
 | 1 | AGV epochs — one epoch per group | Key characteristics + one concrete example |
 | 1 | Suitability of alternatives — one logistics scenario per group | Completed decision matrix + solution recommendation |
-| 2 | Industry-specific AGV applications — one sector per group | Sector requirements + one application example |
+| 2 | Industry-specific AGV applications — case studies from the textbook | Answers to four guiding questions + plenary presentation |
 
 ### Suitability exercise — two-step approach
 
@@ -88,6 +88,29 @@ Output template (on the scenario card):
 
 !!! info "Connection to the business case"
     This two-step structure — establish general properties, then apply them to a concrete situation — is the same logic used in the Nutzwertanalyse in the business case assessment. Practising it here makes the later task significantly easier.
+
+### Industry case studies — Session 2 group work
+
+Each group analyses their assigned case studies from the course textbook (Ullrich & Albrecht) and prepares a short presentation structured around four questions:
+
+1. **Task** — What transport task needs to be fulfilled?
+2. **Requirements** — What specific requirements result from the task and/or the industry (load types, environment, hygiene, safety, cycle times, …)?
+3. **Challenges** — What operational or technical challenges exist in this setting?
+4. **AGV rationale** — Why was an AGV deployed, and what alternatives would have been possible?
+
+**Group assignments:**
+
+| Group | Case studies |
+|---|---|
+| 1 | Gläserne Manufaktur · BMW Leipzig · Deutz AG |
+| 2 | BMW Dingolfing · VW Wolfsburg · Autositz · Unterfahr-FTF (BMW) · Denso |
+| 3 | Stahl · Aerospace |
+| 4 | Papier · Elektro · Baustoffe · Pharma |
+| 5 | Lager |
+| 6 | Lebensmittel und Getränke |
+| 7 | Krankenhaus |
+
+Case study descriptions are in the course textbook. Prepare your presentation in session — no prior preparation required.
 
 ---
 
