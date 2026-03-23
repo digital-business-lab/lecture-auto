@@ -121,36 +121,41 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 ---
 
-### Assignment 1 — Obstacle Avoidance
+### Step 1 — Webots Tutorials 1–7 (Introductory, not graded)
 
-**Goal:** Students get hands-on with Webots and complete their first AGV controller.
+**Goal:** Students learn the Webots environment by following the official guided tutorials. They model a simple robot from scratch and understand the simulation–controller relationship before working on graded assignments.
 
 **Tasks:**
-1. Set up the Webots environment on the provided VM (guided by tutorial → AP2)
-2. Open a pre-built world with a pre-modelled robot
-3. Read through the provided controller template and understand the sensor-to-action logic
-4. Complete the marked `TODO` sections (e.g. distance thresholds, turning direction logic)
-5. Run and observe the simulation; adjust parameters and observe the effect
+1. Set up the Webots environment on the provided VM (→ AP2)
+2. Work through [Webots User Guide Tutorials 1–7](https://cyberbotics.com/doc/guide/tutorials) step by step:
+   - Tutorial 1: Your first simulation in Webots
+   - Tutorial 2: Modification of the environment
+   - Tutorial 3: Appearance
+   - Tutorial 4: More about controllers
+   - Tutorial 5: Road and vehicles
+   - Tutorial 6: 4-wheeled robot
+   - Tutorial 7: Your first Webots application
+3. By the end, students have a working, self-modelled robot with a basic controller
 
-**Deliverable:** Working simulation demonstrating obstacle avoidance. Students document: which parameters they chose and why, what behaviour changed when they adjusted values.
+**Deliverable:** None (ungraded introduction). Students are expected to complete the tutorials before the first graded assignment.
 
-**Hardware extension:** None for this assignment.
+**Hardware extension:** None for this step.
 
 ---
 
-### Assignment 2 — Labyrinth
+### Step 2 — Labyrinth (graded)
 
 **Goal:** Students implement a maze-solving strategy by completing a provided template, then transfer the result to physical hardware (via lecturer demo).
 
 **Tasks:**
-1. Receive a **pre-built labyrinth world** in Webots *(improvement from last semester — students do not model the environment)*
+1. Receive a **pre-built labyrinth world** in Webots (students do not model the environment)
 2. Receive a controller template implementing the basic robot loop; complete the maze-solving logic gaps (e.g. wall-following decision rules)
 3. Refine and test the algorithm within the simulation
 4. Present approach and results to the group
 
 **Pedagogy:** Independent work phase (approx. 2 sessions) followed by group presentations.
 
-**Deliverable:** Presentation of maze-solving approach; working simulation demo.
+**Deliverable:** Presentation of maze-solving approach; working simulation demo. *(Graded — part of the 70% in-semester component)*
 
 **Hardware extension:** Lecturer demonstrates a maze-solving algorithm on the **Alphabot** (physical hardware demo). Students observe and compare real-world behaviour to simulation.
 
@@ -158,7 +163,22 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 ---
 
-### Assignment 3 — Line Following
+### Step 3 — Sensor Extension (Bridging step, not graded)
+
+**Goal:** Students extend the robot built in earlier steps with additional sensors in preparation for the line-following assignment.
+
+**Tasks:**
+1. Add ground/light sensors to the existing robot model in Webots
+2. Verify sensor readings in the simulation console
+3. Understand how sensor data will be used for line-following control
+
+**Deliverable:** None (ungraded). The extended robot serves as the starting point for Step 4.
+
+**Hardware extension:** None for this step.
+
+---
+
+### Step 4 — Line Following (graded)
 
 **Goal:** Students implement line-tracking behaviour at two complexity levels using provided templates.
 
@@ -173,7 +193,7 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 **Pedagogy:** Assignment handout → independent work session → presentation of results.
 
-**Deliverable:** Working line-following simulation; short documentation of parameter choices.
+**Deliverable:** Working line-following simulation; short documentation of parameter choices. *(Graded — part of the 70% in-semester component)*
 
 **Hardware extension:** Lecturer demonstrates line following on the **Dobot** robot.
 
