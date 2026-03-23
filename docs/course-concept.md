@@ -100,7 +100,7 @@ By the end of the course, students will be able to:
 
 ## 6. Block 2 — Classical AGVs with Webots
 
-### Sessions 3–8 (approx. 6 weeks)
+### Sessions 3–6 (approx. 4 weeks · 3 hours per session)
 
 ### Rationale
 Webots provides a free, cross-platform robot simulator suitable for teaching AGV fundamentals without requiring immediate hardware access. Hands-on work in simulation makes abstract concepts tangible and prepares students for the hardware demos.
@@ -121,7 +121,7 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 ---
 
-### Step 1 — Webots Tutorials 1–7 (Introductory, not graded)
+### Session 3 — Webots Tutorials 1–7 (3 h, introductory, not graded)
 
 **Goal:** Students learn the Webots environment by following the official guided tutorials. They model a simple robot from scratch and understand the simulation–controller relationship before working on graded assignments.
 
@@ -139,11 +139,11 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 **Deliverable:** None (ungraded introduction). Students are expected to complete the tutorials before the first graded assignment.
 
-**Hardware extension:** None for this step.
+**Hardware extension:** None for this session.
 
 ---
 
-### Step 2 — Labyrinth (graded)
+### Session 4 — Labyrinth (3 h, graded)
 
 **Goal:** Students implement a maze-solving strategy by completing a provided template, then transfer the result to physical hardware (via lecturer demo).
 
@@ -163,22 +163,22 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 ---
 
-### Step 3 — Sensor Extension (Bridging step, not graded)
+### Session 5 — Sensor Extension (3 h, bridging session, not graded)
 
-**Goal:** Students extend the robot built in earlier steps with additional sensors in preparation for the line-following assignment.
+**Goal:** Students extend the robot built in earlier sessions with additional sensors in preparation for the line-following assignment.
 
 **Tasks:**
 1. Add ground/light sensors to the existing robot model in Webots
 2. Verify sensor readings in the simulation console
 3. Understand how sensor data will be used for line-following control
 
-**Deliverable:** None (ungraded). The extended robot serves as the starting point for Step 4.
+**Deliverable:** None (ungraded). The extended robot serves as the starting point for Session 6.
 
-**Hardware extension:** None for this step.
+**Hardware extension:** None for this session.
 
 ---
 
-### Step 4 — Line Following (graded)
+### Session 6 — Line Following (3 h, graded)
 
 **Goal:** Students implement line-tracking behaviour at two complexity levels using provided templates.
 

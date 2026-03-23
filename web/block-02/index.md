@@ -1,33 +1,31 @@
 # Block 2 — Classical AGVs with Webots
 
-**Sessions 3–8 · Duration: approx. 6 weeks**
+**Sessions 3–6 · Duration: approx. 4 weeks · 3 hours per session**
 
 This block introduces hands-on AGV simulation using [Webots](https://cyberbotics.com), a free and open-source robot simulator. You will model a robot, program its behaviour, and solve two graded assignments — all without prior programming experience, using pre-written code templates.
 
 ---
 
-## How Block 2 Works
+## Sessions Overview
 
 All assignments use **pre-written code templates** — you fill in the marked `TODO` sections. You never write code from scratch. Every non-trivial line is explained with inline comments.
 
-Block 2 follows four steps:
-
-| Step | Activity | Graded |
+| Session | Activity | Graded |
 |---|---|---|
-| 1 | Webots Tutorials 1–7 — model a simple robot | No |
-| 2 | Labyrinth — implement and present a maze-solving controller | **Yes** |
-| 3 | Sensor extension — add sensors to the robot | No |
-| 4 | Line following — implement a line-tracking controller | **Yes** |
+| 3 | Webots Tutorials 1–7 — model a simple robot | No |
+| 4 | Labyrinth — implement and present a maze-solving controller | **Yes** |
+| 5 | Sensor extension — add sensors to the robot | No |
+| 6 | Line following — implement a line-tracking controller | **Yes** |
 
 ---
 
-## Step 1 — Webots Tutorials 1–7
+## Session 3 — Webots Tutorials 1–7 (3 h)
 
 **Not graded — introductory**
 
 Before the first assignment, you work through the official [Webots User Guide Tutorials 1–7](https://cyberbotics.com/doc/guide/tutorials). These tutorials guide you step by step through modelling a simple robot and writing your first controller.
 
-By the end of Step 1, you will:
+By the end of Session 3, you will:
 
 - [ ] Know how to open and navigate Webots
 - [ ] Have built and run a simple robot model yourself
@@ -38,7 +36,7 @@ By the end of Step 1, you will:
 
 ---
 
-## Step 2 — Labyrinth *(graded)*
+## Session 4 — Labyrinth (3 h) *(graded)*
 
 **Goal:** Implement a maze-solving strategy and present your results.
 
@@ -56,17 +54,17 @@ You receive a **pre-built labyrinth world** and a **controller template**. Your 
 
 ---
 
-## Step 3 — Sensor Extension
+## Session 5 — Sensor Extension (3 h)
 
-**Not graded — bridging step**
+**Not graded — bridging session**
 
 Before the line-following assignment, you extend your robot with additional ground sensors directly in Webots. You verify the sensor readings in the simulation console.
 
-This step prepares you technically for Step 4 — no deliverable is required.
+This session prepares you technically for Session 6 — no deliverable is required.
 
 ---
 
-## Step 4 — Line Following *(graded)*
+## Session 6 — Line Following (3 h) *(graded)*
 
 **Goal:** Implement line-tracking behaviour using provided templates.
 

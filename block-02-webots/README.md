@@ -4,14 +4,14 @@ Hands-on simulation phase using the Webots robot simulator. All student activiti
 
 ## Workflow Overview
 
-Block 2 follows a four-step progression:
+Block 2 follows four sessions:
 
-| Step | Activity | Graded |
+| Session | Activity | Graded |
 |---|---|---|
-| 1 | Webots Tutorials 1–7 — model a simple robot ([Webots User Guide](https://cyberbotics.com/doc/guide/tutorials)) | No |
-| 2 | Labyrinth — complete a maze-solving controller; present results | **Yes** |
-| 3 | Sensor extension — add sensors to the robot in preparation for line following | No |
-| 4 | Line following — complete a line-tracking controller (basic + extended) | **Yes** |
+| 3 | Webots Tutorials 1–7 — model a simple robot ([Webots User Guide](https://cyberbotics.com/doc/guide/tutorials)) | No |
+| 4 | Labyrinth — complete a maze-solving controller; present results | **Yes** |
+| 5 | Sensor extension — add sensors to the robot in preparation for line following | No |
+| 6 | Line following — complete a line-tracking controller (basic + extended) | **Yes** |
 
 ## Folder Structure
 
@@ -23,14 +23,14 @@ Block 2 follows a four-step progression:
 
 ## Assignments and Templates
 
-| Step | Assignment | Sheet | Template | World | Status |
+| Session | Assignment | Sheet | Template | World | Status |
 |---|---|---|---|---|---|
-| 2 | Labyrinth | `assignments/labyrinth.md` | `templates/labyrinth_template.py` | `worlds/labyrinth.wbt` | ⏳ To do (AP3) |
-| 4 | Line following (basic) | `assignments/line-following.md` | `templates/line_following_template.py` | `worlds/line_track.wbt` | ⏳ To do (AP4) |
-| 4 | Line following (extended) | `assignments/line-following.md` | `templates/line_following_extended_template.py` | `worlds/line_track_extended.wbt` | ⏳ To do (AP4) |
+| 4 | Labyrinth | `assignments/labyrinth.md` | `templates/labyrinth_template.py` | `worlds/labyrinth.wbt` | ⏳ To do (AP3) |
+| 6 | Line following (basic) | `assignments/line-following.md` | `templates/line_following_template.py` | `worlds/line_track.wbt` | ⏳ To do (AP4) |
+| 6 | Line following (extended) | `assignments/line-following.md` | `templates/line_following_extended_template.py` | `worlds/line_track_extended.wbt` | ⏳ To do (AP4) |
 
 ## Hardware Demos (Lecturer)
-- **Labyrinth (Step 2):** Alphabot
-- **Line following (Step 4):** Dobot
+- **Labyrinth (Session 4):** Alphabot
+- **Line following (Session 6):** Dobot
 
 See [`docs/course-concept.md`](../docs/course-concept.md#6-block-2--classical-agvs-with-webots) for the full pedagogical concept.
