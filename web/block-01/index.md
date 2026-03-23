@@ -19,28 +19,48 @@ By the end of this block, you will be able to:
 
 ## Sessions Overview
 
-### Session 1 — Organisation
-- Course structure, schedule, and assessment overview
-- Assignment of industry research topics
+### Session 1 — Organisation (90 min)
 
-### Session 2 — AGV Fundamentals
-Lecturer presentation covering all foundation topics (see [AGV Fundamentals](agv-fundamentals.md) for the self-study version).
+- Welcome and course introduction
+- Course structure, schedule, and assessment overview (70% in-semester + 30% business case)
+- Tools overview: Webots, ROS, Plant Simulation
+- First AGV impressions: short video clip
+- Research task briefing and group topic assignment
+
+### Session 2 — AGV Fundamentals (90 min)
+
+Lecturer presentation with structured discussion:
+
+- History and evolution of AGVs — four epochs and key milestones
+- Application domains: automotive, e-commerce, healthcare, food & beverage, pharma
+- Technology deep-dive: navigation, safety, fleet management, vehicle types, operating environment
+- AGV vs. AMR: key distinction and decision criteria
+
+See [AGV Fundamentals](agv-fundamentals.md) for the complete self-study version of the lecture content.
+
+!!! tip "Exam relevance"
+    The distinction between classical AGVs and AMRs (Autonomous Mobile Robots) is directly relevant to the business case assessment. Make sure you understand when to choose which system.
 
 ---
 
 ## Student Assignment — Industry Research
 
-!!! example "Group task"
-    Each group researches AGV applications in one specific industry sector and presents their findings to the class.
+!!! example "Group task — presented during Block 2"
+    Each group researches AGV applications in one specific industry sector and presents findings to the class during Sessions 3–7.
 
-    **Your task:**
+    **Assigned sectors:** Automotive · E-commerce & retail · Healthcare · Food & beverage · Pharma
 
-    1. Research how AGVs are used in your assigned industry (e.g. automotive, e-commerce, healthcare, food & beverage)
-    2. Identify at least two concrete application examples with real companies or systems
-    3. Cover: use cases, technical requirements, and operational challenges
-    4. Prepare a short presentation (approx. 10 minutes) for the class
+    → [Full assignment description and instructions](research-assignment.md)
 
-    **Useful starting points:** industry trade press, manufacturer websites (e.g. KION, Jungheinrich, Mobile Industrial Robots), and the course textbook (Ullrich & Albrecht, 2019).
+---
+
+## Block 1 Materials
+
+| Material | Description | Where to find |
+|---|---|---|
+| Lecture slides | Sessions 1–2 (AGV foundations) | Moodle |
+| Research assignment | Group task instructions, sources, evaluation criteria | [research-assignment.md](research-assignment.md) |
+| Self-study content | Full AGV fundamentals for revision | [agv-fundamentals.md](agv-fundamentals.md) |
 
 ---
 

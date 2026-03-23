@@ -53,6 +53,7 @@ nav:
   - Block 1 — Foundations:
     - Overview: block-01/index.md
     - AGV Fundamentals: block-01/agv-fundamentals.md
+    - Industry Research Assignment: block-01/research-assignment.md
   - Block 2 — Webots:
     - Overview: block-02/index.md
   - Block 3 — ROS:
