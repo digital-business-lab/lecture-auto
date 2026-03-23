@@ -50,13 +50,29 @@ This repository provides structured, version-controlled material to accompany th
 
 ### 3.2 Repository Structure
 
-| Path | Purpose |
-|---|---|
-| `README.md` | Slim overview and navigation hub only — no detailed content |
-| `CLAUDE.md` | This file; always read first; the single source of truth for project state |
-| `docs/*.md` | Detailed documentation for specific topics; linked from `README.md` |
+```
+lecture-auto/
+├── docs/                        # Concept and planning documents
+│   ├── course-concept.md        # Full course concept (authoritative)
+│   └── semester-prep.md         # Semester preparation checklist
+├── block-01-foundations/        # Organisation & AGV fundamentals
+├── block-02-webots/             # Classical AGVs — Webots simulation
+│   ├── assignments/             # Assignment sheets
+│   ├── templates/               # Code templates with TODO gaps
+│   └── worlds/                  # Webots world files
+├── block-03-ros/                # Autonomous AGVs — ROS
+│   ├── assignments/             # Guided activity sheets
+│   └── scripts/                 # Pre-written ROS scripts
+├── block-04-simulation/         # AGV Simulation — Plant Simulation
+│   ├── assignments/             # Assignment sheet
+│   └── models/                  # Plant Simulation model files
+└── assessment/                  # Business case (primary assessment)
+    └── business-case/           # Template and grading rubric
+```
 
-**Rule:** Never put detailed content directly into `README.md`. Always put it in the appropriate `docs/*.md` file and link from `README.md`.
+**Rules:**
+- Never put detailed content directly into `README.md`. Always use `docs/*.md` or the relevant block folder.
+- Each block folder contains its own `README.md` describing what belongs there.
 
 ### 3.3 Git Conventions
 
@@ -202,6 +218,8 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | Business case elevated to primary (mandatory) assessment | BWL students' core competencies align with this format; it was underweighted as an "additional" assessment |
 | 2026-03-23 | AP7 revised: students modify a provided ROS node, not create one from scratch | Writing a ROS node from scratch is unrealistic without programming background; guided modification achieves similar learning outcome |
 | 2026-03-23 | Block 4 simulation tool: Plant Simulation (Siemens) | Institutional licences available; GUI-based, no coding required, industry-standard for manufacturing simulation; preferred over AnyLogic (no additional licence procurement needed) |
+| 2026-03-23 | Repository organised into block-based folder structure | Each block is self-contained with its own `assignments/`, `templates/`, and resource folders; avoids flat-directory clutter as material accumulates |
+| 2026-03-23 | `docs/semester-prep.md` introduced as recurring preparation checklist | Ensures infrastructure (VMs, hardware), content, and open decisions are verified before each semester; includes a lessons-learned section |
 
 ---
 
@@ -212,6 +230,7 @@ Planned work items, updated continuously.
 | ID | Description | Status |
 |---|---|---|
 | AP1 | Revised course concept as a structured document | ✅ Done — `docs/course-concept.md` |
+| AP0 | Repository folder structure and semester preparation checklist | ✅ Done — block-based structure; `docs/semester-prep.md` |
 | AP2 | Webots introduction tutorial (VM setup, first robot, first controller) | ⏳ Open |
 | AP3 | Revised labyrinth assignment (pre-built world + clear task description) | ⏳ Open |
 | AP4 | Line-following tutorial for Webots (basic + extended) | ⏳ Open |
