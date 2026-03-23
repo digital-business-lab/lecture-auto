@@ -13,7 +13,7 @@
 | **Title** | Autonomous Logistics Systems and IoT |
 | **Level** | Master |
 | **Topic focus** | Automated Guided Vehicles (AGVs) in intralogistics |
-| **Format** | Lecture + hands-on labs (simulation and real hardware) |
+| **Format** | Lecture + hands-on labs (simulation) |
 | **Duration** | Approx. 13 sessions across one semester |
 | **Assessment** | Two components: 70% in-semester (Webots, ROS, simulation) + 30% semester break (business case) |
 
@@ -103,7 +103,7 @@ By the end of the course, students will be able to:
 ### Sessions 3–6 (approx. 4 weeks · 3 hours per session)
 
 ### Rationale
-Webots provides a free, cross-platform robot simulator suitable for teaching AGV fundamentals without requiring immediate hardware access. Hands-on work in simulation makes abstract concepts tangible and prepares students for the hardware demos.
+Webots provides a free, cross-platform robot simulator suitable for teaching AGV fundamentals without requiring dedicated hardware. Hands-on work in simulation makes abstract concepts tangible.
 
 ### Coding approach: Template-based ("Light Coding")
 Because students have no programming background, all Webots assignments use the following structure:
@@ -139,13 +139,11 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 **Deliverable:** None (ungraded introduction). Students are expected to complete the tutorials before the first graded assignment.
 
-**Hardware extension:** None for this session.
-
 ---
 
 ### Session 4 — Labyrinth (3 h, graded)
 
-**Goal:** Students implement a maze-solving strategy by completing a provided template, then transfer the result to physical hardware (via lecturer demo).
+**Goal:** Students implement a maze-solving strategy using sensor data and control logic by completing a provided template.
 
 **Tasks:**
 1. Receive a **pre-built labyrinth world** in Webots (students do not model the environment)
@@ -156,10 +154,6 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 **Pedagogy:** Independent work phase (approx. 2 sessions) followed by group presentations.
 
 **Deliverable:** Presentation of maze-solving approach; working simulation demo. *(Graded — part of the 70% in-semester component)*
-
-**Hardware extension:** Lecturer demonstrates a maze-solving algorithm on the **Alphabot** (physical hardware demo). Students observe and compare real-world behaviour to simulation.
-
-**Open question:** Should students also deploy their own algorithm on the Alphabot, or is the lecturer demo sufficient given the time and skill constraints?
 
 ---
 
@@ -173,8 +167,6 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 3. Understand how sensor data will be used for line-following control
 
 **Deliverable:** None (ungraded). The extended robot serves as the starting point for Session 6.
-
-**Hardware extension:** None for this session.
 
 ---
 
@@ -195,15 +187,12 @@ All Webots work runs on virtual machines in the computer lab. A step-by-step set
 
 **Deliverable:** Working line-following simulation; short documentation of parameter choices. *(Graded — part of the 70% in-semester component)*
 
-**Hardware extension:** Lecturer demonstrates line following on the **Dobot** robot.
-
 **Open questions:**
 - Is a competition-style evaluation used, and if so, how is it assessed?
 - Is the extended (8-sensor) variant mandatory or optional?
 
 **To do before delivery:**
 - Define and write the line-following tutorial and templates for Webots (→ AP4)
-- Assemble and test the Dobot hardware
 
 ---
 
@@ -392,8 +381,6 @@ Students develop a business case for the introduction of an AGV system in a defi
 | **Webots** | Software (free) | AGV simulation in Block 2 | Available; VM performance to be verified |
 | **Turtlebot3** | Real hardware | SLAM & navigation demo in Block 3 | Available in lab |
 | **LoCoBot** | Real hardware (arm + gripper) | Manipulation demo in Block 3 | Available in lab |
-| **Alphabot** | Real hardware | Labyrinth algorithm demo | Available in lab |
-| **Dobot** | Real hardware | Line-following demo | Needs assembly and testing |
 | **ROS** | Software (free) | Block 3 middleware | Pre-configured VMs planned |
 | **Gazebo** | Software (free) | ROS simulation (Turtlebot3) | Pre-configured VMs planned |
 | **Computer lab VMs** | Infrastructure | Student workstations for all simulation | Specs and performance not yet confirmed |
@@ -411,10 +398,9 @@ Students develop a business case for the introduction of an AGV system in a defi
 | Q4 | Can the computer lab VMs run Webots and Gazebo at acceptable performance? | 🟡 Medium | 2, 3 |
 | Q4a | How is the 70% distributed internally across Blocks 2, 3, and 4? | ⏸ Deferred — decide once AP3/AP5/AP8 are complete | Assessment |
 | Q5 | Is the extended line-following variant (8 sensors) mandatory or optional? | 🟡 Medium | 2 |
-| Q6 | Should students deploy their own labyrinth algorithm on the Alphabot? | 🟡 Medium | 2 |
 | Q7 | Is a competition format used for line following, and how is it evaluated? | 🟡 Medium | 2 |
 | Q8 | How is the business case integrated into the course schedule? | 🟡 Medium | Assessment |
-| Q9 | Are all hardware items tested and ready for the new semester? | 🟡 Medium | 2, 3 |
+| Q9 | Are all hardware items tested and ready for the new semester? | 🟡 Medium | 3 |
 | Q10 | Should prerequisites be formally verified or communicated before the course? | 🟢 Low | All |
 
 ---

@@ -29,8 +29,4 @@ Block 2 follows four sessions:
 | 6 | Line following (basic) | `assignments/line-following.md` | `templates/line_following_template.py` | `worlds/line_track.wbt` | ⏳ To do (AP4) |
 | 6 | Line following (extended) | `assignments/line-following.md` | `templates/line_following_extended_template.py` | `worlds/line_track_extended.wbt` | ⏳ To do (AP4) |
 
-## Hardware Demos (Lecturer)
-- **Labyrinth (Session 4):** Alphabot
-- **Line following (Session 6):** Dobot
-
 See [`docs/course-concept.md`](../docs/course-concept.md#6-block-2--classical-agvs-with-webots) for the full pedagogical concept.

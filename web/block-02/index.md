@@ -47,8 +47,6 @@ You receive a **pre-built labyrinth world** and a **controller template**. Your 
 - [ ] A working Webots simulation in which your robot navigates the labyrinth
 - [ ] A short presentation of your approach and results
 
-**Hardware demo:** After the assignment, the lecturer demonstrates the same algorithm running on a physical **Alphabot** robot. You compare simulation and real-world behaviour.
-
 !!! note "Assessment"
     This assignment is graded and counts towards the 70% in-semester component.
 
@@ -81,8 +79,6 @@ This session prepares you technically for Session 6 — no deliverable is requir
 
 - [ ] A working line-following simulation
 - [ ] Short documentation of your parameter choices
-
-**Hardware demo:** The lecturer demonstrates line following on a physical **Dobot** robot.
 
 !!! note "Assessment"
     This assignment is graded and counts towards the 70% in-semester component.
