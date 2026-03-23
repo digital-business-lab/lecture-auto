@@ -15,6 +15,7 @@
 | **Topic focus** | Automated Guided Vehicles (AGVs) in intralogistics |
 | **Format** | Lecture + hands-on labs (simulation and real hardware) |
 | **Duration** | Approx. 13 sessions across one semester |
+| **Assessment** | Two components: 70% in-semester (Webots, ROS, simulation) + 30% semester break (business case) |
 
 ---
 
@@ -49,14 +50,20 @@ By the end of the course, students will be able to:
 
 ## 4. Course Structure Overview
 
-| Block | Topic | Sessions | Approx. Duration |
-|---|---|---|---|
-| 1 | Organisation & Foundations | 1–2 | 2 weeks |
-| 2 | Classical AGVs with Webots | 3–8 | 6 weeks |
-| — | Field trip | — | 1 day |
-| 3 | Autonomous AGVs with ROS | 9–10 | 2 weeks |
-| 4 | AGV Simulation | 11–13 | 3 weeks |
-| + | Business Case (primary assessment) | parallel / Block 4 | ongoing |
+| Block | Topic | Sessions | Approx. Duration | Assessment weight |
+|---|---|---|---|---|
+| 1 | Organisation & Foundations | 1–2 | 2 weeks | — |
+| 2 | Classical AGVs with Webots | 3–8 | 6 weeks | part of 70% |
+| — | Field trip | — | 1 day | — |
+| 3 | Autonomous AGVs with ROS | 9–10 | 2 weeks | part of 70% |
+| 4 | AGV Simulation | 11–13 | 3 weeks | part of 70% |
+| + | Business Case | semester break | — | 30% |
+
+**Assessment structure:**
+- **Assessment Component 1 (70%) — in-semester:** Hands-on assignments across Blocks 2, 3, and 4 (Webots tasks, ROS activities, Plant Simulation). Submitted and evaluated during the semester.
+- **Assessment Component 2 (30%) — semester break:** Business case. Submitted after the semester ends.
+
+*Open question:* How is the 70% distributed internally across Blocks 2, 3, and 4? Not yet decided.
 
 ---
 
@@ -307,15 +314,43 @@ Institutional licences for Plant Simulation are available. This resolves Q1.
 
 ---
 
-## 9. Business Case (Primary Assessment)
+## 9. Assessment
 
-### Rationale and repositioning
-The business case has been **elevated from an additional/optional assessment to the primary mandatory assessment** of the course. It is the format best aligned with the target group's background and career trajectory. BWL students bring core competencies in economics, analysis, and structured argumentation — this is where they can demonstrate genuine mastery.
+### Overview
 
-### Scenario
-Students develop a business case for the introduction of an AGV system in a defined intralogistics scenario. The scenario may be provided by the lecturer or chosen by the student (to be decided → open question).
+| Component | Timing | Weight | Contents |
+|---|---|---|---|
+| **Component 1 — In-semester work** | During semester | **70%** | Webots assignments (Block 2), ROS activities (Block 3), AGV simulation (Block 4) |
+| **Component 2 — Business case** | Semester break | **30%** | Market research, business case calculation, Lastenheft, Nutzwertanalyse |
 
-### Components
+---
+
+### Component 1 — In-Semester Work (70%)
+
+Students are assessed on their hands-on work across the three practical blocks. Each block contributes to this component; the internal weighting between blocks is not yet decided.
+
+| Block | Assignment | Deliverable |
+|---|---|---|
+| Block 2 | Obstacle avoidance | Working simulation + parameter documentation |
+| Block 2 | Labyrinth | Presentation of approach and working demo |
+| Block 2 | Line following | Working simulation + short documentation |
+| Block 3 | ROS activities | Activity completion + written responses to interpretation questions |
+| Block 4 | AGV simulation | Simulation results + analysis report |
+
+**Open question:** How is the 70% distributed internally across blocks and assignments? To be decided before AP3/AP5/AP8 are written, as it affects rubric design.
+
+---
+
+### Component 2 — Business Case (30%)
+
+Submitted during the semester break. The business case is the component most directly aligned with BWL students' existing competencies and professional context.
+
+**Rationale:** BWL students bring core competencies in economics, analysis, and structured argumentation. This component allows them to demonstrate mastery in a format relevant to their career trajectory.
+
+#### Scenario
+Students develop a business case for the introduction of an AGV system in a defined intralogistics scenario. The scenario may be provided by the lecturer or chosen by the student — *not yet decided*.
+
+#### Components
 
 | Component | Description |
 |---|---|
@@ -324,11 +359,10 @@ Students develop a business case for the introduction of an AGV system in a defi
 | **Requirements specification (Lastenheft)** | Structured requirements document for AGV procurement |
 | **Utility value analysis (Nutzwertanalyse)** | Weighted scoring of at least two AGV alternatives against defined criteria |
 
-### Open questions
-- Is this an individual or group assessment?
-- Is the scenario fixed (lecturer-defined) or flexible (student-chosen)?
-- Is it integrated into Block 4 or run in parallel throughout the semester?
-- What is the weighting relative to other course assessments?
+#### Open questions
+- Individual or group work?
+- Fixed scenario (lecturer-defined) or flexible (student-chosen)?
+- Is an introductory handout given at the start of the semester, or only at the end?
 
 **To do:** Create a structured template and grading rubric (→ AP9)
 
@@ -357,7 +391,8 @@ Students develop a business case for the introduction of an AGV system in a defi
 | ~~Q1~~ | ~~Which tool for Block 4 AGV simulation?~~ | ✅ Resolved — Plant Simulation (Siemens) | 4 |
 | Q2 | Is the business case individual or group work? | 🔴 High | Assessment |
 | Q3 | Is the scenario for the business case fixed or student-chosen? | 🔴 High | Assessment |
-| Q4 | Can the computer lab VMs run Webots and Gazebo at acceptable performance? | 🔴 High | 2, 3 |
+| Q4 | Can the computer lab VMs run Webots and Gazebo at acceptable performance? | 🟡 Medium | 2, 3 |
+| Q4a | How is the 70% distributed internally across Blocks 2, 3, and 4? | 🔴 High | Assessment |
 | Q5 | Is the extended line-following variant (8 sensors) mandatory or optional? | 🟡 Medium | 2 |
 | Q6 | Should students deploy their own labyrinth algorithm on the Alphabot? | 🟡 Medium | 2 |
 | Q7 | Is a competition format used for line following, and how is it evaluated? | 🟡 Medium | 2 |

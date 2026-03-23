@@ -194,7 +194,8 @@ Issues identified from last semester, all currently open.
   - Create a structured template document.
   - Define a grading rubric.
   - Decide on integration into the course schedule.
-- **Open question:** Integration into the course flow (standalone vs. embedded in Block 4) not yet decided.
+- **Assessment structure (2026-03-23):** Business case is Component 2, weighted at 30%, submitted during the semester break. Component 1 (70%) covers in-semester hands-on work across Blocks 2–4.
+- **Open question:** Internal weighting of the 70% across blocks not yet decided (→ Q4a).
 - **Status:** ⏳ Open — concept and template pending (→ AP9)
 
 ---
@@ -220,6 +221,7 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | Block 4 simulation tool: Plant Simulation (Siemens) | Institutional licences available; GUI-based, no coding required, industry-standard for manufacturing simulation; preferred over AnyLogic (no additional licence procurement needed) |
 | 2026-03-23 | Repository organised into block-based folder structure | Each block is self-contained with its own `assignments/`, `templates/`, and resource folders; avoids flat-directory clutter as material accumulates |
 | 2026-03-23 | `docs/semester-prep.md` introduced as recurring preparation checklist | Ensures infrastructure (VMs, hardware), content, and open decisions are verified before each semester; includes a lessons-learned section |
+| 2026-03-23 | Assessment structure defined: 70% in-semester + 30% semester break | Component 1 (70%): Webots, ROS, Plant Simulation assignments during the semester; Component 2 (30%): business case submitted in the semester break |
 
 ---
 
