@@ -24,13 +24,16 @@ This checklist covers everything that must be verified, installed, or decided be
 - [ ] **Webots:** Verify Webots is installed on all lab computers; run the obstacle avoidance world and confirm acceptable frame rate
 - [ ] Communicate download link to students for personal computers ([cyberbotics.com](https://cyberbotics.com))
 
-### Virtual Machines (ROS, Plant Simulation)
+### Lab Computers (Plant Simulation)
+
+- [ ] **Plant Simulation:** Verify Plant Simulation is installed on all lab computers; configure licence server access; open the wave manufacturing model from `block-04-simulation/models/` and verify it runs
+
+### Virtual Machines (ROS)
 
 > ⚠️ VM performance has not been re-verified since the course concept was revised. All VM-based tools must be tested on the current image before the semester.
 
 - [ ] **ROS:** Deploy pre-configured ROS VM image; verify all launch files and scripts in `block-03-ros/scripts/` run without errors
 - [ ] **Gazebo:** Verify the Turtlebot3 Gazebo world loads and runs at acceptable speed on the lab VMs
-- [ ] **Plant Simulation:** Install Siemens Plant Simulation on lab VMs; configure licence server access; open the wave manufacturing model from `block-04-simulation/models/` and verify it runs
 - [ ] Confirm the number of available student VM seats matches expected enrolment
 - [ ] Document software versions in this file under [Current Software Configuration](#current-software-configuration) below
 
@@ -64,7 +67,7 @@ This checklist covers everything that must be verified, installed, or decided be
 ### Block 4 — Plant Simulation
 
 - [ ] Review the assignment sheet in `block-04-simulation/assignments/`
-- [ ] Open and test the wave manufacturing models in `block-04-simulation/models/` on the lab VM
+- [ ] Open and test the wave manufacturing models in `block-04-simulation/models/` on the lab computers
 - [ ] Decide (if not yet done): individual or group assignment?
 - [ ] Decide (if not yet done): presentation, written report, or both?
 
@@ -113,6 +116,7 @@ At the end of each semester, record the following here (or in a dated `docs/less
 | Software | Version | Last verified | Notes |
 |---|---|---|---|
 | Webots | — | Not yet verified for revised concept | Native install; no VM |
+| Plant Simulation | — | Not yet verified | Native install; licence server config required |
 
 ### Virtual Machines
 
@@ -120,7 +124,6 @@ At the end of each semester, record the following here (or in a dated `docs/less
 |---|---|---|---|
 | ROS | — | Not yet verified for revised concept | — |
 | Gazebo | — | Not yet verified for revised concept | — |
-| Plant Simulation | — | Not yet verified | Licence server config required |
 
 ---
 

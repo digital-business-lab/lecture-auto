@@ -68,6 +68,6 @@ mkdocs serve
 
 ## Known Gotchas
 
-- VM specs not yet confirmed — verify Webots and Plant Simulation run before semester starts (→ `docs/semester-prep.md`).
-- Plant Simulation licence installation on VMs still to be verified.
+- VM specs not yet confirmed — verify Webots and Gazebo/ROS run before semester starts (→ `docs/semester-prep.md`).
+- Plant Simulation runs natively on lab computers (not in a VM); licence server configuration still to be verified.
 - Internal weighting of the 70% in-semester grade is deferred until AP3, AP5, AP8 are scoped (Q4a).

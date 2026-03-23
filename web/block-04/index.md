@@ -14,4 +14,4 @@ You will simulate a **wave manufacturing** production environment in two configu
 
 Your task is to analyse and compare throughput, lead times, and bottlenecks.
 
-**Tool:** Siemens Plant Simulation (available on the computer lab VMs)
+**Tool:** Siemens Plant Simulation (available on the lab computers)

@@ -35,7 +35,7 @@ Institutional licences for Plant Simulation are available.
 | Webots | Already known to students but not suited for logistics process simulation and requires coding |
 | Spreadsheet model | Too simplified for meaningful process analysis |
 
-*Assumption:* Plant Simulation is installed or can be installed on the computer lab VMs. Installation and licence server configuration must be verified before the semester — not yet confirmed.
+*Confirmed:* Plant Simulation runs natively on the lab computers (not in a VM). Licence server configuration must be verified before the semester — not yet confirmed.
 
 ---
 

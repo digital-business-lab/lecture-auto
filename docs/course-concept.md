@@ -119,7 +119,7 @@ Two-component grading: 70% in-semester (Blocks 2–4) + 30% business case (semes
 | **ROS** | Software (free) | Block 3 middleware | Pre-configured VMs planned |
 | **Gazebo** | Software (free) | ROS simulation (Turtlebot3) | Pre-configured VMs planned |
 | **Computer lab VMs** | Infrastructure | Student workstations for all simulation | Specs and performance not yet confirmed |
-| **Plant Simulation (Siemens)** | Software (licensed) | Block 4 wave manufacturing simulation | Institutional licence available; VM installation to be verified |
+| **Plant Simulation (Siemens)** | Software (licensed) | Block 4 wave manufacturing simulation | Native install on lab computers; licence server config to be verified |
 
 ---
 
