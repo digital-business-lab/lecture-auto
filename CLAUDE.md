@@ -73,8 +73,9 @@ lecture-auto/
 **Rules:**
 - Never put detailed content directly into `README.md`. Always use `docs/*.md` or the relevant block folder.
 - Each block folder contains its own `README.md` describing what belongs there.
-- **Copyright rule:** Only self-authored material may be committed. Slide decks containing third-party images (stock photos, publisher figures, manufacturer images) must not be added to the repository. Distribute slides via Moodle or the university's internal file system only.
-- **Visibility:** The repository is currently private. If it is ever made public, all content must be verified to be freely licensable or self-authored before publication.
+- **Copyright rule:** Only self-authored material may be committed. Slide decks containing third-party images (stock photos, publisher figures, manufacturer images) must not be added to the repository. Distribute slides via Moodle only.
+- **Visibility:** The repository is private. The MkDocs companion site is deployed as public GitHub Pages — this is safe because it contains only self-authored content. If any non-self-authored material is ever added to the MkDocs site, it must be verified as freely licensable first.
+- **Infrastructure available:** GitHub Pro (private repo + GitHub Pages), Moodle (university), Wooclap (in-class interaction).
 
 ### 3.3 Git Conventions
 
@@ -227,6 +228,7 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | Internal weighting of 70% deferred (Q4a) | Cannot be decided meaningfully until AP3, AP5, and AP8 are fully scoped |
 | 2026-03-23 | Lecture delivery: hybrid approach (Option C) | Existing slides kept for live sessions; MkDocs companion site for self-study material; Wooclap for in-class interaction |
 | 2026-03-23 | Repository remains private; copyrighted slide content stays outside the repo | Slides contain third-party material (stock photos, publisher figures, manufacturer images) that cannot be published; only self-authored material goes into the repo |
+| 2026-03-23 | MkDocs site deployed as public GitHub Pages (GitHub Pro) | MkDocs content is entirely self-authored — no copyrighted material — so public access is fine; students access without login. Slides with third-party content distributed via Moodle only. |
 
 ---
 
