@@ -20,14 +20,16 @@
 
 ## 2. Target Group and Prerequisites
 
-**Target group:** Master's students in business informatics, industrial engineering, or related fields.
+**Target group:** Master's students in **business administration (BWL)**.
 
-**Assumed prerequisites:**
-- Basic programming knowledge (Python preferred) — *assumed, not formally verified*
-- General understanding of logistics and supply chain concepts
-- No prior robotics or simulation experience required
+**Programming background:** None. Students have no prior experience with Python, C++, or any other programming language. This is a confirmed fact, not an assumption, and it is the single most important constraint shaping all hands-on activities in this course.
 
-**Open question:** Should prerequisites be formally communicated and checked before the course begins?
+**Other assumed prerequisites:**
+- General understanding of business processes and supply chain concepts (core BWL competency)
+- Basic digital literacy (file management, browser, office tools)
+- No prior robotics, simulation, or Linux experience expected
+
+**Implication for course design:** All student-facing coding activities must use pre-written templates. Students fill in clearly marked logic gaps and modify parameters — they never write code from scratch. The primary learning goals in technical blocks are *understanding* and *evaluation*, not *implementation*.
 
 ---
 
@@ -36,10 +38,12 @@
 By the end of the course, students will be able to:
 
 1. Explain the history, types, and technical components of AGVs and their role in modern intralogistics.
-2. Model and program a simulated AGV in Webots to perform navigation tasks (obstacle avoidance, maze solving, line following).
-3. Describe the architecture of ROS and implement basic robotics workflows (topics, nodes, navigation, SLAM).
-4. Simulate and compare classical vs. AGV-supported manufacturing processes and evaluate the results.
-5. Develop a structured business case for AGV deployment, including market research, cost-benefit analysis, and a requirements specification.
+2. Navigate and use a robotics simulation environment (Webots) to run and modify pre-defined AGV behaviours (obstacle avoidance, maze solving, line following).
+3. Describe the architecture of ROS and understand how its core concepts (nodes, topics, messages) enable autonomous robot behaviour.
+4. Interpret the results of a simulation comparing classical vs. AGV-supported manufacturing and draw business conclusions.
+5. Develop a structured business case for AGV deployment, including market research, cost-benefit analysis, a requirements specification, and a utility value analysis.
+
+**Note on objective 2:** Students modify and complete provided code templates; the learning goal is understanding the relationship between parameters/logic and observable robot behaviour — not programming proficiency.
 
 ---
 
@@ -52,7 +56,7 @@ By the end of the course, students will be able to:
 | — | Field trip | — | 1 day |
 | 3 | Autonomous AGVs with ROS | 9–10 | 2 weeks |
 | 4 | AGV Simulation | 11–13 | 3 weeks |
-| + | Additional assessment: Business Case | parallel | ongoing |
+| + | Business Case (primary assessment) | parallel / Block 4 | ongoing |
 
 ---
 
@@ -68,26 +72,25 @@ By the end of the course, students will be able to:
 
 **Sessions 1–2 — AGV Fundamentals (lecturer presentation)**
 - History and evolution of AGVs
-- Modern application domains (automotive, e-commerce, healthcare, etc.)
+- Modern application domains (automotive, e-commerce, healthcare, food industry, etc.)
 - AGV technology deep-dive:
   - Navigation and guidance systems (inductive, laser, natural navigation)
   - Safety systems and standards
   - Fleet management and control systems
   - Vehicle types and load handling
   - Operating environment requirements
-  - Future trends (AI-based navigation, collaborative robots)
+  - Future trends (AI-based navigation, collaborative robots, AMRs)
 
 **Student research component**
 - Students research and present industry-specific AGV applications
-- *Rationale:* Keeps lecturer content focused on technical foundations; builds student ownership
+- Rationale: Keeps lecturer input focused on technical fundamentals; builds student ownership and relevance
 
 ### Pedagogy
-- Lecturer input for technical foundations
-- Student presentations for industry context
+- Lecturer input for technical foundations; student presentations for business context
 - *Decision (2026-03-23):* Terminology definition section removed — learning benefit too low relative to time cost
 
 ### Deliverables
-- Students: short research presentation on industry-specific AGV applications
+- Students: short research presentation on industry-specific AGV applications (individual or pairs)
 
 ---
 
@@ -96,78 +99,87 @@ By the end of the course, students will be able to:
 ### Sessions 3–8 (approx. 6 weeks)
 
 ### Rationale
-Webots provides a free, cross-platform robot simulator that is well-suited for teaching AGV fundamentals without requiring immediate hardware access. Students build practical programming skills alongside conceptual understanding.
+Webots provides a free, cross-platform robot simulator suitable for teaching AGV fundamentals without requiring immediate hardware access. Hands-on work in simulation makes abstract concepts tangible and prepares students for the hardware demos.
 
-*Assumption:* Students have no prior Webots experience. All Webots-specific knowledge must be introduced in the course material.
+### Coding approach: Template-based ("Light Coding")
+Because students have no programming background, all Webots assignments use the following structure:
+- A **complete, working controller** is provided as the starting point.
+- Sections that encode the core logic (decision thresholds, sensor weights, state transitions) are replaced with **clearly marked `TODO` gaps**.
+- Students read the surrounding code (with explanations) to understand *what* it does, then complete the gaps based on the assignment instructions.
+- Students never write a controller from scratch.
 
-### Known issue from last semester
-Students struggled significantly with Webots onboarding; the labyrinth assignment required a time extension. Root cause is assumed to be tool unfamiliarity, not algorithm complexity — *this assumption is not yet validated*.
+This approach preserves the hands-on learning benefit while removing the barrier of syntax and language unfamiliarity. It also allows the lecturer to control the complexity precisely.
 
-### Planned improvements
-- Provide structured introductory tutorial before first assignment (→ AP2)
-- Provide the labyrinth world pre-built so students focus on AGV behaviour (→ AP3)
-- Clarify or simplify the VM setup process
+*Assumption:* Even with templates, some students will find Python syntax confusing. The templates must therefore include extensive inline comments explaining every non-trivial line. This has not been tested yet.
+
+### VM Setup
+All Webots work runs on virtual machines in the computer lab. A step-by-step setup guide will be provided (→ AP2). VM performance with Webots must be verified before the semester begins — *not yet confirmed*.
 
 ---
 
 ### Assignment 1 — Obstacle Avoidance
 
-**Goal:** Students get hands-on with Webots and implement their first AGV controller.
+**Goal:** Students get hands-on with Webots and complete their first AGV controller.
 
 **Tasks:**
-1. Set up the Webots environment (VM or local installation)
-2. Model a custom robot (basic geometry and sensor configuration)
-3. Implement a controller that navigates an environment while avoiding obstacles
+1. Set up the Webots environment on the provided VM (guided by tutorial → AP2)
+2. Open a pre-built world with a pre-modelled robot
+3. Read through the provided controller template and understand the sensor-to-action logic
+4. Complete the marked `TODO` sections (e.g. distance thresholds, turning direction logic)
+5. Run and observe the simulation; adjust parameters and observe the effect
 
-**Pedagogy:** Fully hands-on; instructor available for support. Students work in the VM environment provided.
+**Deliverable:** Working simulation demonstrating obstacle avoidance. Students document: which parameters they chose and why, what behaviour changed when they adjusted values.
 
-**Deliverable:** Working Webots simulation demonstrating obstacle avoidance behaviour.
-
-**Hardware extension:** — (none for this assignment)
+**Hardware extension:** None for this assignment.
 
 ---
 
 ### Assignment 2 — Labyrinth
 
-**Goal:** Students implement a maze-solving algorithm and transfer it to physical hardware.
+**Goal:** Students implement a maze-solving strategy by completing a provided template, then transfer the result to physical hardware (via lecturer demo).
 
 **Tasks:**
-1. Receive a pre-built labyrinth world in Webots *(improvement from last semester)*
-2. Develop and refine a maze-solving algorithm within the simulation
-3. Present results and explain algorithmic approach
+1. Receive a **pre-built labyrinth world** in Webots *(improvement from last semester — students do not model the environment)*
+2. Receive a controller template implementing the basic robot loop; complete the maze-solving logic gaps (e.g. wall-following decision rules)
+3. Refine and test the algorithm within the simulation
+4. Present approach and results to the group
 
 **Pedagogy:** Independent work phase (approx. 2 sessions) followed by group presentations.
 
-**Deliverable:** Presentation of labyrinth solution; working simulation demo.
+**Deliverable:** Presentation of maze-solving approach; working simulation demo.
 
-**Hardware extension:** Lecturer demonstrates the algorithm on the **Alphabot** (physical hardware demo).
+**Hardware extension:** Lecturer demonstrates a maze-solving algorithm on the **Alphabot** (physical hardware demo). Students observe and compare real-world behaviour to simulation.
 
-**Open question:** Should students also run their own algorithm on the Alphabot, or is the lecturer demo sufficient?
+**Open question:** Should students also deploy their own algorithm on the Alphabot, or is the lecturer demo sufficient given the time and skill constraints?
 
 ---
 
 ### Assignment 3 — Line Following
 
-**Goal:** Students implement line-tracking behaviour at two complexity levels.
+**Goal:** Students implement line-tracking behaviour at two complexity levels using provided templates.
 
 **Tasks:**
 
 *Basic (all students):*
-1. Implement line following in Webots with 4 sensors on a standard track
+1. Complete a template controller for line following with 4 sensors on a standard track
+2. Test and tune sensor weights and speed parameters
 
-*Extended (optional or advanced):*
-2. Adapt the controller for 8 sensors and tracks with varying colours
+*Extended (optional or for advanced students):*
+3. Adapt the controller for 8 sensors and tracks with varying colours (additional `TODO` sections in an extended template)
 
-**Pedagogy:** Assignment handout → independent work session → presentation of results. A competition-style evaluation is considered (*not yet decided*).
+**Pedagogy:** Assignment handout → independent work session → presentation of results.
 
-**Deliverable:** Working line-following simulation; presentation of approach and results.
+**Deliverable:** Working line-following simulation; short documentation of parameter choices.
 
 **Hardware extension:** Lecturer demonstrates line following on the **Dobot** robot.
 
+**Open questions:**
+- Is a competition-style evaluation used, and if so, how is it assessed?
+- Is the extended (8-sensor) variant mandatory or optional?
+
 **To do before delivery:**
-- Define and write the line-following tutorial for Webots (→ AP4)
+- Define and write the line-following tutorial and templates for Webots (→ AP4)
 - Assemble and test the Dobot hardware
-- Consider embedding a video of a previous line-following competition
 
 ---
 
@@ -184,31 +196,37 @@ Embedded within Block 2. Students visit an industrial site with AGV deployment i
 ### Sessions 9–10 (approx. 2 weeks)
 
 ### Rationale
-ROS (Robot Operating System) is the de-facto standard middleware for autonomous robotics. Introducing it at this stage builds on the simulation skills from Block 2 and prepares students for industry-relevant tooling.
+ROS (Robot Operating System) is the de-facto standard middleware for autonomous robotics and is ubiquitous in industry. Exposure to ROS gives students literacy in the vocabulary and architecture of modern autonomous systems — even without becoming proficient programmers.
 
-*Assumption:* Students have basic Python knowledge going into this block. No prior ROS experience expected.
+### Revised approach for non-programmers
+The previous concept assumed Python knowledge and included student-led coding tasks (publishing topics, writing a ROS node from scratch). These are not feasible for this target group.
 
-### Known issue from last semester
-The ROS block is outlined but hands-on assignments are not yet fully developed. The current structure may not provide enough depth for meaningful skill development in only two sessions.
+**Revised structure:**
+- Lecturer and hardware demos take centre stage; students observe, ask questions, and analyse.
+- Student activities consist of **running pre-written, pre-configured scripts** and interpreting the output.
+- The focus shifts from *building* to *understanding*: what does ROS do here, why does it work this way, what would change if…?
+- AP7 revised: students **modify a provided ROS node** (change parameters, add a simple behaviour step) rather than writing one from scratch.
+
+*Assumption:* Pre-configured VMs with a working ROS environment will be provided. Setting up ROS from scratch is not a student task. VM performance with Gazebo must be verified — *not yet confirmed*.
 
 ---
 
 ### Unit 3.1 — ROS Fundamentals
 
 **Content (lecturer presentation + demo):**
-- Why ROS? Motivation and industry relevance
-- ROS architecture: nodes, topics, messages, services
+- Why ROS? Motivation, history, and industry relevance
+- ROS architecture: nodes, topics, messages, services — conceptual overview
 - Packages and workspaces
-- Live demo: reading sensor data from a Turtlebot via ROS topics
+- **Live demo:** Turtlebot3 sensor data streamed as ROS topics; students observe in real time
 
-**Hands-on (students):**
-- Set up the ROS environment
-- First experiments using the **iRobot Create 3 simulator**
-- Publish and subscribe to basic topics
+**Guided student activity:**
+- Open a pre-configured ROS environment on the VM
+- Run provided scripts to start and inspect a simulated robot (iRobot Create 3 simulator)
+- Use `rostopic echo` and `rqt_graph` to visualise data flow — no coding, command execution only
 
-**Deliverable:** Students can run a basic ROS setup and interact with topics.
+**Deliverable:** Students can describe the node-topic architecture and identify what data is flowing in a given ROS system.
 
-**To do:** Write a detailed assignment sheet for this unit (→ AP5)
+**To do:** Write a guided activity sheet (→ AP5)
 
 ---
 
@@ -216,33 +234,39 @@ The ROS block is outlined but hands-on assignments are not yet fully developed. 
 
 **Content (lecturer presentation):**
 - Localisation approaches: GPS, AprilTags, indoor localisation
-- SLAM (Simultaneous Localisation and Mapping): principles and algorithms
+- SLAM (Simultaneous Localisation and Mapping): what it does and why it matters
 - Path planning: global vs. local planners
 
-**Hands-on (students):**
-- SLAM and autonomous navigation in the **Gazebo** simulator (Turtlebot 3 or 4)
+**Guided student activity:**
+- Launch a pre-configured SLAM session in the **Gazebo** simulator (Turtlebot3 environment provided)
+- Drive the robot manually to build a map; observe the map being constructed in RViz
+- Then send a navigation goal and observe autonomous path planning in action
 
 **Lecturer demo:**
-- SLAM and navigation with a real **Turtlebot 3 or 4**
+- SLAM and autonomous navigation with the real **Turtlebot3**
 
-**Planned future addition:** AprilTag demo (tags for localisation on the Turtlebot) — *not yet implemented*
+**Planned future addition:** AprilTag localisation demo — *not yet implemented*
 
-**Deliverable:** Students successfully map an environment and navigate autonomously in Gazebo.
+**Deliverable:** Students can explain what SLAM is doing in the demo and describe one limitation of the approach.
 
-**To do:** Write a detailed assignment sheet for this unit (→ AP6)
+**To do:** Write a guided activity sheet with pre-configured launch files (→ AP6)
 
 ---
 
 ### Unit 3.3 — Manipulation
 
 **Content (lecturer demo):**
-- Introduction to robot arm control via ROS
-- Demo: **LoCoBot** robot arm in motion
+- Introduction to robot arm control via ROS and MoveIt
+- **Live demo:** LoCoBot arm with gripper performing a pick-and-place sequence
 
-**Hands-on (students):**
-- Program a Python-based motion sequence for the LoCoBot using its simulator
+**Guided student activity:**
+- Open a provided LoCoBot simulation with a pre-written motion script
+- Modify clearly marked parameters (target position coordinates, gripper timing) and observe the effect
+- This is the AP7 activity: guided modification of an existing ROS node
 
-**Planned future addition:** Mini-project — students design and implement a custom ROS node from scratch (→ AP7)
+**Deliverable:** Students document what they changed and how the robot's behaviour differed.
+
+**To do:** Prepare the LoCoBot simulation environment and the parameterised motion script (→ AP7)
 
 ---
 
@@ -251,84 +275,92 @@ The ROS block is outlined but hands-on assignments are not yet fully developed. 
 ### Sessions 11–13 (approx. 3 weeks)
 
 ### Rationale
-Students apply their accumulated knowledge by simulating a complete manufacturing scenario. The contrast between a classical production layout and one supported by AGVs motivates a data-driven evaluation of AGV impact.
+Students apply their accumulated understanding by analysing a complete manufacturing simulation. The contrast between classical and AGV-supported production layouts provides a concrete, evaluable scenario that connects technical content to business decision-making.
 
 ### Scenario
-**Wave manufacturing** — students simulate a production environment in two configurations:
-1. Classical layout (no AGVs)
+**Wave manufacturing** — students work with a simulation of a production environment in two configurations:
+1. Classical layout (manual transport between stations)
 2. AGV-supported layout
 
-They analyse throughput, lead times, and bottlenecks, and draw conclusions about the value of AGV deployment.
+They analyse throughput, lead times, WIP (work in progress), and bottlenecks, and draw conclusions about when and why AGV deployment creates value.
 
-### Known issue
-The task has no concrete problem statement, requirements, or evaluation criteria yet. Students and lecturer need a structured assignment (→ AP8).
+### Tool decision — open
+Given the non-programmer target group, a GUI-based tool is strongly preferred over Webots or Python scripting. Candidates:
+
+| Tool | Pros | Cons |
+|---|---|---|
+| **AnyLogic** (free educational licence) | Industry standard; visual modelling; drag-and-drop; good AGV library | Steeper learning curve; requires registration |
+| **Plant Simulation (Siemens)** | Very strong in manufacturing; used in industry | Licence cost; more complex |
+| **Webots** | Already familiar from Block 2 | Not designed for logistics simulation; requires coding |
+| **Custom spreadsheet model** | Minimal technical barrier; no installation | Oversimplified; limited educational value |
+
+*Preferred direction:* AnyLogic (educational licence) — but this must be confirmed before the semester. *Not yet decided.*
 
 ### Open questions
-- Which simulation tool should students use?
-  - **Webots** (already familiar from Block 2) — low additional overhead, but not a logistics simulator
-  - **Python-based custom simulation** — flexible, but requires significant scaffolding
-  - **Dedicated logistics simulation tool** (e.g. AnyLogic, Plant Simulation, FlexSim) — industry-standard, but steep learning curve and potential licensing cost
-- Should this be an individual or group assignment?
-- Should results be presented, submitted as a report, or both?
-
-*Preferred approach not yet decided — needs discussion before next semester.*
+- Which simulation tool? (see above — must be decided before AP8 can be written)
+- Individual or group assignment?
+- Presentation, written report, or both?
 
 ---
 
-## 9. Additional Assessment — Business Case
+## 9. Business Case (Primary Assessment)
 
-### Rationale
-A business case exercise connects the technical content to real-world decision-making. Students learn to justify AGV investments with quantitative and qualitative arguments.
+### Rationale and repositioning
+The business case has been **elevated from an additional/optional assessment to the primary mandatory assessment** of the course. It is the format best aligned with the target group's background and career trajectory. BWL students bring core competencies in economics, analysis, and structured argumentation — this is where they can demonstrate genuine mastery.
+
+### Scenario
+Students develop a business case for the introduction of an AGV system in a defined intralogistics scenario. The scenario may be provided by the lecturer or chosen by the student (to be decided → open question).
 
 ### Components
 
 | Component | Description |
 |---|---|
-| Market research | Survey of available AGV systems, vendors, and current market trends |
-| Business case calculation | ROI, payback period, cost-benefit analysis for a defined scenario |
-| Requirements specification (Lastenheft) | Structured requirements document for an AGV procurement |
-| Utility value analysis (Nutzwertanalyse) | Weighted scoring of AGV alternatives against defined criteria |
-
-### Known issue
-No template, rubric, or clear scope exists yet. It is also unclear whether this is a mandatory or optional assessment (→ AP9).
+| **Market research** | Survey of available AGV systems, vendors, and current market trends |
+| **Business case calculation** | ROI, payback period, TCO, cost-benefit analysis for the defined scenario |
+| **Requirements specification (Lastenheft)** | Structured requirements document for AGV procurement |
+| **Utility value analysis (Nutzwertanalyse)** | Weighted scoring of at least two AGV alternatives against defined criteria |
 
 ### Open questions
-- Mandatory or optional?
-- Individual or group work?
-- Integrated into Block 4, or run in parallel throughout the semester?
-- Is there a real or fictional company scenario, or do students define their own?
+- Is this an individual or group assessment?
+- Is the scenario fixed (lecturer-defined) or flexible (student-chosen)?
+- Is it integrated into Block 4 or run in parallel throughout the semester?
+- What is the weighting relative to other course assessments?
+
+**To do:** Create a structured template and grading rubric (→ AP9)
 
 ---
 
-## 10. Tools and Infrastructure
+## 10. Infrastructure
 
-| Tool | Purpose | Availability |
-|---|---|---|
-| **Webots** | AGV simulation (Blocks 2, potentially 4) | Free, open-source; VM provided |
-| **Alphabot** | Physical hardware demo (labyrinth) | Available in lab |
-| **Dobot** | Physical hardware demo (line following) | Needs assembly and testing |
-| **ROS** | Autonomous robotics middleware (Block 3) | Free, open-source; environment setup required |
-| **Gazebo** | ROS-integrated simulator (SLAM/navigation) | Free, open-source |
-| **Create 3 Simulator** | First ROS experiments | Free |
-| **LoCoBot** | Manipulation demo + simulation | Available in lab |
-| **Turtlebot 3/4** | SLAM & navigation (real hardware demo) | Available in lab |
-
-*Assumption:* All listed hardware is operational and available for the new semester. This has not been verified for each item.
+| Item | Type | Role | Status |
+|---|---|---|---|
+| **Webots** | Software (free) | AGV simulation in Block 2 | Available; VM performance to be verified |
+| **Turtlebot3** | Real hardware | SLAM & navigation demo in Block 3 | Available in lab |
+| **LoCoBot** | Real hardware (arm + gripper) | Manipulation demo in Block 3 | Available in lab |
+| **Alphabot** | Real hardware | Labyrinth algorithm demo | Available in lab |
+| **Dobot** | Real hardware | Line-following demo | Needs assembly and testing |
+| **ROS** | Software (free) | Block 3 middleware | Pre-configured VMs planned |
+| **Gazebo** | Software (free) | ROS simulation (Turtlebot3) | Pre-configured VMs planned |
+| **Computer lab VMs** | Infrastructure | Student workstations for all simulation | Specs and performance not yet confirmed |
+| **AGV simulation tool** | Software (TBD) | Block 4 wave manufacturing simulation | *Not yet decided* |
 
 ---
 
 ## 11. Open Questions and Next Steps
 
-| # | Question | Priority |
-|---|---|---|
-| Q1 | Which tool will be used for Block 4 AGV simulation? | High |
-| Q2 | Is the Business Case a mandatory or optional assessment? | High |
-| Q3 | How is the Business Case integrated into the course schedule? | Medium |
-| Q4 | Should students also run their own algorithm on the Alphabot (labyrinth)? | Medium |
-| Q5 | Are all hardware items tested and ready for the new semester? | Medium |
-| Q6 | Should prerequisites be formally verified before the course begins? | Low |
-| Q7 | Is a line-following competition format used, and how is it evaluated? | Low |
+| # | Question | Priority | Blocks affected |
+|---|---|---|---|
+| Q1 | Which tool for Block 4 AGV simulation (AnyLogic preferred)? | 🔴 High | 4 |
+| Q2 | Is the business case individual or group work? | 🔴 High | Assessment |
+| Q3 | Is the scenario for the business case fixed or student-chosen? | 🔴 High | Assessment |
+| Q4 | Can the computer lab VMs run Webots and Gazebo at acceptable performance? | 🔴 High | 2, 3 |
+| Q5 | Is the extended line-following variant (8 sensors) mandatory or optional? | 🟡 Medium | 2 |
+| Q6 | Should students deploy their own labyrinth algorithm on the Alphabot? | 🟡 Medium | 2 |
+| Q7 | Is a competition format used for line following, and how is it evaluated? | 🟡 Medium | 2 |
+| Q8 | How is the business case integrated into the course schedule? | 🟡 Medium | Assessment |
+| Q9 | Are all hardware items tested and ready for the new semester? | 🟡 Medium | 2, 3 |
+| Q10 | Should prerequisites be formally verified or communicated before the course? | 🟢 Low | All |
 
 ---
 
-*Document created 2026-03-23. Maintained alongside `CLAUDE.md`.*
+*Document created 2026-03-23. Revised 2026-03-23: target group confirmed (BWL, no programming background); template-based coding approach adopted; ROS block restructured; business case elevated to primary assessment. Maintained alongside `CLAUDE.md`.*

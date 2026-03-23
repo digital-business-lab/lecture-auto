@@ -2,7 +2,7 @@
 
 > **Always read this file first** before starting any work on this project.
 > This is a living document. Update it after every significant decision or session.
-> Last updated: 2026-03-23 (AP1 completed; course-concept.md created)
+> Last updated: 2026-03-23 (target group clarified; template-based coding approach decided)
 
 ---
 
@@ -17,6 +17,15 @@
 | **Repository** | lecture-auto |
 | **URL** | https://github.com/digital-business-lab/lecture-auto |
 | **Purpose** | Accompanying material for the course (assignments, tutorials, simulations, documents) |
+| **Target group** | Master's students in business administration (BWL) — **no programming background** |
+
+### Available Infrastructure
+
+| Item | Type | Notes |
+|---|---|---|
+| **Turtlebot3** | Real hardware | SLAM, navigation demos in Block 3 |
+| **LoCoBot** | Real hardware | Robot arm with gripper; manipulation demo in Block 3 |
+| **Computer lab VMs** | Virtual machines | Student workstations; Webots and ROS run here; specs not yet confirmed |
 
 ---
 
@@ -135,22 +144,22 @@ Issues identified from last semester, all currently open.
 ### 6.1 Webots Onboarding Too Difficult
 
 - **Problem:** Students struggled significantly with getting started in Webots; the processing time for the labyrinth assignment had to be extended.
+- **Root cause (revised):** Now confirmed that students have *no programming background*. The difficulty was almost certainly caused by the combination of an unfamiliar tool *and* unfamiliar programming — not Webots alone.
 - **Planned measures:**
-  - Provide the labyrinth world pre-built, so students focus on AGV behaviour rather than environment modelling.
-  - Provide structured introductory tutorials.
-  - Simplify VM setup or add a step-by-step installation guide.
-- **Assumption:** Difficulty stems from Webots unfamiliarity, not from the algorithm itself — *not yet validated*.
-- **Status:** ⏳ Open — material to be created (→ AP2, AP3)
+  - Provide the labyrinth world pre-built (decided 2026-03-23).
+  - Provide all assignments as pre-written code templates with clearly marked gaps; students fill in logic, never write from scratch (decided 2026-03-23 → see 7. Decision Log).
+  - Structured step-by-step tutorial for VM setup and first Webots interaction (→ AP2).
+- **Status:** ⏳ Open — templates and tutorial to be created (→ AP2, AP3, AP4)
 
-### 6.2 ROS Unit Needs More Depth
+### 6.2 ROS Unit Needs Fundamental Restructuring
 
-- **Problem:** The ROS block is outlined but hands-on assignments are not fully developed.
-- **Planned measures:**
-  - Detailed assignment sheets for ROS basics, SLAM, and navigation.
-  - Integrate AprilTag demo.
-  - Add a mini-project: programming a ROS node.
-- **Assumption:** Students have basic Python knowledge; ROS-specific concepts are new to them.
-- **Status:** ⏳ Open — assignments to be specified (→ AP5, AP6, AP7)
+- **Problem:** The ROS block assumed Python knowledge that students do not have. A mini-project to write a custom ROS node from scratch is not feasible for this target group.
+- **Revised approach:**
+  - Shift student activities from *writing code* to *running pre-written scripts and interpreting results*.
+  - Focus on conceptual understanding: what ROS does, why it matters, how its parts fit together.
+  - Lecturer and hardware demos (Turtlebot3, LoCoBot) become the primary learning medium.
+  - AP7 (ROS mini-project) revised: students modify a provided ROS node rather than creating one from scratch.
+- **Status:** ⏳ Open — assignments to be redesigned (→ AP5, AP6, AP7)
 
 ### 6.3 AGV Simulation Assignment Too Vague
 
@@ -158,16 +167,17 @@ Issues identified from last semester, all currently open.
 - **Planned measures:**
   - Write a concrete assignment with scenario, requirements, and a grading rubric.
   - Decide on the simulation tool to be used.
-- **Open question:** Should students use Webots, a custom Python simulation, or a dedicated logistics simulation tool (e.g. AnyLogic, Plant Simulation)?
-- **Status:** ⏳ Open — assignment to be written (→ AP8)
+- **Open question:** Given no programming background, a GUI-based logistics tool (e.g. AnyLogic, Plant Simulation) is preferred over Webots or Python. Licensing and learning curve must be checked.
+- **Status:** ⏳ Open — tool decision and assignment to be written (→ AP8)
 
-### 6.4 Business Case Not Structured
+### 6.4 Business Case Not Structured — and Underweighted
 
-- **Problem:** The business case is listed as an additional assessment but has no template, rubric, or clear scope.
+- **Problem:** The business case is listed as an *additional* assessment but is actually the most appropriate form of assessment for BWL students. It is not yet structured.
+- **Revised direction:** Elevate the business case to a primary (mandatory) assessment. BWL students bring relevant core competencies here (economics, analysis, decision-making).
 - **Planned measures:**
-  - Create a template document.
+  - Create a structured template document.
   - Define a grading rubric.
-  - Decide: mandatory or optional assessment?
+  - Decide on integration into the course schedule.
 - **Open question:** Integration into the course flow (standalone vs. embedded in Block 4) not yet decided.
 - **Status:** ⏳ Open — concept and template pending (→ AP9)
 
@@ -186,6 +196,11 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | `README.md` kept as navigation hub only; detailed content in `docs/*.md` | Avoids README bloat; makes content discoverable and linkable |
 | 2026-03-23 | Commit messages in English, conventional commits format | Consistency, tooling compatibility (changelogs, semantic release) |
 | 2026-03-23 | Course concept written as `docs/course-concept.md` in Markdown | Stays version-controlled in the repo; no external tool dependency; linked from `README.md` |
+| 2026-03-23 | Target group confirmed: BWL Master's students, no programming background | Changes the entire approach to student-facing assignments; all previous assumptions of Python knowledge are invalid |
+| 2026-03-23 | Webots assignments use template-based coding ("Light Coding") | Students complete pre-written code templates with clearly marked gaps; no code written from scratch; reduces cognitive load while preserving hands-on learning |
+| 2026-03-23 | ROS block restructured: demo-first, scripts provided, no from-scratch coding | Without programming background, student-led ROS coding is not feasible; understanding and evaluation replace implementation |
+| 2026-03-23 | Business case elevated to primary (mandatory) assessment | BWL students' core competencies align with this format; it was underweighted as an "additional" assessment |
+| 2026-03-23 | AP7 revised: students modify a provided ROS node, not create one from scratch | Writing a ROS node from scratch is unrealistic without programming background; guided modification achieves similar learning outcome |
 
 ---
 
@@ -199,9 +214,9 @@ Planned work items, updated continuously.
 | AP2 | Webots introduction tutorial (VM setup, first robot, first controller) | ⏳ Open |
 | AP3 | Revised labyrinth assignment (pre-built world + clear task description) | ⏳ Open |
 | AP4 | Line-following tutorial for Webots (basic + extended) | ⏳ Open |
-| AP5 | ROS assignment sheet: fundamentals + environment setup | ⏳ Open |
-| AP6 | ROS assignment sheet: SLAM and navigation in Gazebo | ⏳ Open |
-| AP7 | ROS mini-project: define and develop a custom ROS node | ⏳ Open |
+| AP5 | ROS guided activity: fundamentals + running provided scripts | ⏳ Open |
+| AP6 | ROS guided activity: SLAM and navigation in Gazebo (pre-configured) | ⏳ Open |
+| AP7 | ROS guided activity: modify a provided ROS node (no from-scratch coding) | ⏳ Open |
 | AP8 | AGV simulation assignment: wave manufacturing scenario | ⏳ Open |
 | AP9 | Business case template + grading rubric | ⏳ Open |
 | AP10 | Finalise overall concept and align with new semester schedule | ⏳ Open |
@@ -212,14 +227,15 @@ Planned work items, updated continuously.
 
 | Tool | Role in the course |
 |---|---|
-| **Webots** | Simulation of classical AGVs (obstacle avoidance, labyrinth, line following) |
+| **Webots** | Simulation of classical AGVs (obstacle avoidance, labyrinth, line following) — students use provided templates |
+| **Turtlebot3** | Real hardware; SLAM & navigation demo in Block 3 |
+| **LoCoBot** | Real hardware with gripper arm; manipulation demo in Block 3 |
 | **Alphabot** | Physical hardware demo for labyrinth algorithms |
 | **Dobot** | Physical hardware demo for line following |
-| **ROS** | Middleware for autonomous AGVs (fundamentals, SLAM, navigation, manipulation) |
-| **Gazebo** | Simulator for ROS assignments (Turtlebot 3/4) |
-| **Create 3 Simulator** | First ROS experiments |
-| **LoCoBot** | Manipulation: demo + Python simulation |
-| **Turtlebot 3/4** | SLAM & navigation demo (real hardware) |
+| **ROS** | Middleware for autonomous AGVs; students run provided scripts, do not write from scratch |
+| **Gazebo** | Simulator for ROS activities (Turtlebot3); pre-configured environments provided |
+| **Create 3 Simulator** | First guided ROS experiments |
+| **Computer lab VMs** | Student workstations; all simulation software runs here; VM specs to be confirmed |
 
 ---
 
