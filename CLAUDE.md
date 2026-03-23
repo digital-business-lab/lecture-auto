@@ -2,7 +2,7 @@
 
 > **Always read this file first** before starting any work on this project.
 > This is a living document. Update it after every significant decision or session.
-> Last updated: 2026-03-23
+> Last updated: 2026-03-23 (AP1 completed; course-concept.md created)
 
 ---
 
@@ -185,6 +185,7 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | All repository files and documentation in English | Consistent with academic and open-source norms; code is also English |
 | 2026-03-23 | `README.md` kept as navigation hub only; detailed content in `docs/*.md` | Avoids README bloat; makes content discoverable and linkable |
 | 2026-03-23 | Commit messages in English, conventional commits format | Consistency, tooling compatibility (changelogs, semantic release) |
+| 2026-03-23 | Course concept written as `docs/course-concept.md` in Markdown | Stays version-controlled in the repo; no external tool dependency; linked from `README.md` |
 
 ---
 
@@ -194,7 +195,7 @@ Planned work items, updated continuously.
 
 | ID | Description | Status |
 |---|---|---|
-| AP1 | Revised course concept as a structured document | ⏳ Open |
+| AP1 | Revised course concept as a structured document | ✅ Done — `docs/course-concept.md` |
 | AP2 | Webots introduction tutorial (VM setup, first robot, first controller) | ⏳ Open |
 | AP3 | Revised labyrinth assignment (pre-built world + clear task description) | ⏳ Open |
 | AP4 | Line-following tutorial for Webots (basic + extended) | ⏳ Open |

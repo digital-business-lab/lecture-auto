@@ -9,6 +9,6 @@ The course covers the use of Automated Guided Vehicles (AGVs) in intralogistics,
 | Resource | Description |
 |---|---|
 | [`CLAUDE.md`](./CLAUDE.md) | Project memory: course structure, decisions, work packages |
-| `docs/` | Detailed documentation (tutorials, assignment sheets, concepts) |
+| [`docs/course-concept.md`](./docs/course-concept.md) | Full course concept: structure, assignments, tools, open questions |
 
 > Detailed content lives in `docs/`. This file is a navigation hub only.
