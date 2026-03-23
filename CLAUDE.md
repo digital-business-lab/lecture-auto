@@ -74,8 +74,8 @@ lecture-auto/
 - Never put detailed content directly into `README.md`. Always use `docs/*.md` or the relevant block folder.
 - Each block folder contains its own `README.md` describing what belongs there.
 - **Copyright rule:** Only self-authored material may be committed. Slide decks containing third-party images (stock photos, publisher figures, manufacturer images) must not be added to the repository. Distribute slides via Moodle only.
-- **Visibility:** The repository is private. The MkDocs companion site is deployed as public GitHub Pages — this is safe because it contains only self-authored content. If any non-self-authored material is ever added to the MkDocs site, it must be verified as freely licensable first.
-- **Infrastructure available:** GitHub Pro (private repo + GitHub Pages), Moodle (university), Wooclap (in-class interaction).
+- **Visibility:** The repository is **public**. All committed content must be self-authored. Copyrighted material (slides, publisher figures, stock photos) must never be committed — distribute via Moodle only.
+- **Infrastructure available:** GitHub Pro (public repo + GitHub Pages), Moodle (university, for slides and student submissions), Wooclap (in-class interaction).
 
 ### 3.3 Git Conventions
 
@@ -227,8 +227,9 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | Assessment structure defined: 70% in-semester + 30% semester break | Component 1 (70%): Webots, ROS, Plant Simulation assignments during the semester; Component 2 (30%): business case submitted in the semester break |
 | 2026-03-23 | Internal weighting of 70% deferred (Q4a) | Cannot be decided meaningfully until AP3, AP5, and AP8 are fully scoped |
 | 2026-03-23 | Lecture delivery: hybrid approach (Option C) | Existing slides kept for live sessions; MkDocs companion site for self-study material; Wooclap for in-class interaction |
-| 2026-03-23 | Repository remains private; copyrighted slide content stays outside the repo | Slides contain third-party material (stock photos, publisher figures, manufacturer images) that cannot be published; only self-authored material goes into the repo |
-| 2026-03-23 | MkDocs site deployed as public GitHub Pages (GitHub Pro) | MkDocs content is entirely self-authored — no copyrighted material — so public access is fine; students access without login. Slides with third-party content distributed via Moodle only. |
+| 2026-03-23 | Repository made public | All repo content is self-authored material intended for students; no copyrighted third-party material in the repo. Adding/removing students each semester would be too cumbersome. Public access enables direct student use without access management. |
+| 2026-03-23 | Copyrighted slide content stays outside the repo — Moodle only | Slides contain third-party material (stock photos, publisher figures, manufacturer images) that cannot be published regardless of repo visibility. |
+| 2026-03-23 | MkDocs site deployed as public GitHub Pages (GitHub Pro) | Consistent with public repo; MkDocs content is entirely self-authored; students access without login. |
 
 ---
 
