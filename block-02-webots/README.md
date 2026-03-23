@@ -78,4 +78,4 @@ Embedded within Block 2. Students visit an industrial site with AGVs in operatio
 
 - Template-based ("Light Coding"): complete, working controllers with clearly marked `TODO` gaps — students never write from scratch
 - Templates include extensive inline comments; syntax unfamiliarity is mitigated, not assumed away
-- *VM performance with Webots must be verified before the semester begins — not yet confirmed*
+- Webots runs natively on lab computers (pre-installed) or personal computers (download at [cyberbotics.com](https://cyberbotics.com)) — no VM required

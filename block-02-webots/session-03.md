@@ -8,7 +8,7 @@
 
 ## Tasks
 
-1. Set up the Webots environment on the provided VM
+1. Set up the Webots environment (pre-installed on lab computers; personal computers: download at [cyberbotics.com](https://cyberbotics.com))
 2. Work through [Webots User Guide Tutorials 1–7](https://cyberbotics.com/doc/guide/tutorials) step by step:
    - Tutorial 1: Your first simulation in Webots
    - Tutorial 2: Modification of the environment

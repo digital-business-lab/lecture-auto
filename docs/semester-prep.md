@@ -17,16 +17,22 @@ This checklist covers everything that must be verified, installed, or decided be
 
 ---
 
-## 2. Infrastructure — Virtual Machines
+## 2. Infrastructure
 
-> ⚠️ VM performance has not been re-verified since the course concept was revised. All simulation tools must be tested on the current VM image before the semester.
+### Lab Computers (Webots)
 
-- [ ] **Webots:** Install or update Webots on all lab VMs; run the obstacle avoidance world and verify acceptable frame rate
+- [ ] **Webots:** Verify Webots is installed on all lab computers; run the obstacle avoidance world and confirm acceptable frame rate
+- [ ] Communicate download link to students for personal computers ([cyberbotics.com](https://cyberbotics.com))
+
+### Virtual Machines (ROS, Plant Simulation)
+
+> ⚠️ VM performance has not been re-verified since the course concept was revised. All VM-based tools must be tested on the current image before the semester.
+
 - [ ] **ROS:** Deploy pre-configured ROS VM image; verify all launch files and scripts in `block-03-ros/scripts/` run without errors
 - [ ] **Gazebo:** Verify the Turtlebot3 Gazebo world loads and runs at acceptable speed on the lab VMs
 - [ ] **Plant Simulation:** Install Siemens Plant Simulation on lab VMs; configure licence server access; open the wave manufacturing model from `block-04-simulation/models/` and verify it runs
 - [ ] Confirm the number of available student VM seats matches expected enrolment
-- [ ] Document VM software versions in this file under [Current VM Configuration](#current-vm-configuration) below
+- [ ] Document software versions in this file under [Current Software Configuration](#current-software-configuration) below
 
 ---
 
@@ -45,7 +51,7 @@ This checklist covers everything that must be verified, installed, or decided be
 
 - [ ] Review assignment sheets in `block-02-webots/assignments/` — update if scenario or requirements have changed
 - [ ] Review controller templates in `block-02-webots/templates/` — verify `TODO` gaps are correct and comments are clear
-- [ ] Test all Webots world files in `block-02-webots/worlds/` on the current VM image
+- [ ] Test all Webots world files in `block-02-webots/worlds/` on the lab computers
 - [ ] Confirm the labyrinth world is pre-built and the robot starts in the correct position
 
 ### Block 3 — ROS
@@ -98,13 +104,20 @@ At the end of each semester, record the following here (or in a dated `docs/less
 
 ---
 
-## Current VM Configuration
+## Current Software Configuration
 
 > Update this table after each semester's infrastructure setup.
 
+### Lab Computers
+
 | Software | Version | Last verified | Notes |
 |---|---|---|---|
-| Webots | — | Not yet verified for revised concept | — |
+| Webots | — | Not yet verified for revised concept | Native install; no VM |
+
+### Virtual Machines
+
+| Software | Version | Last verified | Notes |
+|---|---|---|---|
 | ROS | — | Not yet verified for revised concept | — |
 | Gazebo | — | Not yet verified for revised concept | — |
 | Plant Simulation | — | Not yet verified | Licence server config required |
