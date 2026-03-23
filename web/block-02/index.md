@@ -6,6 +6,25 @@ This block introduces hands-on AGV simulation using [Webots](https://cyberbotics
 
 ---
 
+## Software — Webots
+
+[Webots](https://cyberbotics.com) is a free, open-source robot simulator developed by Cyberbotics and released under the Apache 2.0 licence. It runs on **Windows, Linux, and macOS**.
+
+### How to access Webots
+
+=== "Lab computers"
+
+    Webots is pre-installed on the computer lab workstations. No setup required — open the application directly and start working.
+
+=== "Personal computer"
+
+    Download and install Webots from [cyberbotics.com](https://cyberbotics.com). Select the installer for your operating system (Windows, Linux, or macOS) and follow the on-screen instructions.
+
+!!! info "Free to use"
+    Webots is open-source and completely free. No licence, registration, or payment is required.
+
+---
+
 ## Sessions Overview
 
 All assignments use **pre-written code templates** — you fill in the marked `TODO` sections. You never write code from scratch. Every non-trivial line is explained with inline comments.

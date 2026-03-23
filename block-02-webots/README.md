@@ -30,3 +30,10 @@ Block 2 follows four sessions:
 | 6 | Line following (extended) | `assignments/line-following.md` | `templates/line_following_extended_template.py` | `worlds/line_track_extended.wbt` | ⏳ To do (AP4) |
 
 See [`docs/course-concept.md`](../docs/course-concept.md#6-block-2--classical-agvs-with-webots) for the full pedagogical concept.
+
+## Open Development Tasks (one-time)
+
+> These are internal preparation tasks — not student-facing.
+
+- [ ] **Labyrinth dimensions check:** Verify that the pre-built labyrinth world (`worlds/labyrinth.wbt`) is dimensionally compatible with the robot built in the Webots User Guide Tutorials 1–7. Passage widths and robot footprint must match so students can reuse their tutorial robot directly.
+- [ ] **Line-following world:** Create the Webots world file for the line-following assignment (`worlds/line_track.wbt`) — standard track for the 4-sensor variant. Extended version (`worlds/line_track_extended.wbt`) with colour-varying track follows as part of AP4.
