@@ -6,8 +6,9 @@ This block covers the organisational introduction to the course and the technica
 
 | Item | Description |
 |---|---|
-| Lecturer slides | Presentation material for AGV fundamentals (to be added) |
-| Student research guide | Instructions for the industry-specific research task (to be added) |
+| `session-plan.md` | Detailed lecturer reference: agenda, group work details, preparation checklists |
+| `scenario-cards.pdf` | Printable scenario cards for the Session 1 suitability exercise |
+| Lecture slides | Distributed via Moodle (contain third-party images) |
 
 ## Sessions
 - **Session 1 (3 h):** Organisation, AGV epochs (group work), task-related deployment aspects, deployment modes, alternatives and their suitability (group work)
