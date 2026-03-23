@@ -167,8 +167,8 @@ Issues identified from last semester, all currently open.
 - **Planned measures:**
   - Write a concrete assignment with scenario, requirements, and a grading rubric.
   - Decide on the simulation tool to be used.
-- **Open question:** Given no programming background, a GUI-based logistics tool (e.g. AnyLogic, Plant Simulation) is preferred over Webots or Python. Licensing and learning curve must be checked.
-- **Status:** ⏳ Open — tool decision and assignment to be written (→ AP8)
+- **Tool decision (2026-03-23):** Plant Simulation (Siemens) — institutional licences available; GUI-based, no coding required. Installation on VMs still to be verified.
+- **Status:** ⏳ Open — assignment to be written (→ AP8)
 
 ### 6.4 Business Case Not Structured — and Underweighted
 
@@ -201,6 +201,7 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | ROS block restructured: demo-first, scripts provided, no from-scratch coding | Without programming background, student-led ROS coding is not feasible; understanding and evaluation replace implementation |
 | 2026-03-23 | Business case elevated to primary (mandatory) assessment | BWL students' core competencies align with this format; it was underweighted as an "additional" assessment |
 | 2026-03-23 | AP7 revised: students modify a provided ROS node, not create one from scratch | Writing a ROS node from scratch is unrealistic without programming background; guided modification achieves similar learning outcome |
+| 2026-03-23 | Block 4 simulation tool: Plant Simulation (Siemens) | Institutional licences available; GUI-based, no coding required, industry-standard for manufacturing simulation; preferred over AnyLogic (no additional licence procurement needed) |
 
 ---
 
@@ -235,6 +236,7 @@ Planned work items, updated continuously.
 | **ROS** | Middleware for autonomous AGVs; students run provided scripts, do not write from scratch |
 | **Gazebo** | Simulator for ROS activities (Turtlebot3); pre-configured environments provided |
 | **Create 3 Simulator** | First guided ROS experiments |
+| **Plant Simulation (Siemens)** | Block 4 wave manufacturing simulation; institutional licence available; installation on VMs to be verified |
 | **Computer lab VMs** | Student workstations; all simulation software runs here; VM specs to be confirmed |
 
 ---

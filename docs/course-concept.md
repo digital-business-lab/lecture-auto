@@ -284,20 +284,24 @@ Students apply their accumulated understanding by analysing a complete manufactu
 
 They analyse throughput, lead times, WIP (work in progress), and bottlenecks, and draw conclusions about when and why AGV deployment creates value.
 
-### Tool decision — open
-Given the non-programmer target group, a GUI-based tool is strongly preferred over Webots or Python scripting. Candidates:
+### Tool decision — **Plant Simulation (Siemens)** ✅ decided 2026-03-23
 
-| Tool | Pros | Cons |
-|---|---|---|
-| **AnyLogic** (free educational licence) | Industry standard; visual modelling; drag-and-drop; good AGV library | Steeper learning curve; requires registration |
-| **Plant Simulation (Siemens)** | Very strong in manufacturing; used in industry | Licence cost; more complex |
-| **Webots** | Already familiar from Block 2 | Not designed for logistics simulation; requires coding |
-| **Custom spreadsheet model** | Minimal technical barrier; no installation | Oversimplified; limited educational value |
+Institutional licences for Plant Simulation are available. This resolves Q1.
 
-*Preferred direction:* AnyLogic (educational licence) — but this must be confirmed before the semester. *Not yet decided.*
+**Rationale for this choice:**
+- GUI-based discrete event simulation — no programming required
+- Industry-standard tool widely used in manufacturing and intralogistics
+- Strong built-in support for material flow, conveyor systems, and AGV modelling
+- Licence barrier removed (institutional access confirmed)
+
+**Alternatives considered and not chosen:**
+- *AnyLogic:* Also GUI-based and strong; rejected because Plant Simulation licences are already available, avoiding additional procurement and registration overhead.
+- *Webots:* Already known to students but not suited for logistics process simulation and requires coding.
+- *Spreadsheet model:* Too simplified for meaningful process analysis.
+
+*Assumption:* Plant Simulation is installed or can be installed on the computer lab VMs. Installation and licence server configuration must be verified before the semester — *not yet confirmed*.
 
 ### Open questions
-- Which simulation tool? (see above — must be decided before AP8 can be written)
 - Individual or group assignment?
 - Presentation, written report, or both?
 
@@ -342,7 +346,7 @@ Students develop a business case for the introduction of an AGV system in a defi
 | **ROS** | Software (free) | Block 3 middleware | Pre-configured VMs planned |
 | **Gazebo** | Software (free) | ROS simulation (Turtlebot3) | Pre-configured VMs planned |
 | **Computer lab VMs** | Infrastructure | Student workstations for all simulation | Specs and performance not yet confirmed |
-| **AGV simulation tool** | Software (TBD) | Block 4 wave manufacturing simulation | *Not yet decided* |
+| **Plant Simulation (Siemens)** | Software (licensed) | Block 4 wave manufacturing simulation | Institutional licence available; VM installation to be verified |
 
 ---
 
@@ -350,7 +354,7 @@ Students develop a business case for the introduction of an AGV system in a defi
 
 | # | Question | Priority | Blocks affected |
 |---|---|---|---|
-| Q1 | Which tool for Block 4 AGV simulation (AnyLogic preferred)? | 🔴 High | 4 |
+| ~~Q1~~ | ~~Which tool for Block 4 AGV simulation?~~ | ✅ Resolved — Plant Simulation (Siemens) | 4 |
 | Q2 | Is the business case individual or group work? | 🔴 High | Assessment |
 | Q3 | Is the scenario for the business case fixed or student-chosen? | 🔴 High | Assessment |
 | Q4 | Can the computer lab VMs run Webots and Gazebo at acceptable performance? | 🔴 High | 2, 3 |
