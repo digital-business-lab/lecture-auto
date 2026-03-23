@@ -69,35 +69,32 @@ By the end of the course, students will be able to:
 
 ## 5. Block 1 — Organisation & Foundations
 
-### Sessions 1–2
+### Sessions 1–2 (3 hours each)
 
 ### Content
 
-**Session 1 — Organisation**
-- Course structure and schedule overview
-- Topic assignment for student research (industry-specific AGV applications)
+**Session 1 — Organisation & AGV Foundations**
+- Course structure, schedule, assessment overview, tools & infrastructure
+- AGV epochs — four phases of development (group work + short presentations)
+- Task-related aspects of AGV deployment (load types, flow regularity, throughput)
+- Deployment modes (unit load carrier, towing, fork AGV, underride, assembly)
+- Alternatives to AGVs (conveyors, forklifts, AMRs, manual transport)
+- Suitability of alternatives — which solution fits which scenario? (group work + short presentations)
 
-**Sessions 1–2 — AGV Fundamentals (lecturer presentation)**
-- History and evolution of AGVs
-- Modern application domains (automotive, e-commerce, healthcare, food industry, etc.)
-- AGV technology deep-dive:
-  - Navigation and guidance systems (inductive, laser, natural navigation)
-  - Safety systems and standards
-  - Fleet management and control systems
-  - Vehicle types and load handling
-  - Operating environment requirements
-  - Future trends (AI-based navigation, collaborative robots, AMRs)
-
-**Student research component**
-- Students research and present industry-specific AGV applications
-- Rationale: Keeps lecturer input focused on technical fundamentals; builds student ownership and relevance
+**Session 2 — AGV Technology**
+- Industry-specific aspects and examples: automotive, e-commerce, healthcare, food, pharma (group work + plenary discussion)
+- Technology of the overall system: navigation & guidance, fleet management, safety, WMS/ERP integration
+- Technology of the transport vehicles: vehicle types, load handling, energy supply, sensor systems
 
 ### Pedagogy
-- Lecturer input for technical foundations; student presentations for business context
+- Alternates between short lecturer input and group work throughout both sessions
+- Group work tasks are scenario- or sector-based; each group reports back in 2–3 min
 - *Decision (2026-03-23):* Terminology definition section removed — learning benefit too low relative to time cost
+- *Update (2026-03-23):* Sessions extended to 3 h each; group work and short presentations integrated directly into both sessions
 
 ### Deliverables
-- Students: short research presentation on industry-specific AGV applications (individual or pairs)
+- Session 1: group presentations on AGV epochs and alternative suitability (in-session)
+- Session 2: group report-back on industry-specific AGV applications (in-session)
 
 ---
 

@@ -1,99 +1,97 @@
 # Block 1 — Detailed Session Plan
 
 > **Audience:** Lecturer reference. Not published on the course website.
-> **Format:** Each session approx. 90 minutes. Lecture + lab setting.
+> **Format:** Two sessions of approx. 3 hours each. Lecture + group work + short presentations.
 
 ---
 
-## Session 1 — Organisation & Course Introduction
+## Session 1 — Organisation & AGV Foundations
 
-**Duration:** 90 min · **Method:** Lecturer presentation, plenary discussion, group task assignment
+**Duration:** 3 h · **Method:** Lecturer input, group work, plenary presentations
 
 ### Agenda
 
-| Time | Duration | Activity | Method | Material |
-|---|---|---|---|---|
-| 0:00 | 10 min | Welcome & introduction | Lecturer input | Slide: title + agenda |
-| 0:10 | 15 min | Course overview: topic, format, blocks, field trip | Lecturer input | Slides: course map |
-| 0:25 | 15 min | Assessment explained: 70% in-semester + 30% business case | Lecturer input + Q&A | Slides: assessment overview |
-| 0:40 | 10 min | Tools & infrastructure: Webots, ROS, Plant Simulation, Moodle | Lecturer input | Slides: tool overview |
-| 0:50 | 10 min | AGV first impression: short video clip (2–3 min) + brief orientation | Plenary discussion | Video (e.g. Amazon fulfilment centre, automotive line) |
-| 1:00 | 20 min | Research task briefing + topic assignment | Group task | Printed or digital assignment sheet (→ research-assignment.md) |
-| 1:20 | 10 min | Questions, housekeeping, Moodle login check | Plenary | — |
+| # | Topic | Method | Material |
+|---|---|---|---|
+| 1 | **Organisation** — course structure, schedule, assessment, tools & infrastructure | Lecturer input | Slides: course map, assessment overview, tool overview |
+| 2 | **AGV epochs** — four phases of AGV/FTS development | Group work + short presentations | Assignment sheet: one epoch per group; timeline reference |
+| 3 | **Task-related aspects of AGV deployment** — which transport tasks suit AGVs? (load types, flow regularity, throughput, cycle times) | Lecturer input | Slides with examples |
+| 4 | **Deployment modes** — unit load carrier, towing, fork AGV, underride, assembly line | Lecturer input | Slides with photos |
+| 5 | **Alternatives to AGVs** — conveyor systems, forklifts, AMRs, manual transport | Lecturer input | Slides: comparison overview |
+| 6 | **Suitability of alternatives** — which solution fits which scenario? | Group work + short presentations | Scenario cards (one scenario per group) |
+
+### Group Work Details
+
+**Topic 2 — AGV epochs:**
+- Groups of 2–3 students; one epoch per group
+- Epochs: (1) wire-guided early systems, (2) laser/optical guidance era, (3) natural navigation & fleet management, (4) AMR and AI-based systems
+- Task: summarise key characteristics and give one concrete example
+- Presentation: 2–3 min per group
+
+**Topic 6 — Suitability of alternatives:**
+- Groups receive a short scenario card (e.g. "mid-sized e-commerce warehouse, high SKU variety, variable throughput")
+- Task: recommend one transport solution and justify the choice against the alternatives presented
+- Presentation: 2–3 min per group
 
 ### Preparation Checklist
-- [ ] Slides ready and uploaded to Moodle
-- [ ] Research topic list prepared (one topic per group or pair)
-- [ ] Assignment sheet available (printed or digital)
-- [ ] AGV video clip selected and tested
-- [ ] Moodle course space active and accessible
+- [ ] Slides for organisational part (course map, assessment, tools)
+- [ ] Epoch assignment cards (4 cards, one per group)
+- [ ] Scenario cards for suitability exercise (one per group)
+- [ ] Timeline graphic for AGV epochs
+- [ ] Short video clip of an AGV system in operation (2–3 min, warm-up or intro)
 
 ### Notes
-- Keep the assessment explanation concrete — show the grading table, not just the percentages.
-- The topic assignment should be done in session, not upfront — avoids "homework evasion" before session 1.
-- Leave 5–10 min buffer; first sessions always run long.
+- Keep the organisational part focused — students do not need every detail in session 1; point them to Moodle for the rest.
+- The epoch group work doubles as a first icebreaker; keep groups small and time-box strictly.
+- The suitability exercise builds on the immediately preceding lecturer content — sequence matters.
 
 ---
 
-## Session 2 — AGV Fundamentals
+## Session 2 — AGV Technology
 
-**Duration:** 90 min · **Method:** Lecturer presentation, structured discussion, visual aids
+**Duration:** 3 h · **Method:** Group work, lecturer input
 
 ### Agenda
 
-| Time | Duration | Activity | Method | Material |
-|---|---|---|---|---|
-| 0:00 | 5 min | Recap Session 1, questions on research task | Plenary | — |
-| 0:05 | 15 min | **History & evolution of AGVs** — four epochs, key milestones | Lecturer input | Slides + timeline graphic |
-| 0:20 | 20 min | **Application domains** — automotive, e-commerce, healthcare, food, pharma | Lecturer input + image-driven | Slides with real-world photos |
-| 0:40 | 25 min | **AGV technology deep-dive** | Lecturer input | Slides (see breakdown below) |
-| 1:05 | 10 min | **AGV vs. AMR** — key distinction, when to use which | Lecturer input + discussion prompt | Slide: comparison table |
-| 1:15 | 10 min | Preview of Block 2 (Webots), research reminder, Q&A | Plenary | — |
+| # | Topic | Method | Material |
+|---|---|---|---|
+| 1 | **Industry-specific aspects and examples** — AGV applications across sectors (automotive, e-commerce, healthcare, food, pharma) | Group work + plenary discussion | Research cards or short reading materials per sector |
+| 2 | **Technology of the overall system** — navigation & guidance, fleet management, safety, infrastructure, WMS/ERP integration | Lecturer input | Slides with diagrams |
+| 3 | **Technology of the transport vehicles** — vehicle types in detail, load handling, energy supply, sensor systems | Lecturer input | Slides with photos and technical sketches |
 
-### Technology Deep-Dive Breakdown (0:40–1:05)
+### Group Work Details
 
-| Sub-topic | Key points | Approx. time |
-|---|---|---|
-| Navigation & guidance | Inductive, optical, laser (reflector), natural (SLAM), magnetic spots | 8 min |
-| Safety systems | EN ISO 3691-4, laser scanners, bumpers, warning signals, speed zones | 5 min |
-| Fleet management | Order assignment, traffic control, charging management, WMS/ERP interface | 5 min |
-| Vehicle types | Towing, unit load carrier, fork AGV, underride, assembly AGV | 4 min |
-| Operating environment | Floor requirements, infrastructure, traffic zones, charging bays | 3 min |
+**Topic 1 — Industry-specific aspects:**
+- Groups of 2–3 students; one sector per group
+- Task: identify the specific requirements of the sector (load types, environment, cycle times, regulatory constraints) and describe one concrete AGV application
+- Plenary: brief report-back (2–3 min per group) + lecturer comment
+- Note: this can re-use groups from session 1 or be reassigned
 
-### Discussion Prompts
-- "Where in your daily life might you have already encountered an AGV or AMR?" (warm-up)
-- After the AMR vs. AGV section: "Which type would you recommend for a medium-sized e-commerce warehouse — and why?"
+### Technology Deep-Dive Breakdown (Topics 2 & 3)
 
-### Preparation Checklist
-- [ ] Slides with real photos from application domains (check copyright before using)
-- [ ] Timeline graphic for four epochs
-- [ ] Comparison table AGV vs. AMR
-- [ ] Discussion prompt questions in notes
-
-### Notes
-- Session 2 is content-heavy. Use images and short video clips to break up the flow.
-- The AGV vs. AMR distinction is explicitly exam-relevant — flag this clearly.
-- Students have no technical background: use analogies (e.g. "laser scanner like a rotating flashlight").
-- Avoid overwhelming with technical detail — the goal is conceptual understanding, not engineering.
-
----
-
-## Research Presentations — Scheduled During Block 2
-
-Student research presentations are not in Sessions 1–2 but are scheduled during Block 2 (Sessions 3–8), e.g. as a 10-minute slot at the start of selected sessions. This keeps Block 1 focused on foundations and gives groups time to prepare.
-
-**Scheduling suggestion:**
-
-| Session | Presentation slot |
+| Sub-topic | Key points |
 |---|---|
-| Session 3 | Group 1 (e.g. automotive) |
-| Session 4 | Group 2 (e.g. e-commerce) |
-| Session 5 | Group 3 (e.g. healthcare) |
-| Session 6 | Group 4 (e.g. food & beverage) |
-| Session 7 | Group 5 (e.g. pharma or aerospace) |
+| Navigation & guidance | Inductive, optical, laser (reflector), natural (SLAM), magnetic spots |
+| Fleet management | Order assignment, traffic control, charging management, WMS/ERP interface |
+| Safety | EN ISO 3691-4, laser scanners, bumpers, warning signals, speed zones |
+| Infrastructure | Floor requirements, traffic zones, charging bays, route planning |
+| Vehicle types | Towing AGV, unit load carrier, fork AGV, underride AGV, assembly AGV |
+| Load handling | Roller conveyors, lift platforms, fork mechanisms, custom interfaces |
+| Energy supply | Opportunity charging, inductive charging, battery swap |
+| Sensor systems | Laser scanners, ultrasonic, cameras, encoders |
 
-Adjust to the number of student groups.
+### Preparation Checklist
+- [ ] Sector research cards (automotive, e-commerce, healthcare, food, pharma — one per group)
+- [ ] Slides for overall system technology
+- [ ] Slides for vehicle technology (photos, technical drawings)
+- [ ] AGV vs. AMR comparison (brief — builds on Session 1 content)
+
+### Notes
+- The industry group work at the start of session 2 connects back to the suitability exercise from session 1 — draw this link explicitly.
+- Use analogies throughout the technology sections: "fleet management like air traffic control", "laser scanner like a rotating flashlight".
+- Students have no technical background — focus on function and business relevance, not engineering detail.
+- Flag the AGV vs. AMR distinction as relevant for the assessment.
 
 ---
 
-*Created 2026-03-23. Lecturer reference only.*
+*Updated 2026-03-23. Lecturer reference only.*
