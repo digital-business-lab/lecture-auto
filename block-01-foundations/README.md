@@ -6,7 +6,8 @@ This block covers the organisational introduction to the course and the technica
 
 | Item | Description |
 |---|---|
-| `session-plan.md` | Detailed lecturer reference: agenda, group work details, preparation checklists |
+| `session-01.md` | Detailed lecturer reference: Session 1 agenda, group work details, preparation checklist |
+| `session-02.md` | Detailed lecturer reference: Session 2 agenda, group work details, preparation checklist |
 | `scenario-cards.pdf` | Printable scenario cards for the Session 1 suitability exercise |
 | Lecture slides | Distributed via Moodle (contain third-party images) |
 
@@ -25,6 +26,8 @@ This block covers the organisational introduction to the course and the technica
 ### Deliverables
 - Group presentations on AGV epochs and alternative suitability (in-session)
 
+→ See [`session-01.md`](session-01.md) for full details.
+
 ---
 
 ## Session 2 — AGV Technology (3 h)
@@ -36,6 +39,8 @@ This block covers the organisational introduction to the course and the technica
 
 ### Deliverables
 - Group report-back on industry-specific AGV applications (in-session)
+
+→ See [`session-02.md`](session-02.md) for full details.
 
 ---
 
