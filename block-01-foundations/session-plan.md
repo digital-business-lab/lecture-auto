@@ -28,29 +28,44 @@
 - Task: summarise key characteristics and give one concrete example
 - Presentation: 2–3 min per group
 
-**Topic 6 — Suitability of alternatives:**
-- Groups receive a scenario card (see below); one scenario per group
-- Task: fill in the decision matrix for their scenario, then recommend one transport solution and justify the choice
-- Presentation: 2–3 min per group — show the completed matrix and state the recommendation
+**Topic 6 — Suitability of alternatives (two-step structure):**
 
-**Decision matrix (handed out on the scenario card):**
+*Step 1 — Lecturer input (whole class):*
+Before the group work, the lecturer presents a pre-filled comparison table of all five alternatives across the five criteria. This gives every group the same reference knowledge and avoids each group having to research generic properties independently.
 
-Groups rate each alternative on five criteria using Low / Medium / High:
+Reference table (shown on slide and printed on scenario card):
 
 | Alternative | Flexibility | Investment cost | Personnel requirement | Throughput capacity | Infrastructure effort |
 |---|---|---|---|---|---|
-| Manual transport | | | | | |
-| Forklift | | | | | |
-| Conveyor system | | | | | |
-| AGV | | | | | |
-| AMR | | | | | |
+| Manual transport | High | Low | High | Low | None |
+| Forklift | High | Low–Medium | Medium | Medium | Low |
+| Conveyor system | Low | High | Low | High | High |
+| AGV | Low–Medium | High | Low | High | High |
+| AMR | High | High | Low | Medium | Low |
 
-Criteria definitions (printed on the card):
+Criteria definitions (on slide and printed on scenario card):
 - **Flexibility** — ease of adapting routes or layout without major cost
 - **Investment cost** — upfront capital expenditure
 - **Personnel requirement** — ongoing need for human operators
 - **Throughput capacity** — volume of transport tasks the system can handle
 - **Infrastructure effort** — floor preparation, IT integration, facility changes required
+
+*Step 2 — Group work:*
+- Groups receive a scenario card with a concrete logistics situation; one scenario per group
+- Task: work through each criterion and explain how it plays out in their specific scenario — then derive a recommendation
+- Output template (printed on the scenario card):
+
+| Criterion | How does it apply to our scenario? | Implication for the choice |
+|---|---|---|
+| Flexibility | | |
+| Investment cost | | |
+| Personnel requirement | | |
+| Throughput capacity | | |
+| Infrastructure effort | | |
+
+**Our recommendation:** *(alternative)* — because *(2–3 sentences)*
+
+- Presentation: 2–3 min per group — walk through two or three criteria and state the recommendation
 
 **Scenario cards (one per group):**
 
@@ -62,9 +77,9 @@ Criteria definitions (printed on the card):
 | D | *Hospital logistics:* mixed-use corridors shared with people, variable demand across wards, sterile goods and linen, strict hygiene requirements |
 | E | *Food & beverage warehouse:* cold-storage environment (−22 °C), pallet-level transport, medium throughput, strict traceability requirements |
 
-**Lecturer note:** There is no single correct answer — the matrix is a tool for structuring the argument, not for computing an automatic verdict. Debrief by asking groups what they would change if one parameter shifted (e.g. "what if throughput doubled?"). This previews the sensitivity analysis logic used later in the business case.
+**Lecturer note:** There is no single correct answer. Debrief by asking groups what they would change if one parameter shifted (e.g. "what if throughput doubled?" or "what if the building layout changes every six months?"). This previews the sensitivity analysis logic used later in the business case.
 
-**Connection to assessment:** The decision matrix is a simplified version of the Nutzwertanalyse (utility value analysis) in the business case. Naming this connection explicitly in the debrief helps students see the transfer.
+**Connection to assessment:** The two-step structure — first establish general properties, then apply them to a concrete situation — is the same logic used in the Nutzwertanalyse in the business case. Name this connection explicitly in the debrief.
 
 ### Preparation Checklist
 - [ ] Slides for organisational part (course map, assessment, tools)

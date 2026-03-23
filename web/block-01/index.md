@@ -54,22 +54,40 @@ Both sessions include structured group work with short presentations (2–3 min 
 | 1 | Suitability of alternatives — one logistics scenario per group | Completed decision matrix + solution recommendation |
 | 2 | Industry-specific AGV applications — one sector per group | Sector requirements + one application example |
 
-### Suitability exercise — decision matrix
+### Suitability exercise — two-step approach
 
-For the suitability group work in Session 1, each group receives a logistics scenario and rates each transport alternative across five criteria:
+The suitability group work in Session 1 is structured in two steps.
+
+**Step 1 — Reference table (whole class, lecturer input)**
+
+Before the group work, the lecturer presents a comparison of all alternatives across five criteria. This table is your shared reference for Step 2:
 
 | Alternative | Flexibility | Investment cost | Personnel requirement | Throughput capacity | Infrastructure effort |
 |---|---|---|---|---|---|
-| Manual transport | | | | | |
-| Forklift | | | | | |
-| Conveyor system | | | | | |
-| AGV | | | | | |
-| AMR | | | | | |
+| Manual transport | High | Low | High | Low | None |
+| Forklift | High | Low–Medium | Medium | Medium | Low |
+| Conveyor system | Low | High | Low | High | High |
+| AGV | Low–Medium | High | Low | High | High |
+| AMR | High | High | Low | Medium | Low |
 
-Rating scale: **Low / Medium / High**
+**Step 2 — Scenario group work**
+
+Each group receives a concrete logistics scenario and uses the reference table to reason through it. The task is not to re-rate the alternatives in general, but to explain how each criterion plays out in *your specific scenario* — and to derive a recommendation from that reasoning.
+
+Output template (on the scenario card):
+
+| Criterion | How does it apply to our scenario? | Implication for the choice |
+|---|---|---|
+| Flexibility | | |
+| Investment cost | | |
+| Personnel requirement | | |
+| Throughput capacity | | |
+| Infrastructure effort | | |
+
+**Our recommendation:** *(alternative)* — because *(2–3 sentences)*
 
 !!! info "Connection to the business case"
-    This matrix is a simplified version of the Nutzwertanalyse (utility value analysis) you will use in the business case assessment. Practising the structured comparison logic here makes the later task significantly easier.
+    This two-step structure — establish general properties, then apply them to a concrete situation — is the same logic used in the Nutzwertanalyse in the business case assessment. Practising it here makes the later task significantly easier.
 
 ---
 
