@@ -34,8 +34,6 @@ This checklist covers everything that must be verified, installed, or decided be
 
 - [ ] **Turtlebot3:** Power on and verify ROS connectivity; run a brief SLAM test to confirm sensors and motors are functional
 - [ ] **LoCoBot (arm + gripper):** Power on and verify ROS connectivity; test the gripper mechanism; run the provided motion script from `block-03-ros/scripts/`
-- [ ] **Alphabot:** Power on and verify the labyrinth demo controller runs correctly
-- [ ] **Dobot:** Assemble (if stored disassembled); calibrate; run the line-following demo to confirm correct operation ⚠️ *Needs assembly and testing before each semester*
 - [ ] Confirm all hardware is physically present and undamaged
 - [ ] Charge or replace batteries as needed
 
@@ -84,7 +82,6 @@ These questions from [`docs/course-concept.md`](./course-concept.md) must be ans
 | How is the business case integrated into the schedule? | Course schedule |
 | Is the extended line-following variant (8 sensors) mandatory or optional? | `block-02-webots/` |
 | Is a competition format used for line following, and how is it assessed? | `block-02-webots/` |
-| Should students deploy their own labyrinth algorithm on the Alphabot? | `block-02-webots/` |
 
 ---
 
