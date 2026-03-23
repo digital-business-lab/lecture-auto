@@ -1,8 +1,8 @@
 # Block 1 — Organisation & Foundations
 
-**Sessions 1–2 · Duration: approx. 2 weeks**
+**Sessions 1–2 · Duration: approx. 2 weeks · 3 hours per session**
 
-This block introduces the course structure and builds the theoretical foundation for all subsequent blocks. It covers the history, technology, and modern applications of Automated Guided Vehicles (AGVs).
+This block introduces the course structure and builds the theoretical foundation for all subsequent blocks. It covers the history, technology, and modern applications of Automated Guided Vehicles (AGVs) — with regular group work and short in-session presentations.
 
 ---
 
@@ -13,28 +13,29 @@ By the end of this block, you will be able to:
 - [ ] Describe what an AGV is and how it differs from other intralogistics systems
 - [ ] Explain the four historical epochs of AGV development
 - [ ] Name and explain the core technical components of an AGV system
-- [ ] Present industry-specific examples of AGV applications in your assigned sector
+- [ ] Assess the suitability of AGVs and their alternatives for a given logistics scenario
+- [ ] Present industry-specific examples of AGV applications in an assigned sector
 
 ---
 
 ## Sessions Overview
 
-### Session 1 — Organisation (90 min)
+### Session 1 — Organisation & AGV Foundations (3 h)
 
 - Welcome and course introduction
 - Course structure, schedule, and assessment overview (70% in-semester + 30% business case)
 - Tools overview: Webots, ROS, Plant Simulation
-- First AGV impressions: short video clip
-- Research task briefing and group topic assignment
+- **Group work:** AGV epochs — each group researches one development phase and presents briefly
+- Task-related aspects of AGV deployment: which transport tasks are suitable?
+- Deployment modes: unit load carriers, towing vehicles, fork AGVs, underride vehicles, assembly AGVs
+- Alternatives to AGVs: conveyor systems, forklifts, AMRs, manual transport
+- **Group work:** Suitability of alternatives — each group evaluates a scenario and recommends a solution
 
-### Session 2 — AGV Fundamentals (90 min)
+### Session 2 — AGV Technology (3 h)
 
-Lecturer presentation with structured discussion:
-
-- History and evolution of AGVs — four epochs and key milestones
-- Application domains: automotive, e-commerce, healthcare, food & beverage, pharma
-- Technology deep-dive: navigation, safety, fleet management, vehicle types, operating environment
-- AGV vs. AMR: key distinction and decision criteria
+- **Group work:** Industry-specific aspects and examples — each group covers one sector (automotive, e-commerce, healthcare, food & beverage, pharma) and reports back
+- Technology of the overall system: navigation & guidance, fleet management, safety, WMS/ERP integration
+- Technology of the transport vehicles: vehicle types in detail, load handling, energy supply, sensor systems
 
 See [AGV Fundamentals](agv-fundamentals.md) for the complete self-study version of the lecture content.
 
@@ -43,14 +44,15 @@ See [AGV Fundamentals](agv-fundamentals.md) for the complete self-study version 
 
 ---
 
-## Student Assignment — Industry Research
+## In-Session Group Work
 
-!!! example "Group task — presented during Block 2"
-    Each group researches AGV applications in one specific industry sector and presents findings to the class during Sessions 3–7.
+Both sessions include structured group work with short presentations (2–3 min per group). Participation is active — expect to present your group's findings to the class.
 
-    **Assigned sectors:** Automotive · E-commerce & retail · Healthcare · Food & beverage · Pharma
-
-    → [Full assignment description and instructions](research-assignment.md)
+| Session | Group task | Output |
+|---|---|---|
+| 1 | AGV epochs — one epoch per group | Key characteristics + one concrete example |
+| 1 | Suitability of alternatives — one logistics scenario per group | Solution recommendation + justification |
+| 2 | Industry-specific AGV applications — one sector per group | Sector requirements + one application example |
 
 ---
 
@@ -59,7 +61,6 @@ See [AGV Fundamentals](agv-fundamentals.md) for the complete self-study version 
 | Material | Description | Where to find |
 |---|---|---|
 | Lecture slides | Sessions 1–2 (AGV foundations) | Moodle |
-| Research assignment | Group task instructions, sources, evaluation criteria | [research-assignment.md](research-assignment.md) |
 | Self-study content | Full AGV fundamentals for revision | [agv-fundamentals.md](agv-fundamentals.md) |
 
 ---
