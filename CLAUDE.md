@@ -73,6 +73,8 @@ lecture-auto/
 **Rules:**
 - Never put detailed content directly into `README.md`. Always use `docs/*.md` or the relevant block folder.
 - Each block folder contains its own `README.md` describing what belongs there.
+- **Copyright rule:** Only self-authored material may be committed. Slide decks containing third-party images (stock photos, publisher figures, manufacturer images) must not be added to the repository. Distribute slides via Moodle or the university's internal file system only.
+- **Visibility:** The repository is currently private. If it is ever made public, all content must be verified to be freely licensable or self-authored before publication.
 
 ### 3.3 Git Conventions
 
@@ -222,6 +224,9 @@ All significant decisions are recorded here so that the reasoning remains tracea
 | 2026-03-23 | Repository organised into block-based folder structure | Each block is self-contained with its own `assignments/`, `templates/`, and resource folders; avoids flat-directory clutter as material accumulates |
 | 2026-03-23 | `docs/semester-prep.md` introduced as recurring preparation checklist | Ensures infrastructure (VMs, hardware), content, and open decisions are verified before each semester; includes a lessons-learned section |
 | 2026-03-23 | Assessment structure defined: 70% in-semester + 30% semester break | Component 1 (70%): Webots, ROS, Plant Simulation assignments during the semester; Component 2 (30%): business case submitted in the semester break |
+| 2026-03-23 | Internal weighting of 70% deferred (Q4a) | Cannot be decided meaningfully until AP3, AP5, and AP8 are fully scoped |
+| 2026-03-23 | Lecture delivery: hybrid approach (Option C) | Existing slides kept for live sessions; MkDocs companion site for self-study material; Wooclap for in-class interaction |
+| 2026-03-23 | Repository remains private; copyrighted slide content stays outside the repo | Slides contain third-party material (stock photos, publisher figures, manufacturer images) that cannot be published; only self-authored material goes into the repo |
 
 ---
 
@@ -242,6 +247,7 @@ Planned work items, updated continuously.
 | AP8 | AGV simulation assignment: wave manufacturing scenario | ⏳ Open |
 | AP9 | Business case template + grading rubric | ⏳ Open |
 | AP10 | Finalise overall concept and align with new semester schedule | ⏳ Open |
+| AP11 | Set up MkDocs companion site for self-study material (Block 1 theory as pilot) | ⏳ Open |
 
 ---
 
