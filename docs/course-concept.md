@@ -337,7 +337,7 @@ Students are assessed on their hands-on work across the three practical blocks. 
 | Block 3 | ROS activities | Activity completion + written responses to interpretation questions |
 | Block 4 | AGV simulation | Simulation results + analysis report |
 
-**Open question:** How is the 70% distributed internally across blocks and assignments? To be decided before AP3/AP5/AP8 are written, as it affects rubric design.
+**Open question (deferred):** How is the 70% distributed internally across blocks and assignments? Deferred until AP3, AP5, and AP8 are sufficiently defined — the weighting depends on the scope and depth of each assignment.
 
 ---
 
@@ -392,7 +392,7 @@ Students develop a business case for the introduction of an AGV system in a defi
 | Q2 | Is the business case individual or group work? | 🔴 High | Assessment |
 | Q3 | Is the scenario for the business case fixed or student-chosen? | 🔴 High | Assessment |
 | Q4 | Can the computer lab VMs run Webots and Gazebo at acceptable performance? | 🟡 Medium | 2, 3 |
-| Q4a | How is the 70% distributed internally across Blocks 2, 3, and 4? | 🔴 High | Assessment |
+| Q4a | How is the 70% distributed internally across Blocks 2, 3, and 4? | ⏸ Deferred — decide once AP3/AP5/AP8 are complete | Assessment |
 | Q5 | Is the extended line-following variant (8 sensors) mandatory or optional? | 🟡 Medium | 2 |
 | Q6 | Should students deploy their own labyrinth algorithm on the Alphabot? | 🟡 Medium | 2 |
 | Q7 | Is a competition format used for line following, and how is it evaluated? | 🟡 Medium | 2 |

@@ -195,7 +195,7 @@ Issues identified from last semester, all currently open.
   - Define a grading rubric.
   - Decide on integration into the course schedule.
 - **Assessment structure (2026-03-23):** Business case is Component 2, weighted at 30%, submitted during the semester break. Component 1 (70%) covers in-semester hands-on work across Blocks 2–4.
-- **Open question:** Internal weighting of the 70% across blocks not yet decided (→ Q4a).
+- **Open question (deferred):** Internal weighting of the 70% across blocks (→ Q4a) — deferred until AP3, AP5, and AP8 are defined.
 - **Status:** ⏳ Open — concept and template pending (→ AP9)
 
 ---
