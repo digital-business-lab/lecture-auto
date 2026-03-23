@@ -52,9 +52,15 @@ nav:
   - Home: index.md
   - Block 1 — Foundations:
     - Overview: block-01/index.md
+    - Session 1 — Organisation & AGV Foundations: block-01/session-01.md
+    - Session 2 — AGV Technology: block-01/session-02.md
     - AGV Fundamentals: block-01/agv-fundamentals.md
   - Block 2 — Webots:
     - Overview: block-02/index.md
+    - Session 3 — Webots Tutorials: block-02/session-03.md
+    - Session 4 — Labyrinth: block-02/session-04.md
+    - Session 5 — Sensor Extension: block-02/session-05.md
+    - Session 6 — Line Following: block-02/session-06.md
   - Block 3 — ROS:
     - Overview: block-03/index.md
   - Block 4 — Simulation:
