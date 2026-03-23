@@ -1,165 +1,225 @@
-# CLAUDE.md – Projektgedächtnis: Autonome Logistiksysteme und IoT
+# CLAUDE.md — Project Memory: Autonomous Logistics Systems and IoT
 
-> Diese Datei dient als persistentes Gedächtnis für die Zusammenarbeit zwischen Claude und dem Dozenten.
-> Sie wird nach jeder relevanten Entscheidung oder Änderung aktualisiert.
-> Letztes Update: 2026-03-23
+> **Always read this file first** before starting any work on this project.
+> This is a living document. Update it after every significant decision or session.
+> Last updated: 2026-03-23
 
 ---
 
-## 1. Projektübersicht
+## 1. Project Overview
 
-| Feld | Inhalt |
+| Field | Content |
 |---|---|
-| **Vorlesung** | Autonome Logistiksysteme und IoT |
-| **Niveau** | Master |
-| **Thema** | Einsatz von Fahrerlosen Transportsystemen (FTS) in der Intralogistik |
-| **Repository** | https://github.com/digital-business-lab/lecture-auto |
-| **Zweck des Repos** | Begleitmaterial zur Vorlesung (Aufgaben, Tutorials, Simulationen, Dokumente) |
+| **Course** | Autonomous Logistics Systems and IoT |
+| **Level** | Master |
+| **Topic** | Use of Automated Guided Vehicles (AGVs) in intralogistics |
+| **GitHub Organisation** | digital-business-lab |
+| **Repository** | lecture-auto |
+| **URL** | https://github.com/digital-business-lab/lecture-auto |
+| **Purpose** | Accompanying material for the course (assignments, tutorials, simulations, documents) |
 
 ---
 
-## 2. Ziele des Projekts
+## 2. Project Goals
 
-Dieses Repository soll die Vorlesung mit strukturiertem, versioniertem Material begleiten und semester-übergreifend weiterentwickelt werden. Konkret geht es um:
+This repository provides structured, version-controlled material to accompany the course across multiple semesters. The three primary goals are:
 
-1. **Verfeinerung des Vorlesungskonzepts** auf Basis der Erfahrungen aus dem letzten Semester
-2. **Erstellung von Begleitmaterial** (Aufgabenblätter, Tutorials, Skripte, Simulationsdateien)
-3. **Dokumentation von Entscheidungen** zu Didaktik, Werkzeugen und Inhalten
+1. **Refine the course concept** based on lessons learned from the previous semester.
+2. **Create accompanying material** — assignment sheets, tutorials, scripts, simulation files.
+3. **Document decisions** regarding pedagogy, tools, and content so that future iterations can build on past reasoning.
 
 ---
 
-## 3. Vorlesungsstruktur (Stand: letztes Semester)
+## 3. Working Conventions
 
-Die Vorlesung gliedert sich in folgende Blöcke:
+### 3.1 Language
 
-### Block 1 – Organisatorisches & Grundlagen (Termin 1–2)
-- Gliederung der Vorlesung, Themenvergabe
-- Geschichte und moderne Anwendungsgebiete von FTS
-- FTS-Technik: Spurführung, Sicherheit, Leitsteuerung, Transportfahrzeug, Umfeld, Zukunft
-- **Didaktik:** Dozentenvortrag + Studierendenrecherche (branchenbezogene Aspekte)
-- **Entscheidung:** Begriffsdefinition wurde entfernt (Mehrwert gering, Zeitaufwand hoch)
-
-### Block 2 – Klassische FTF mit Webots (Termine 3–8, ca. 6 Wochen)
-Hands-On-Phase mit der Simulationsumgebung **Webots** und physischer Hardware.
-
-| Aufgabe | Beschreibung |
+| Context | Language |
 |---|---|
-| **Hindernisvermeidung** | Eigenen Roboter modellieren, Controller zur Hindernisvermeidung implementieren |
-| **Labyrinth** | Labyrinthalgorithmus entwickeln und präsentieren; Hardware-Demo im Alphabot |
-| **Spurführung** | Linienverfolgung in Webots (Basis: 4 Sensoren; Extended: 8 Sensoren, andere Farben); Demo mit Dobot |
+| Communication with the lecturer | German |
+| All files, documentation, code, and comments in the repository | English |
 
-- **Exkursion:** Eingebettet in diesen Block (26.05.)
+### 3.2 Repository Structure
 
-### Block 3 – Autonome FTF mit ROS (Termine 9–10, ca. 2 Wochen)
-Einstieg in **ROS (Robot Operating System)** als Robotik-Middleware.
-
-| Einheit | Inhalte |
+| Path | Purpose |
 |---|---|
-| **ROS-Grundlagen** | Warum ROS? Struktur, Packages, Topics; Demo mit Turtlebot-Sensordaten; Hands-On mit Create 3 Simulator |
-| **SLAM & Navigation** | Lokalisierung (GPS, Apriltags, Indoor), SLAM, Pfadplanung; Gazebo-Simulator (Turtlebot 3/4); Demo mit echtem Turtlebot |
-| **Manipulation** | Demo: Roboterarm des LoCoBot; Hands-On: Python-Bewegungsablauf im LoCoBot-Simulator |
+| `README.md` | Slim overview and navigation hub only — no detailed content |
+| `CLAUDE.md` | This file; always read first; the single source of truth for project state |
+| `docs/*.md` | Detailed documentation for specific topics; linked from `README.md` |
 
-### Block 4 – FTS-Simulation (Termine 11–13, ca. 3 Wochen)
-- **Thema:** Simulation der Wellenfertigung – klassisch vs. mit FTS
-- Ausgabe → Bearbeitung → (vermutlich: Präsentation)
+**Rule:** Never put detailed content directly into `README.md`. Always put it in the appropriate `docs/*.md` file and link from `README.md`.
 
-### Zusatzleistung – Business Case
-- Marktrecherche & Informationsbeschaffung
-- Business-Case-Berechnung
-- Lastenheft
-- Nutzwertanalyse
+### 3.3 Git Conventions
 
----
+- **Commit messages:** English, imperative mood, conventional commits format
+  - `feat: add Webots obstacle avoidance tutorial`
+  - `fix: correct sensor count in line-following assignment`
+  - `docs: update decision log in CLAUDE.md`
+- **Branches:** Feature branches for larger work packages; direct commits to `main` for documentation updates.
+- **Commit scope:** One logical change per commit; keep commits small and reviewable.
 
-## 4. Bekannte Schwachstellen & Verbesserungsbedarf
+### 3.4 Maintaining This File
 
-Diese Punkte wurden aus den Erfahrungen des letzten Semesters identifiziert und sollen in dieser Iteration adressiert werden:
+`CLAUDE.md` is a living document. The following rules apply at the end of every session:
 
-### 4.1 Webots-Einstieg zu schwer
-- **Problem:** Studierende hatten große Schwierigkeiten mit dem Einstieg in Webots; die Bearbeitungszeit musste verlängert werden.
-- **Geplante Maßnahmen:**
-  - Das Labyrinth bereits vorgeben, damit sich Studierende auf das FTF-Verhalten konzentrieren können (nicht auf die Modellierung der Umgebung)
-  - Bessere/strukturiertere Einführungstutorials bereitstellen
-  - VM-Setup vereinfachen oder Schritt-für-Schritt-Anleitung ergänzen
-- **Status:** ⏳ Offen – Material muss erstellt werden
-
-### 4.2 ROS-Einheit ausbauen
-- **Problem:** ROS-Block ist inhaltlich skizziert, aber die Hands-On-Aufgaben sind noch nicht vollständig ausgearbeitet.
-- **Geplante Maßnahmen:**
-  - Detaillierte Aufgabenblätter für ROS-Grundlagen, SLAM und Navigation
-  - Demo-Apriltags integrieren
-  - Mini-Projekt: Programmierung eines ROS-Nodes
-- **Status:** ⏳ Offen – Aufgaben müssen konkretisiert werden
-
-### 4.3 FTS-Simulation konkretisieren
-- **Problem:** Die Aufgabenstellung zur Wellenfertigung-Simulation ist noch zu vage.
-- **Geplante Maßnahmen:**
-  - Klare Aufgabenstellung mit Szenario, Anforderungen und Bewertungskriterien formulieren
-  - Entscheiden, welches Simulationswerkzeug eingesetzt wird
-- **Status:** ⏳ Offen – Aufgabenstellung muss geschrieben werden
-
-### 4.4 Prüfungsleistung / Business Case strukturieren
-- **Problem:** Business Case ist als Zusatzleistung aufgeführt, aber nicht klar strukturiert.
-- **Geplante Maßnahmen:**
-  - Vorlage / Template für den Business Case erstellen
-  - Bewertungsrubrik definieren
-  - Prüfen, ob als Pflicht- oder Wahlleistung sinnvoll
-- **Status:** ⏳ Offen – Konzept und Vorlage ausstehend
+- **Update after every significant decision** — if a technology choice, architectural direction, naming convention, or workflow is agreed upon, add or revise the relevant entry before the session ends.
+- **Record the rationale, not just the outcome** — note briefly *why* a decision was made (constraint, trade-off, experiment result), so future sessions can judge whether it still holds.
+- **Remove or flag outdated entries** — if a previous decision is superseded, either update the entry or mark it `(superseded)` with the replacement noted.
+- **Keep entries concise** — one to two sentences per item; link to the relevant `docs/*.md` file for deeper context.
 
 ---
 
-## 5. Entscheidungslog
+## 4. Scientific and Self-Critical Working Practice
 
-Hier werden alle getroffenen Entscheidungen dokumentiert, damit sie nachvollziehbar bleiben.
+All design decisions, technology choices, and implementation proposals must follow a scientific, self-critical approach:
 
-| Datum | Entscheidung | Begründung |
+- **State assumptions explicitly** — before proposing a solution, name the assumptions it rests on (e.g. load estimates, student skill level, hardware availability).
+- **Consider alternatives** — for non-trivial decisions, briefly acknowledge at least one alternative and explain why it was not chosen.
+- **Identify open questions and risks** — flag anything not yet validated (e.g. *"untested with actual hardware"*, *"student Python proficiency assumed at beginner level"*).
+- **Prefer reversible decisions** — when two options are comparable, prefer the one that is easier to change later.
+- **Distinguish fact from assumption** — use precise language: *"the sensor measures …"* (fact) vs. *"the sensor is expected to measure …"* (assumption).
+
+---
+
+## 5. Course Structure (as of last semester)
+
+### Block 1 — Organisation & Foundations (Sessions 1–2)
+
+- Course overview and topic assignment
+- History and modern applications of AGVs
+- AGV technology: navigation/guidance, safety, fleet management, vehicle types, environment, future trends
+- **Pedagogy:** Lecturer presentation + student research (industry-specific aspects)
+- **Decision (2026-03-23):** Terminology definition section removed — low learning benefit, high time cost.
+
+### Block 2 — Classical AGVs with Webots (Sessions 3–8, approx. 6 weeks)
+
+Hands-on phase using the **Webots** simulation environment and physical hardware.
+
+| Assignment | Description |
+|---|---|
+| **Obstacle avoidance** | Model a custom robot in Webots; implement an obstacle avoidance controller |
+| **Labyrinth** | Develop a maze-solving algorithm; present results; hardware demo on the Alphabot |
+| **Line following** | Line tracking in Webots (basic: 4 sensors; extended: 8 sensors, varying colours); hardware demo with Dobot |
+
+- **Field trip:** Embedded in this block.
+
+### Block 3 — Autonomous AGVs with ROS (Sessions 9–10, approx. 2 weeks)
+
+Introduction to **ROS (Robot Operating System)** as a robotics middleware.
+
+| Unit | Content |
+|---|---|
+| **ROS Fundamentals** | Why ROS? Architecture, packages, topics; demo with Turtlebot sensor data; hands-on with Create 3 simulator |
+| **SLAM & Navigation** | Localisation (GPS, AprilTags, indoor); SLAM; path planning; Gazebo simulator (Turtlebot 3/4); live demo with real Turtlebot |
+| **Manipulation** | Demo: LoCoBot robot arm; hands-on: Python motion sequence in LoCoBot simulator |
+
+### Block 4 — AGV Simulation (Sessions 11–13, approx. 3 weeks)
+
+- **Topic:** Simulation of wave manufacturing — classical vs. AGV-supported
+- Sequence: Assignment handout → independent work → (likely: presentation)
+- **Open question:** Which simulation tool will be used? Not yet decided.
+
+### Additional Assessment — Business Case
+
+- Market research and information gathering
+- Business case calculation
+- Requirements specification (Lastenheft)
+- Utility value analysis (Nutzwertanalyse)
+
+---
+
+## 6. Known Weaknesses and Improvement Areas
+
+Issues identified from last semester, all currently open.
+
+### 6.1 Webots Onboarding Too Difficult
+
+- **Problem:** Students struggled significantly with getting started in Webots; the processing time for the labyrinth assignment had to be extended.
+- **Planned measures:**
+  - Provide the labyrinth world pre-built, so students focus on AGV behaviour rather than environment modelling.
+  - Provide structured introductory tutorials.
+  - Simplify VM setup or add a step-by-step installation guide.
+- **Assumption:** Difficulty stems from Webots unfamiliarity, not from the algorithm itself — *not yet validated*.
+- **Status:** ⏳ Open — material to be created (→ AP2, AP3)
+
+### 6.2 ROS Unit Needs More Depth
+
+- **Problem:** The ROS block is outlined but hands-on assignments are not fully developed.
+- **Planned measures:**
+  - Detailed assignment sheets for ROS basics, SLAM, and navigation.
+  - Integrate AprilTag demo.
+  - Add a mini-project: programming a ROS node.
+- **Assumption:** Students have basic Python knowledge; ROS-specific concepts are new to them.
+- **Status:** ⏳ Open — assignments to be specified (→ AP5, AP6, AP7)
+
+### 6.3 AGV Simulation Assignment Too Vague
+
+- **Problem:** The wave manufacturing simulation task has no clear problem statement, requirements, or evaluation criteria.
+- **Planned measures:**
+  - Write a concrete assignment with scenario, requirements, and a grading rubric.
+  - Decide on the simulation tool to be used.
+- **Open question:** Should students use Webots, a custom Python simulation, or a dedicated logistics simulation tool (e.g. AnyLogic, Plant Simulation)?
+- **Status:** ⏳ Open — assignment to be written (→ AP8)
+
+### 6.4 Business Case Not Structured
+
+- **Problem:** The business case is listed as an additional assessment but has no template, rubric, or clear scope.
+- **Planned measures:**
+  - Create a template document.
+  - Define a grading rubric.
+  - Decide: mandatory or optional assessment?
+- **Open question:** Integration into the course flow (standalone vs. embedded in Block 4) not yet decided.
+- **Status:** ⏳ Open — concept and template pending (→ AP9)
+
+---
+
+## 7. Decision Log
+
+All significant decisions are recorded here so that the reasoning remains traceable across sessions.
+
+| Date | Decision | Rationale |
 |---|---|---|
-| 2026-03-23 | CLAUDE.md als zentrales Projektgedächtnis eingeführt | Persistente Dokumentation über Sitzungen hinweg; versioniert im Git-Repo |
-| 2026-03-23 | Begriffsdefinition aus Block 1 entfernt (aus Vorjahr übernommen) | Mehrwert gering, Zeitaufwand für Studierende zu hoch |
-| 2026-03-23 | Labyrinth soll künftig vorgegeben werden | Studierende sollen sich auf FTF-Algorithmen konzentrieren, nicht auf Webots-Modellierung |
+| 2026-03-23 | Introduced `CLAUDE.md` as central project memory | Enables persistent, versioned documentation across sessions; survives context resets |
+| 2026-03-23 | Removed terminology definition section from Block 1 | Low learning benefit relative to the time cost for students |
+| 2026-03-23 | Labyrinth world will be provided pre-built | Students should focus on AGV algorithm, not Webots environment modelling |
+| 2026-03-23 | All repository files and documentation in English | Consistent with academic and open-source norms; code is also English |
+| 2026-03-23 | `README.md` kept as navigation hub only; detailed content in `docs/*.md` | Avoids README bloat; makes content discoverable and linkable |
+| 2026-03-23 | Commit messages in English, conventional commits format | Consistency, tooling compatibility (changelogs, semantic release) |
 
 ---
 
-## 6. Geplante Arbeitspakete
+## 8. Work Packages
 
-Die folgende Liste gibt den geplanten Arbeitsfortschritt wieder und wird laufend aktualisiert.
+Planned work items, updated continuously.
 
-- [ ] **AP1:** Überarbeitetes Vorlesungskonzept als strukturiertes Dokument (Word/Markdown)
-- [ ] **AP2:** Webots-Einführungstutorial erstellen (VM-Setup, erster Roboter, erste Controller)
-- [ ] **AP3:** Labyrinth-Aufgabe überarbeiten (vorgegebenes Labyrinth + klare Aufgabenstellung)
-- [ ] **AP4:** Spurführungs-Tutorial für Webots definieren (Basis + Extended)
-- [ ] **AP5:** ROS-Aufgabenblatt: Grundlagen + Umgebungsaufbau
-- [ ] **AP6:** ROS-Aufgabenblatt: SLAM und Navigation im Gazebo-Simulator
-- [ ] **AP7:** Mini-Projekt ROS-Node definieren und ausarbeiten
-- [ ] **AP8:** Aufgabenstellung FTS-Simulation (Wellenfertigung) schreiben
-- [ ] **AP9:** Business-Case-Template erstellen + Bewertungsrubrik
-- [ ] **AP10:** Gesamtkonzept finalisieren und mit neuem Semester-Terminplan aktualisieren
+| ID | Description | Status |
+|---|---|---|
+| AP1 | Revised course concept as a structured document | ⏳ Open |
+| AP2 | Webots introduction tutorial (VM setup, first robot, first controller) | ⏳ Open |
+| AP3 | Revised labyrinth assignment (pre-built world + clear task description) | ⏳ Open |
+| AP4 | Line-following tutorial for Webots (basic + extended) | ⏳ Open |
+| AP5 | ROS assignment sheet: fundamentals + environment setup | ⏳ Open |
+| AP6 | ROS assignment sheet: SLAM and navigation in Gazebo | ⏳ Open |
+| AP7 | ROS mini-project: define and develop a custom ROS node | ⏳ Open |
+| AP8 | AGV simulation assignment: wave manufacturing scenario | ⏳ Open |
+| AP9 | Business case template + grading rubric | ⏳ Open |
+| AP10 | Finalise overall concept and align with new semester schedule | ⏳ Open |
 
 ---
 
-## 7. Werkzeuge und Technologien
+## 9. Tools and Technologies
 
-| Werkzeug | Verwendung in der Vorlesung |
+| Tool | Role in the course |
 |---|---|
-| **Webots** | Simulation klassischer FTF (Hindernisvermeidung, Labyrinth, Spurführung) |
-| **Alphabot** | Hardware-Demo für Labyrinth-Algorithmen |
-| **Dobot** | Hardware-Demo für Spurführung |
-| **ROS** | Middleware für autonome FTF (Grundlagen, SLAM, Navigation, Manipulation) |
-| **Gazebo** | Simulator für ROS-Aufgaben (Turtlebot 3/4) |
-| **Create 3 Simulator** | Erste ROS-Versuche |
-| **LoCoBot** | Manipulation: Demo + Python-Simulation |
-| **Turtlebot 3/4** | SLAM & Navigation Demo (echte Hardware) |
+| **Webots** | Simulation of classical AGVs (obstacle avoidance, labyrinth, line following) |
+| **Alphabot** | Physical hardware demo for labyrinth algorithms |
+| **Dobot** | Physical hardware demo for line following |
+| **ROS** | Middleware for autonomous AGVs (fundamentals, SLAM, navigation, manipulation) |
+| **Gazebo** | Simulator for ROS assignments (Turtlebot 3/4) |
+| **Create 3 Simulator** | First ROS experiments |
+| **LoCoBot** | Manipulation: demo + Python simulation |
+| **Turtlebot 3/4** | SLAM & navigation demo (real hardware) |
 
 ---
 
-## 8. Konventionen für dieses Repository
-
-- **Sprache:** Deutsch (Vorlesungsmaterial), Englisch (Code, Kommentare)
-- **Ordnerstruktur:** wird mit erstem Arbeitspaket definiert
-- **Commits:** Aussagekräftige Commit-Messages auf Deutsch, z.B. `feat: Webots-Tutorial Grundlagen hinzugefügt`
-- **Branches:** Feature-Branches für größere Arbeitspakete, direkte Commits auf `main` für Dokumentation
-- **CLAUDE.md:** Wird bei jeder relevanten Entscheidung oder abgeschlossenen Aufgabe aktualisiert
-
----
-
-*Erstellt von Claude (Anthropic) in Zusammenarbeit mit dem Dozenten – 2026-03-23*
+*Created by Claude (Anthropic) in collaboration with the lecturer — 2026-03-23*
