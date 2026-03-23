@@ -10,8 +10,38 @@ This block covers the organisational introduction to the course and the technica
 | `scenario-cards.pdf` | Printable scenario cards for the Session 1 suitability exercise |
 | Lecture slides | Distributed via Moodle (contain third-party images) |
 
-## Sessions
-- **Session 1 (3 h):** Organisation, AGV epochs (group work), task-related deployment aspects, deployment modes, alternatives and their suitability (group work)
-- **Session 2 (3 h):** Industry-specific examples (group work), technology of the overall system, technology of transport vehicles
+---
 
-See [`docs/course-concept.md`](../docs/course-concept.md#5-block-1--organisation--foundations) for the full pedagogical concept.
+## Session 1 — Organisation & AGV Foundations (3 h)
+
+### Content
+- Course structure, schedule, assessment overview, tools & infrastructure
+- AGV epochs — four phases of development (group work + short presentations)
+- Task-related aspects of AGV deployment (load types, flow regularity, throughput)
+- Deployment modes (unit load carrier, towing, fork AGV, underride, assembly)
+- Alternatives to AGVs (conveyors, forklifts, AMRs, manual transport)
+- Suitability of alternatives — which solution fits which scenario? (group work + short presentations)
+
+### Deliverables
+- Group presentations on AGV epochs and alternative suitability (in-session)
+
+---
+
+## Session 2 — AGV Technology (3 h)
+
+### Content
+- Industry-specific aspects and examples: automotive, e-commerce, healthcare, food, pharma (group work + plenary discussion)
+- Technology of the overall system: navigation & guidance, fleet management, safety, WMS/ERP integration
+- Technology of the transport vehicles: vehicle types, load handling, energy supply, sensor systems
+
+### Deliverables
+- Group report-back on industry-specific AGV applications (in-session)
+
+---
+
+## Pedagogy
+
+- Alternates between short lecturer input and group work throughout both sessions
+- Group work tasks are scenario- or sector-based; each group reports back in 2–3 min
+- *Decision (2026-03-23):* Terminology definition section removed — learning benefit too low relative to time cost
+- *Update (2026-03-23):* Sessions extended to 3 h each; group work and short presentations integrated directly into both sessions
