@@ -1,6 +1,7 @@
 # CLAUDE.md
 
 > Read this before starting any work. Keep it lean — deep context lives in `docs/`.
+> **Size limit: max 5,000 tokens.** If edits would exceed this, trim or move content to `docs/` first.
 
 ## Project
 
