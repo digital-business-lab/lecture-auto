@@ -51,8 +51,25 @@ Both sessions include structured group work with short presentations (2–3 min 
 | Session | Group task | Output |
 |---|---|---|
 | 1 | AGV epochs — one epoch per group | Key characteristics + one concrete example |
-| 1 | Suitability of alternatives — one logistics scenario per group | Solution recommendation + justification |
+| 1 | Suitability of alternatives — one logistics scenario per group | Completed decision matrix + solution recommendation |
 | 2 | Industry-specific AGV applications — one sector per group | Sector requirements + one application example |
+
+### Suitability exercise — decision matrix
+
+For the suitability group work in Session 1, each group receives a logistics scenario and rates each transport alternative across five criteria:
+
+| Alternative | Flexibility | Investment cost | Personnel requirement | Throughput capacity | Infrastructure effort |
+|---|---|---|---|---|---|
+| Manual transport | | | | | |
+| Forklift | | | | | |
+| Conveyor system | | | | | |
+| AGV | | | | | |
+| AMR | | | | | |
+
+Rating scale: **Low / Medium / High**
+
+!!! info "Connection to the business case"
+    This matrix is a simplified version of the Nutzwertanalyse (utility value analysis) you will use in the business case assessment. Practising the structured comparison logic here makes the later task significantly easier.
 
 ---
 

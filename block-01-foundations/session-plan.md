@@ -29,14 +29,47 @@
 - Presentation: 2–3 min per group
 
 **Topic 6 — Suitability of alternatives:**
-- Groups receive a short scenario card (e.g. "mid-sized e-commerce warehouse, high SKU variety, variable throughput")
-- Task: recommend one transport solution and justify the choice against the alternatives presented
-- Presentation: 2–3 min per group
+- Groups receive a scenario card (see below); one scenario per group
+- Task: fill in the decision matrix for their scenario, then recommend one transport solution and justify the choice
+- Presentation: 2–3 min per group — show the completed matrix and state the recommendation
+
+**Decision matrix (handed out on the scenario card):**
+
+Groups rate each alternative on five criteria using Low / Medium / High:
+
+| Alternative | Flexibility | Investment cost | Personnel requirement | Throughput capacity | Infrastructure effort |
+|---|---|---|---|---|---|
+| Manual transport | | | | | |
+| Forklift | | | | | |
+| Conveyor system | | | | | |
+| AGV | | | | | |
+| AMR | | | | | |
+
+Criteria definitions (printed on the card):
+- **Flexibility** — ease of adapting routes or layout without major cost
+- **Investment cost** — upfront capital expenditure
+- **Personnel requirement** — ongoing need for human operators
+- **Throughput capacity** — volume of transport tasks the system can handle
+- **Infrastructure effort** — floor preparation, IT integration, facility changes required
+
+**Scenario cards (one per group):**
+
+| Card | Scenario |
+|---|---|
+| A | *Pharmaceutical production:* clean-room environment, strict documentation requirements, 200 transport orders/day, stable routes, high regulatory compliance demands |
+| B | *E-commerce fulfilment:* high SKU variety, strongly seasonal volume peaks (3× normal at peak), frequent layout changes due to product range shifts |
+| C | *Automotive body shop:* heavy loads (up to 2 t), fixed assembly line sequence, continuous 3-shift operation, high throughput, very stable routes |
+| D | *Hospital logistics:* mixed-use corridors shared with people, variable demand across wards, sterile goods and linen, strict hygiene requirements |
+| E | *Food & beverage warehouse:* cold-storage environment (−22 °C), pallet-level transport, medium throughput, strict traceability requirements |
+
+**Lecturer note:** There is no single correct answer — the matrix is a tool for structuring the argument, not for computing an automatic verdict. Debrief by asking groups what they would change if one parameter shifted (e.g. "what if throughput doubled?"). This previews the sensitivity analysis logic used later in the business case.
+
+**Connection to assessment:** The decision matrix is a simplified version of the Nutzwertanalyse (utility value analysis) in the business case. Naming this connection explicitly in the debrief helps students see the transfer.
 
 ### Preparation Checklist
 - [ ] Slides for organisational part (course map, assessment, tools)
 - [ ] Epoch assignment cards (4 cards, one per group)
-- [ ] Scenario cards for suitability exercise (one per group)
+- [ ] Scenario cards for suitability exercise (Cards A–E, see group work details above); print one per group, include decision matrix and criteria definitions
 - [ ] Timeline graphic for AGV epochs
 - [ ] Short video clip of an AGV system in operation (2–3 min, warm-up or intro)
 
