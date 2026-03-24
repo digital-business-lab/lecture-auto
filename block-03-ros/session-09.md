@@ -88,26 +88,124 @@ The robot maintains hundreds of *hypotheses* (particles) about where it might be
 
 **Context:** The robot knows where it is (localisation). It needs to decide *how to get* to a goal position. This is the job of the path planner.
 
-**Two layers in ROS Navigation Stack:**
+Path planning in ROS is split into two separate layers that operate on different time horizons and at different scales:
 
-| Layer | Role | Algorithm examples |
+| Layer | Role | Algorithm examples | Horizon |
+|---|---|---|---|
+| **Global planner** | Finds an optimal path through the full known map | Dijkstra, A* | Entire map; computed once per goal |
+| **Local planner** | Executes the path in real time, reacting to dynamic obstacles | DWA (Dynamic Window Approach) | Small window around robot; re-computed at ~10 Hz |
+
+---
+
+#### Global Planner — Dijkstra Algorithm
+
+The global planner treats the occupancy grid map as a **graph**: each free cell is a node, and edges connect neighbouring cells with a cost that reflects how desirable it is to pass through that area (cells near obstacles are assigned higher costs via the *costmap*).
+
+**Dijkstra's algorithm** guarantees the shortest path in a graph with non-negative edge weights. It works as follows:
+
+1. Assign cost **0** to the start node; assign **∞** to all other nodes.
+2. From all unvisited nodes, select the one with the lowest current cost.
+3. For each neighbour of that node: if the path *through* the current node is shorter than the neighbour's current cost, update it.
+4. Mark the current node as visited (it will not be revisited).
+5. Repeat from step 2 until the goal node is visited.
+6. Trace the shortest path backwards from goal to start.
+
+**Worked example — warehouse routing:**
+
+Consider a simplified warehouse with six locations. Edge weights represent travel distance in metres.
+
+```
+  S ──2── A ──5── C
+  │       │       │
+  4       1       2
+  │       │       │
+  B ──3── D ──1── G
+```
+
+Nodes: **S** (Start), **A**, **B**, **C**, **D**, **G** (Goal)
+
+Edges: S→A: 2 · S→B: 4 · A→B: 1 · A→C: 5 · B→D: 3 · D→C: 1 · D→G: 6 · C→G: 2
+
+**Step-by-step execution:**
+
+| Step | Visited node | Cost at visit | Updated neighbours (new cost) | Unvisited set (node: cost) |
+|---|---|---|---|---|
+| Init | — | — | — | S:0, A:∞, B:∞, C:∞, D:∞, G:∞ |
+| 1 | **S** | 0 | A: 0+2=**2**, B: 0+4=**4** | A:2, B:4, C:∞, D:∞, G:∞ |
+| 2 | **A** | 2 | B: min(4, 2+1)=**3**, C: 2+5=**7** | B:3, C:7, D:∞, G:∞ |
+| 3 | **B** | 3 | D: 3+3=**6** | C:7, D:6, G:∞ |
+| 4 | **D** | 6 | C: min(7, 6+1)=**7**, G: 6+6=**12** | C:7, G:12 |
+| 5 | **C** | 7 | G: min(12, 7+2)=**9** | G:9 |
+| 6 | **G** | 9 | — | — |
+
+**Result:** Shortest path cost = **9 m**
+
+**Path trace (backwards):** G ← C ← A ← S → **S → A → C → G**
+
+The naive-looking route S → B → D → C → G would cost 4+3+1+2 = 10 m — Dijkstra correctly found the shorter alternative despite an initial detour through A.
+
+**Key takeaway for students:** Dijkstra always finds the globally optimal path, but it explores the entire map (or large parts of it) to do so. For small maps this is fine; for large grids it can be slow.
+
+---
+
+#### Global Planner — A* as an Improvement
+
+A* is a common alternative that uses a **heuristic** (typically the straight-line distance to the goal) to guide the search preferentially towards the goal. This reduces the number of nodes explored and speeds up planning considerably, while still guaranteeing the optimal path (provided the heuristic never overestimates the true cost).
+
+**Comparison:**
+
+| Property | Dijkstra | A* |
 |---|---|---|
-| **Global planner** | Finds an optimal path through the known map | Dijkstra, A* |
-| **Local planner** | Executes the path while avoiding dynamic obstacles | DWA (Dynamic Window Approach) |
+| Optimality | Always optimal | Optimal with admissible heuristic |
+| Search direction | Uniform (expands in all directions) | Guided towards goal |
+| Speed | Slower on large maps | Much faster in practice |
+| ROS default | Used as fallback | Default in many ROS configurations |
 
-#### Dijkstra Algorithm — Worked Example
+**Teaching note:** The key intuition is that A* "knows roughly which direction the goal is" while Dijkstra "has no idea and checks everywhere equally."
 
-> **Note to lecturer:** Insert the prepared worked example here (graph with 6–8 nodes, edge weights representing travel distances or times). Walk through the algorithm step by step:
-> 1. Assign distance ∞ to all nodes except start (distance 0)
-> 2. Visit the unvisited node with the lowest current distance
-> 3. Update distances to its neighbours if a shorter path is found
-> 4. Mark node as visited; repeat until goal is reached
-> 5. Trace back the shortest path
+---
 
-<!-- TODO: Replace this block with the Dijkstra worked example provided by the lecturer -->
-<!-- The example should show: graph diagram, step-by-step table, highlighted shortest path -->
+#### Local Planner — Dynamic Window Approach (DWA)
 
-**Connection to practice:** In ROS, the global planner runs Dijkstra (or A*) on the occupancy grid map. Each cell is a node; edge weights reflect traversability (free space costs less than near-obstacle space).
+Once the global planner has produced a path, the **local planner** is responsible for actually driving the robot along it. The local planner re-plans every 100 ms or so, using only the most recent sensor data within a small window around the robot.
+
+**Why not just follow the global path exactly?**
+The global map may be outdated — a person or forklift may have moved into the robot's path. The local planner handles these dynamic obstacles in real time.
+
+**DWA works as follows:**
+
+1. **Sample feasible velocities:** Generate a set of candidate velocity pairs (linear velocity *v*, angular velocity *ω*) that the robot can physically reach within one time step given its current speed and acceleration limits. This is the *dynamic window*.
+2. **Simulate trajectories:** For each candidate velocity, simulate the robot's trajectory over a short horizon (e.g. 2–3 seconds).
+3. **Score each trajectory** using a cost function that penalises:
+   - Distance to obstacles (safety)
+   - Deviation from the global path (staying on route)
+   - Distance to the goal heading (progress)
+4. **Select the best trajectory** (lowest cost) and send its velocity command to the drive controller.
+
+**Teaching note:** Show the DWA visualisation in RViz (the fan of candidate trajectories in different colours). Students find this intuitive — the robot "tries out" possible futures and picks the best one.
+
+---
+
+#### Costmaps
+
+Both planning layers use a **costmap** — a grid that annotates each cell of the map with a traversal cost:
+
+| Cell type | Cost | Meaning |
+|---|---|---|
+| Free space, far from obstacles | 0 | Robot can pass without penalty |
+| Inflated zone (near obstacle) | 1–252 | Path planner steers away to maintain clearance |
+| Inscribed zone (inside robot footprint if centred here) | 253 | Robot body would touch obstacle — avoid |
+| Lethal obstacle | 254 | Collision — strictly forbidden |
+
+The *inflation radius* is a configurable parameter: a larger value produces more conservative, obstacle-shy paths; a smaller value allows the robot to pass closer to obstacles.
+
+**Two separate costmaps in ROS:**
+- **Global costmap** — built once from the static map; used by the global planner.
+- **Local costmap** — updated continuously from live sensor data; used by the local planner for real-time obstacle avoidance.
+
+---
+
+**Connection to practice:** In ROS, the `move_base` node orchestrates both planners. When a goal pose is sent (via RViz or programmatically), `move_base` calls the global planner to compute a path, then hands execution over to the local planner, which continuously adjusts velocity commands until the goal is reached or the path is blocked.
 
 ---
 
@@ -228,7 +326,6 @@ Without ROS, each robotics project would re-implement the same low-level compone
 
 - [ ] **AP5:** Write `assignments/ros-fundamentals.md` (activity sheet for Part 4)
 - [ ] **AP5:** Prepare launch file wrappers and VM setup README in `scripts/`
-- [ ] **Dijkstra example:** Insert the prepared worked example into Section 1.5 of this file
 - [ ] **VM performance:** Verify Gazebo runs at acceptable speed on lab VM specs (→ `docs/semester-prep.md`)
 
 ---
