@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 230" width="740" height="230" font-family="Arial, Helvetica, sans-serif">
+<rect width="740" height="230" fill="#f8f9fa"/>
+<rect x="10" y="40" width="150" height="115" rx="4" fill="#ffffff" stroke="#546e7a" stroke-width="1.5"/>
+<line x1="70" y1="40" x2="70" y2="78" stroke="#546e7a" stroke-width="2"/>
+<text x="85" y="34" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#bf360c">① Initialisation</text>
+<text x="85" y="169" text-anchor="middle" font-size="8.5" fill="#455a64">Particles spread uniformly</text>
+<text x="85" y="181" text-anchor="middle" font-size="8.5" fill="#455a64">across entire map</text>
+<circle cx="22" cy="52" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="42" cy="52" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="62" cy="52" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="88" cy="52" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="105" cy="52" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="125" cy="52" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="148" cy="52" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="22" cy="67" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="42" cy="67" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="62" cy="67" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="88" cy="67" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="105" cy="67" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="125" cy="67" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="148" cy="67" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="22" cy="84" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="42" cy="84" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="62" cy="84" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="88" cy="84" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="105" cy="84" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="125" cy="84" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="148" cy="84" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="22" cy="100" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="42" cy="100" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="62" cy="100" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="88" cy="100" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="105" cy="100" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="125" cy="100" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="148" cy="100" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="22" cy="116" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="42" cy="116" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="62" cy="116" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="88" cy="116" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="105" cy="116" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="125" cy="116" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="148" cy="116" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="22" cy="133" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="42" cy="133" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="62" cy="133" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="88" cy="133" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="105" cy="133" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="125" cy="133" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="148" cy="133" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="22" cy="148" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="42" cy="148" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="62" cy="148" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="88" cy="148" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="105" cy="148" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="125" cy="148" r="3" fill="#90a4ae" opacity="0.8"/>
+<circle cx="148" cy="148" r="3" fill="#90a4ae" opacity="0.8"/>
+<polygon points="125,105  109,97  109,113" fill="#d84315" opacity="0.9"/>
+<line x1="164" y1="97" x2="186" y2="97" stroke="#546e7a" stroke-width="1.8"/>
+<polygon points="186,97 179,93 179,101" fill="#546e7a"/>
+<line x1="344" y1="97" x2="366" y2="97" stroke="#546e7a" stroke-width="1.8"/>
+<polygon points="366,97 359,93 359,101" fill="#546e7a"/>
+<line x1="524" y1="97" x2="546" y2="97" stroke="#546e7a" stroke-width="1.8"/>
+<polygon points="546,97 539,93 539,101" fill="#546e7a"/>
+<rect x="190" y="40" width="150" height="115" rx="4" fill="#ffffff" stroke="#546e7a" stroke-width="1.5"/>
+<line x1="250" y1="40" x2="250" y2="78" stroke="#546e7a" stroke-width="2"/>
+<text x="265" y="34" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#bf360c">② Motion Update</text>
+<text x="265" y="169" text-anchor="middle" font-size="8.5" fill="#455a64">Each particle shifts + noise;</text>
+<text x="265" y="181" text-anchor="middle" font-size="8.5" fill="#455a64">cloud spreads out</text>
+<circle cx="219" cy="51" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="240" cy="59" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="254" cy="50" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="288" cy="50" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="302" cy="58" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="317" cy="57" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="335" cy="49" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="215" cy="70" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="240" cy="65" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="257" cy="65" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="288" cy="70" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="297" cy="73" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="318" cy="67" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="335" cy="74" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="223" cy="81" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="243" cy="90" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="260" cy="81" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="283" cy="81" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="305" cy="83" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="321" cy="87" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="335" cy="89" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="215" cy="106" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="238" cy="105" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="264" cy="99" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="281" cy="106" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="306" cy="107" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="320" cy="102" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="335" cy="105" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="225" cy="114" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="243" cy="113" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="263" cy="116" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="287" cy="123" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="305" cy="119" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="329" cy="118" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="335" cy="122" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="221" cy="135" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="238" cy="133" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="266" cy="132" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="291" cy="142" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="300" cy="131" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="326" cy="134" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="335" cy="137" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="219" cy="150" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="241" cy="149" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="263" cy="146" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="281" cy="150" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="303" cy="147" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="329" cy="150" r="3" fill="#64b5f6" opacity="0.8"/>
+<circle cx="335" cy="150" r="3" fill="#64b5f6" opacity="0.8"/>
+<polygon points="323,108  307,100  307,116" fill="#d84315" opacity="0.9"/>
+<rect x="370" y="40" width="150" height="115" rx="4" fill="#ffffff" stroke="#546e7a" stroke-width="1.5"/>
+<line x1="430" y1="40" x2="430" y2="78" stroke="#546e7a" stroke-width="2"/>
+<text x="445" y="34" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#bf360c">③ Sensor Update</text>
+<text x="445" y="169" text-anchor="middle" font-size="8.5" fill="#455a64">Particles scored by sensor match;</text>
+<text x="445" y="181" text-anchor="middle" font-size="8.5" fill="#455a64">weight shown by size</text>
+<circle cx="399" cy="51" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="420" cy="59" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="434" cy="50" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="468" cy="50" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="482" cy="58" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="497" cy="57" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="515" cy="49" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="395" cy="70" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="420" cy="65" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="437" cy="65" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="468" cy="70" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="477" cy="73" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="498" cy="67" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="515" cy="74" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="403" cy="81" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="423" cy="90" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="440" cy="81" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="463" cy="81" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="485" cy="83" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="501" cy="87" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="515" cy="89" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="395" cy="106" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="418" cy="105" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="444" cy="99" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="461" cy="106" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="486" cy="107" r="5.5" fill="#ef6c00" opacity="1.0"/>
+<circle cx="500" cy="102" r="5.5" fill="#ef6c00" opacity="1.0"/>
+<circle cx="515" cy="105" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="405" cy="114" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="423" cy="113" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="443" cy="116" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="467" cy="123" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="485" cy="119" r="5.5" fill="#ef6c00" opacity="1.0"/>
+<circle cx="509" cy="118" r="5.5" fill="#ef6c00" opacity="1.0"/>
+<circle cx="515" cy="122" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="401" cy="135" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="418" cy="133" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="446" cy="132" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="471" cy="142" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="480" cy="131" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="506" cy="134" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="515" cy="137" r="3.5" fill="#ffab40" opacity="0.9"/>
+<circle cx="399" cy="150" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="421" cy="149" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="443" cy="146" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="461" cy="150" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="483" cy="147" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="509" cy="150" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<circle cx="515" cy="150" r="2.0" fill="#b0bec5" opacity="0.5"/>
+<polygon points="503,108  487,100  487,116" fill="#d84315" opacity="0.9"/>
+<rect x="550" y="40" width="150" height="115" rx="4" fill="#ffffff" stroke="#546e7a" stroke-width="1.5"/>
+<line x1="610" y1="40" x2="610" y2="78" stroke="#546e7a" stroke-width="2"/>
+<text x="625" y="34" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#bf360c">④ Resampling</text>
+<text x="625" y="169" text-anchor="middle" font-size="8.5" fill="#455a64">Low-weight particles dropped;</text>
+<text x="625" y="181" text-anchor="middle" font-size="8.5" fill="#455a64">cluster converges on robot</text>
+<circle cx="673" cy="99" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="661" cy="123" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="673" cy="108" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="674" cy="115" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="671" cy="96" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="675" cy="120" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="679" cy="84" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="664" cy="100" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="671" cy="107" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="678" cy="102" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="676" cy="99" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="673" cy="132" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="675" cy="107" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="666" cy="116" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="672" cy="108" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="689" cy="100" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="680" cy="99" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="676" cy="111" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="678" cy="96" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="687" cy="144" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="673" cy="108" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="676" cy="114" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="669" cy="109" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="664" cy="106" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="673" cy="89" r="3.5" fill="#f57c00" opacity="0.85"/>
+<circle cx="669" cy="110" r="3.5" fill="#f57c00" opacity="0.85"/>
+<polygon points="683,108  667,100  667,116" fill="#d84315" opacity="0.9"/>
+<text x="370" y="203" text-anchor="middle" font-size="11" fill="#455a64" font-style="italic">Repeat ② → ③ → ④ continuously while the robot moves</text>
+</svg>
