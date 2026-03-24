@@ -1,49 +1,29 @@
-# Session 6 — Line Following Assignment
+# Session 6 — Sensor Extension
 
-**Duration: 3 hours · Graded**
+**Duration: 3 hours · Not graded**
 
 ---
 
 ## Goal
 
-Implement line-tracking behaviour for a simulated AGV using provided code templates.
+Extend your existing robot model with additional ground sensors directly in Webots, and verify the sensor readings in the simulation console. This session is a technical bridge — it prepares you for the line-following assignment in Session 7.
+
+No deliverable is required.
 
 ---
 
-## Variants
+## What You Will Do
 
-### Basic (all students)
-
-- [ ] Complete the template controller for line following with **4 sensors** on a standard track
-- [ ] Test and tune sensor weights and speed parameters until the robot reliably follows the line
-
-### Extended (optional)
-
-- [ ] Adapt the controller for **8 sensors** and tracks with varying colours
+1. Open your existing robot world from the tutorials or labyrinth session.
+2. Add ground sensors to the robot using the Webots scene tree.
+3. Extend the controller to read and print sensor values.
+4. Verify that sensor output responds correctly as the robot moves across different surfaces.
 
 ---
 
-## Deliverables
+## Why This Matters
 
-- [ ] A working line-following simulation
-- [ ] Short documentation of your parameter choices (sensor weights, speed values, reasoning)
+The line-following assignment in Session 6 requires sensors positioned below the robot to detect a line on the ground. Understanding how to add and read sensors in Webots is the prerequisite skill for that assignment.
 
-!!! note "Assessment"
-    This assignment is graded and counts towards the 70% in-semester component.
-
----
-
-## Key Parameters to Tune
-
-Your template controller will include adjustable parameters. Common values to experiment with:
-
-| Parameter | Effect |
-|---|---|
-| Sensor weights | How strongly each sensor position influences steering |
-| Base speed | Overall speed of the robot |
-| Correction factor | How aggressively the robot steers to correct deviations |
-
-Start with small corrections and increase gradually. A robot that overcorrects will oscillate rather than follow the line smoothly.
-
-!!! tip "Extended variant"
-    For the 8-sensor variant, think about how additional sensors near the centre vs. the edges help distinguish gradual curves from sharp turns. Colour variation requires adapting the threshold logic for surface detection.
+!!! tip "Experiment freely"
+    This session has no grade and no fixed outcome. Use the time to explore sensor placement and understand how sensor readings change depending on position and surface colour.

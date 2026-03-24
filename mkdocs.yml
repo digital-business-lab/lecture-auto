@@ -58,9 +58,9 @@ nav:
   - Block 2 — Webots:
     - Overview: block-02/index.md
     - Session 3 — Webots Tutorials: block-02/session-03.md
-    - Session 4 — Labyrinth: block-02/session-04.md
-    - Session 5 — Sensor Extension: block-02/session-05.md
-    - Session 6 — Line Following: block-02/session-06.md
+    - Sessions 4–5 — Labyrinth: block-02/session-04.md
+    - Session 6 — Sensor Extension: block-02/session-06.md
+    - Session 7 — Line Following: block-02/session-07.md
   - Block 3 — ROS:
     - Overview: block-03/index.md
     - Session 9 — AGV Technology & ROS Fundamentals: block-03/session-09.md

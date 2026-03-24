@@ -1,6 +1,6 @@
 # Session 4 — Labyrinth Assignment
 
-**Duration: 3 hours · Graded**
+**Duration: 6 hours (two sessions) · Graded**
 
 ---
 

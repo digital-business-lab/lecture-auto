@@ -7,9 +7,9 @@ Hands-on simulation phase using the Webots robot simulator. Students complete ma
 | Item | Description |
 |---|---|
 | `session-03.md` | Detailed lecturer reference: Session 3 agenda, preparation checklist |
-| `session-04.md` | Detailed lecturer reference: Session 4 agenda, grading, preparation checklist |
-| `session-05.md` | Detailed lecturer reference: Session 5 agenda, preparation checklist |
-| `session-06.md` | Detailed lecturer reference: Session 6 agenda, grading, preparation checklist |
+| `session-04.md` | Detailed lecturer reference: Sessions 4–5 agenda (6 h), grading, preparation checklist |
+| `session-06.md` | Detailed lecturer reference: Session 6 agenda, preparation checklist |
+| `session-07.md` | Detailed lecturer reference: Session 7 agenda, grading, preparation checklist |
 | `assignments/` | Assignment sheets handed out to students |
 | `templates/` | Controller templates with `TODO` gaps |
 | `worlds/` | Pre-built Webots world files |
@@ -30,7 +30,7 @@ Hands-on simulation phase using the Webots robot simulator. Students complete ma
 
 ---
 
-## Session 4 — Labyrinth (3 h) ★ Graded
+## Sessions 4–5 — Labyrinth (6 h) ★ Graded
 
 ### Content
 - Pre-built labyrinth world provided; students complete the maze-solving controller template
@@ -43,19 +43,19 @@ Hands-on simulation phase using the Webots robot simulator. Students complete ma
 
 ---
 
-## Session 5 — Sensor Extension (3 h)
+## Session 6 — Sensor Extension (3 h)
 
 ### Content
 - Extend the tutorial robot with additional sensors in preparation for line following
 
 ### Deliverables
-- Extended robot ready for Session 6 (ungraded)
+- Extended robot ready for Session 7 (ungraded)
 
-→ See [`session-05.md`](session-05.md) for full details.
+→ See [`session-06.md`](session-06.md) for full details.
 
 ---
 
-## Session 6 — Line Following (3 h) ★ Graded
+## Session 7 — Line Following (3 h) ★ Graded
 
 ### Content
 - Complete a line-tracking controller template (basic 4-sensor variant)
@@ -64,7 +64,7 @@ Hands-on simulation phase using the Webots robot simulator. Students complete ma
 ### Deliverables
 - Working line-following simulation demo *(graded)*
 
-→ See [`session-06.md`](session-06.md) for full details.
+→ See [`session-07.md`](session-07.md) for full details.
 
 ---
 

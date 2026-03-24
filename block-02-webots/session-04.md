@@ -1,6 +1,6 @@
-# Session 4 — Labyrinth
+# Sessions 4–5 — Labyrinth
 
-> **Duration:** 3 h · **Graded:** Yes (part of the 70% in-semester component)
+> **Duration:** 6 h (two sessions) · **Graded:** Yes (part of the 70% in-semester component)
 
 **Goal:** Students implement a maze-solving strategy using sensor data and control logic by completing a provided template.
 

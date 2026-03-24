@@ -79,7 +79,7 @@ Sessions 1–2 (3 hours each). Covers the organisational introduction and AGV te
 
 ## 6. Block 2 — Classical AGVs with Webots
 
-Sessions 3–6 (approx. 4 weeks). Students use the Webots robot simulator for three graded scenarios: labyrinth solving, and line following. All coding uses pre-written templates with `TODO` gaps. A field trip to an industrial AGV site is embedded in this block.
+Sessions 3–8 (approx. 6 weeks). Students use the Webots robot simulator for two graded assignments: labyrinth solving (Sessions 4–5, 6 h) and line following (Session 7). A field trip to an industrial AGV site is embedded as Session 8. All coding uses pre-written templates with `TODO` gaps. A field trip to an industrial AGV site is embedded in this block.
 
 → **Full detail:** [`block-02-webots/README.md`](../block-02-webots/README.md)
 
