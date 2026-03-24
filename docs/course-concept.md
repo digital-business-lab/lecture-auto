@@ -87,7 +87,7 @@ Sessions 3–6 (approx. 4 weeks). Students use the Webots robot simulator for th
 
 ## 7. Block 3 — Autonomous AGVs with ROS
 
-Sessions 9–10 (approx. 2 weeks). ROS is introduced through lecturer demos, hardware demonstrations (Turtlebot3, LoCoBot), and guided student activities using pre-written scripts. Students observe and run — they do not write ROS code.
+Sessions 9–10 (approx. 2 weeks). Two interleaved themes: (1) the technical building blocks of autonomous AGVs (sensors, dead reckoning, landmark localisation, SLAM, path planning) and (2) ROS as the middleware that integrates these components. Content is delivered through lecturer presentations and hardware demos; student activities use pre-written scripts and pre-configured VMs. The complete TurtleBot3 workflow (simulation in Gazebo → live hardware demo) serves as a unifying red thread. Students observe and run — they do not write ROS code.
 
 → **Full detail:** [`block-03-ros/README.md`](../block-03-ros/README.md)
 
