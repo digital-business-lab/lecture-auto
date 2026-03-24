@@ -11,9 +11,8 @@
 | Time | Phase | Format |
 |---|---|---|
 | 0:00 – 0:20 | Part 1: Recap & Workflow Introduction | Lecturer presentation |
-| 0:20 – 1:50 | Part 2: Guided Student Activity — TurtleBot3 Workflow in Gazebo | Individual / pair work |
-| 1:50 – 2:20 | Part 3: Live Demo — Real TurtleBot3 | Lecturer hardware demo |
-| 2:20 – 3:00 | Part 4: Discussion & Written Deliverable | Plenary + individual work |
+| 0:20 – 2:00 | Part 2: Guided Student Activity — TurtleBot3 Workflow in Gazebo | Individual / pair work |
+| 2:00 – 3:00 | Part 3: Live Demo — Real TurtleBot3 & Plenary Discussion | Lecturer hardware demo + plenary |
 
 ---
 
@@ -49,7 +48,7 @@ Explain: Steps 1–4 are always done in sequence. Step 5 requires the saved map 
 
 ---
 
-## Part 2 — Guided Student Activity: TurtleBot3 Workflow in Gazebo (90 min)
+## Part 2 — Guided Student Activity: TurtleBot3 Workflow in Gazebo (100 min)
 
 **Setup:** Pre-configured VMs. All launch files and a step-by-step activity sheet are provided.
 
@@ -119,7 +118,7 @@ rosrun map_server map_saver -f ~/map
 
 ---
 
-### Step 5 — Autonomous Navigation (35 min)
+### Step 5 — Autonomous Navigation (45 min)
 
 Shut down the SLAM launch file. Now load the saved map and launch the navigation stack. This starts AMCL (localisation) and `move_base` (path planning + execution).
 
@@ -149,9 +148,11 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 
 ---
 
-## Part 3 — Live Demo: Real TurtleBot3 (30 min)
+## Part 3 — Live Demo: Real TurtleBot3 & Plenary Discussion (60 min)
 
 **Hardware:** Real TurtleBot3, connected to lecturer laptop.
+
+### Live Demo (40 min)
 
 **Demo:** Repeat the same five-step workflow on the physical robot in the room.
 
@@ -162,33 +163,16 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 | LiDAR returns are perfect | Glass walls invisible; thin legs may be missed | Safety implications for industrial AGVs |
 | Navigation always succeeds if map is correct | Robot may get stuck; recovery behaviours activate | Robustness in real deployments |
 
-**Discussion prompt:** *"You have seen the same workflow in simulation and on real hardware. Where would you invest engineering effort to make a real AGV deployment reliable?"*
+**Teaching note:** Narrate each step as it runs. Deliberately show one failure case (e.g. blocked path, recovery behaviour) if time permits — this is often more instructive than a clean run.
 
----
+### Plenary Discussion (20 min)
 
-## Part 4 — Discussion & Written Deliverable (40 min)
+Use the following questions to guide the debrief. Students can refer to their notes from Part 2.
 
-### Plenary Discussion (15 min)
-
-- What surprised you compared to what you expected?
-- In which intralogistics scenarios is SLAM most useful? When is a fixed map sufficient?
-- What is the biggest limitation of this approach for a real warehouse?
-
-### Written Deliverable (25 min, individual)
-
-Students write a short structured report answering the following questions. Template provided in the activity sheet.
-
-| Question | Expected answer depth |
-|---|---|
-| Describe the five steps of the TurtleBot3 workflow. What happens in each step? | 3–5 sentences per step |
-| Explain in your own words: what does SLAM achieve, and why is it needed? | 1 paragraph |
-| What is the difference between the mapping phase and the navigation phase? | 1 paragraph |
-| Name two observations from the simulation that connect to a concept from Session 9. | 2–4 sentences each |
-| (Optional) Name one limitation of the demonstrated approach for real industrial use and suggest how it could be addressed. | 1 paragraph |
-
-**Submission:** End of session or next session at the latest (to be confirmed).
-
-**Deliverable:** Written observation report. *(Graded — part of the 70% in-semester component)*
+- What surprised you compared to what you expected from the simulation?
+- In which intralogistics scenarios is SLAM most useful? When is a pre-built fixed map sufficient?
+- What is the biggest limitation of this approach for a real warehouse deployment?
+- Where would you invest engineering effort to make a real AGV system reliable?
 
 ---
 
@@ -207,17 +191,14 @@ Students write a short structured report answering the following questions. Temp
 - [ ] A pre-built map of the demo room is saved as fallback (in case live mapping runs overtime)
 - [ ] Student VMs: `turtlebot3_gazebo`, `turtlebot3_slam`, `turtlebot3_navigation` packages installed and tested
 - [ ] Pre-configured RViz launch file provided in `scripts/` (no manual panel setup needed)
-- [ ] Report template included in activity sheet; submission process communicated
 - [ ] Timing check: SLAM mapping in simulation takes approx. 30–35 min — do not underestimate
 
 ---
 
 ## Open Development Tasks
 
-- [ ] **AP6:** Write `assignments/slam-navigation.md` (step-by-step activity sheet + report template)
+- [ ] **AP6:** Write `assignments/slam-navigation.md` (step-by-step activity sheet)
 - [ ] **AP6:** Prepare pre-configured RViz launch profile and add to `scripts/`
-- [ ] **AP6:** Decide and document submission process for the written deliverable
-- [ ] **Q4a:** Confirm weighting of this deliverable within the 70% in-semester grade
 
 ---
 
