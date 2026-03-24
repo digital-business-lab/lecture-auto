@@ -1,6 +1,6 @@
 # Session 10 — SLAM, Navigation & TurtleBot3 Workflow
 
-> **Duration:** 3 h · **Graded:** Yes (part of the 70% in-semester component)
+> **Duration:** 3 h · **Graded:** No
 
 **Goal:** Students execute the complete TurtleBot3 autonomous navigation workflow step by step in the Gazebo simulation and document what they observe. They can explain the role of SLAM, localisation, and path planning in a running system — connecting theory from Session 9 to observable behaviour.
 
