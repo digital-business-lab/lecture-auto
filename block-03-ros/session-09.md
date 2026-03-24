@@ -67,20 +67,123 @@ Why sensors matter: an AGV without reliable perception cannot navigate safely. O
 
 ### 1.4 Probabilistic Localisation (15 min)
 
-**Problem with hard position estimates:** A single position estimate is fragile — one bad sensor reading can throw it off entirely.
+#### Why Probabilistic Approaches?
 
-**AMCL — Adaptive Monte Carlo Localisation (particle filter):**
+Sensors are never perfectly accurate. A LiDAR reading contains noise; wheel encoders slip; the environment changes. A system that maintains a single "best guess" position is fragile: one bad reading can knock it irretrievably off course, and the system has no way to express *how confident* it is.
 
-The robot maintains hundreds of *hypotheses* (particles) about where it might be. Each particle represents one possible pose (x, y, θ).
+**Probabilistic localisation** solves this by replacing the hard position estimate with a **probability distribution over all possible poses**. Instead of claiming "I am at (3.2 m, 1.7 m, 45°)", the robot maintains something closer to "I am most likely here, but I might also be over there — and I know exactly how likely each possibility is."
 
-1. **Initialisation:** Particles spread randomly across the whole map (or in a Gaussian cloud if rough starting position is known).
-2. **Motion update:** When the robot moves, all particles move the same amount — plus random noise to model uncertainty.
-3. **Sensor update:** Each particle is scored by how well its predicted sensor readings match the actual LiDAR scan. Particles in wrong positions get low scores.
-4. **Resampling:** Low-scoring particles are discarded; high-scoring particles are duplicated. The cloud converges to the robot's actual location.
+**Everyday analogy:** Imagine you are dropped blindfolded into a building you know the floor plan of. Your prior is that you could be anywhere. A friend then tells you: "You're near a window." Your belief narrows to all window positions. They add: "There's a pillar to your left." Your belief narrows further. After a few such hints you can pinpoint your location — even though every single hint was imprecise. This is the essence of Bayesian localisation.
 
-**Key intuition for students:** The robot is not certain about its position — it has a *probability distribution* over all possible positions. As it moves and perceives, the distribution narrows.
+---
 
-**Teaching note:** An animation or sequence of four diagrams (random → spread → focused cloud → narrow peak) communicates this far better than equations. Use slide with particle cloud visualisation from RViz.
+#### The Two Building Blocks: Motion Model and Sensor Model
+
+All probabilistic localisation methods — including AMCL — combine two complementary models:
+
+| Model | Question answered | Input | Output |
+|---|---|---|---|
+| **Motion model** | Where did the robot move to? | Previous pose + odometry command | New pose distribution (wider — uncertainty grows) |
+| **Sensor model** | How likely is this sensor reading if the robot were at pose *p*? | Candidate pose *p* + actual sensor data | A likelihood score (higher = more consistent) |
+
+The motion model *spreads* the uncertainty (moving introduces new error); the sensor model *narrows* it by rewarding poses that are consistent with what the sensors actually measured. The interplay of these two models is what allows the system to stay localised over time.
+
+---
+
+#### AMCL — Adaptive Monte Carlo Localisation
+
+AMCL represents the pose probability distribution as a **set of weighted particles**. Each particle is one hypothesis: a specific pose (x, y, θ) with an associated weight that reflects how plausible that pose is.
+
+**Why particles?** A probability distribution over a continuous 2D map with orientation cannot be stored or computed exactly. Particles are a practical approximation: a large enough set of random samples can represent almost any distribution, including ones with multiple peaks (e.g. when the robot is in a symmetric corridor and cannot yet distinguish which end it is at).
+
+---
+
+**Step 1 — Initialisation**
+
+If the starting position is unknown: particles are distributed uniformly across all free cells of the map with equal weight (1/N). Every location is equally likely.
+
+If the starting position is roughly known (e.g. from a human operator placing the robot): particles are initialised in a Gaussian cloud centred on the known pose — dense at the centre, sparser towards the edges.
+
+**Teaching note:** Show the RViz view at initialisation — a green fog covering the entire map. Students immediately grasp the "I don't know where I am" state.
+
+---
+
+**Step 2 — Motion Update (Prediction)**
+
+When the robot moves (e.g. forward 0.5 m, turning 15°), each particle applies the same motion — but with **added noise** sampled from the motion model's uncertainty distribution.
+
+*Example:* The robot commands "move forward 0.5 m". Particle A moves to (x+0.49, y+0.01, θ+0.3°). Particle B moves to (x+0.52, y−0.01, θ−0.1°). The exact displacement differs for each particle because real wheels slip and measurements are imperfect.
+
+**Effect:** The particle cloud *spreads out* after each motion update. Uncertainty grows because movement accumulates error — exactly as described in Section 1.2 (dead reckoning drift).
+
+---
+
+**Step 3 — Sensor Update (Correction)**
+
+The robot takes a LiDAR scan. For each particle, the system asks: *if the robot were actually at this particle's pose, what scan would it expect to see, given the known map?* The expected scan is compared to the actual scan, and the particle is assigned a **weight** (likelihood score).
+
+- A particle in an open corridor where the real robot is in an open corridor → high weight (scan matches)
+- A particle placed inside a wall → very low weight (the scan is completely inconsistent)
+
+**Effect:** Particles in geometrically plausible positions receive high weights; particles in implausible positions receive near-zero weights.
+
+---
+
+**Step 4 — Resampling**
+
+A new set of N particles is drawn from the current weighted set. Particles with **high weights are drawn multiple times** (survive and are duplicated); particles with **near-zero weights are rarely drawn** (effectively discarded). This is analogous to natural selection: well-adapted hypotheses multiply; poorly-adapted ones die out.
+
+After resampling, all particle weights are reset to 1/N — the weights are now encoded implicitly in the *density* of the particle cloud (more particles = higher probability mass in that region).
+
+**Effect:** The cloud converges towards the robot's true location. Repeat steps 2–4 continuously as the robot moves.
+
+---
+
+**Visualising the Full Cycle**
+
+| Phase | Particle cloud appearance in RViz |
+|---|---|
+| Initialisation (unknown position) | Dense green fog across entire map |
+| After first few motion updates | Fog begins to drift; slightly less uniform |
+| After first sensor updates | Cloud starts to cluster at consistent locations |
+| After several motion + sensor cycles | Tight cluster at true robot location |
+| Steady-state navigation | Small, dense cluster moving with the robot |
+
+**Teaching note:** An animation or sequence of four screenshots from RViz communicates this far better than equations. Walk through each phase live if a robot is available, or use the Gazebo simulation.
+
+---
+
+#### What Does "Adaptive" Mean in AMCL?
+
+Standard Monte Carlo Localisation uses a fixed number of particles (e.g. always 500). AMCL is *adaptive*: it **adjusts the particle count dynamically** based on the current uncertainty.
+
+- When the robot is **lost or newly initialised**: uncertainty is high → many particles needed → AMCL uses up to `max_particles` (e.g. 5,000).
+- When the robot is **well localised**: uncertainty is low → few particles needed → AMCL reduces to `min_particles` (e.g. 100).
+
+This makes AMCL computationally efficient: it does not waste processing power maintaining thousands of particles when the robot's position is already known precisely.
+
+**Practical parameters in ROS (`amcl` package):**
+
+| Parameter | Typical value | Effect |
+|---|---|---|
+| `min_particles` | 100 | Lower bound on particle count |
+| `max_particles` | 5000 | Upper bound; used when localisation is uncertain |
+| `update_min_d` | 0.2 m | Robot must move this far before a filter update is triggered |
+| `update_min_a` | 0.5 rad | Or rotate this much before a filter update is triggered |
+
+---
+
+#### The Kidnapped Robot Problem
+
+A known failure mode of localisation systems: the robot is physically picked up and moved to a new location without the system being notified (e.g. a forklift bumps it, or an operator repositions it). The particle cloud remains clustered at the old location — the robot "thinks" it is still there.
+
+AMCL addresses this partially by keeping a small fraction of random particles scattered across the map at all times. If the robot is moved, these random particles suddenly score highly in the sensor update and the cloud eventually migrates to the new location. However, recovery can be slow. In practice, it is often faster for an operator to manually trigger a relocalisation (publishing an initial pose estimate in RViz).
+
+**Teaching note:** This is a good discussion prompt — ask students "What could cause a robot to become lost in a real warehouse? How would you detect it?"
+
+---
+
+**Key intuition for students:** The robot is never *certain* about its position. It maintains a *distribution of beliefs*, updated continuously as it moves and perceives. The particle filter is a practical, scalable way to represent and compute that distribution without any assumptions about the shape of the uncertainty.
 
 ---
 
