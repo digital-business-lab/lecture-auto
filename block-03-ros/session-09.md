@@ -61,7 +61,48 @@ Why sensors matter: an AGV without reliable perception cannot navigate safely. O
 | **Natural landmarks** | Distinctive corners, columns, structures | SLAM algorithms extract features without markers |
 | **GPS** | Satellite signal | Works outdoors; unusable indoors |
 
-**Teaching note:** Show an AprilTag. Explain that the robot knows the exact position of each tag in the environment map → it can compute its own position when it sees one.
+---
+
+#### AprilTags — Deep Dive (used in this course's lab)
+
+AprilTags are a family of **visual fiducial markers** developed at the University of Michigan. They look similar to QR codes but are specifically designed for pose estimation by cameras in robotic systems.
+
+**Structure of an AprilTag:**
+
+An AprilTag consists of a black-and-white square pattern with a thick black border. The inner bit pattern encodes a unique integer ID. Different *tag families* (e.g. `tag36h11`, `tag25h9`) differ in bit count and error-correction properties — the `tag36h11` family is the standard choice for robotics applications because it offers a good balance of ID range, detection range, and false-positive resistance.
+
+**How pose estimation works:**
+
+When the camera detects a tag, the detection pipeline performs the following steps:
+
+1. **Detection:** The image is scanned for quadrilateral shapes with a dark border. Candidate regions are decoded to extract the bit pattern and matched against the known tag library to confirm the ID.
+2. **Corner extraction:** The four corners of the tag in the image are located with sub-pixel precision.
+3. **Perspective-n-Point (PnP) solve:** Because the physical size of the tag is known (e.g. 0.16 m × 0.16 m in our lab setup), the camera's intrinsic parameters and the four corner positions in the image are sufficient to compute the full 6-DOF pose of the tag relative to the camera: translation (x, y, z) and rotation (roll, pitch, yaw).
+4. **Coordinate transform:** The robot knows the camera's fixed position and orientation relative to its own body frame (the *camera extrinsics*). Using this, it transforms the tag pose into the robot's body frame, and from there into the world frame — using the tag's known world position from the map.
+
+**What the robot ultimately gets:** Its own position and orientation in the map, accurate to a few centimetres at typical detection distances (0.3–3 m depending on tag size and camera resolution).
+
+**Key properties relevant for the lab:**
+
+| Property | Value / note |
+|---|---|
+| Tag family used | `tag36h11` |
+| Typical physical tag size | 0.15–0.20 m side length (mounted on lab walls) |
+| Detection range | ~0.3 m – ~2.5 m at lab resolution |
+| Update rate | Depends on camera frame rate; typically 10–30 Hz |
+| Lighting sensitivity | Requires adequate, even illumination; avoid strong backlighting |
+| Occlusion | A partially covered tag cannot be detected — tags must have a clear line of sight |
+
+**Why AprilTags instead of a pure SLAM approach in the lab?**
+
+SLAM (Section 1.6) builds a map from scratch without any infrastructure. AprilTags require physical markers to be installed, but in return offer:
+- Absolute position accuracy (no drift over time)
+- Instant relocalisation after the robot is picked up or powered off
+- Deterministic, easily debuggable detection output (you can see exactly which tag was seen)
+
+In the lab, tags are mounted at known positions and heights around the workspace. The robot uses them as fixed reference points, analogous to GPS waypoints indoors.
+
+**Teaching note:** Show a printed AprilTag. If possible, run the `apriltag_ros` detection node live on the lecturer laptop with a webcam: students can see the detected tag ID, the bounding box overlay, and the estimated distance/angle values in real time. This makes the abstract pose-estimation concept immediately tangible.
 
 ---
 
@@ -141,6 +182,10 @@ After resampling, all particle weights are reset to 1/N — the weights are now 
 
 **Visualising the Full Cycle**
 
+![AMCL Particle Filter — Four-Phase Cycle](assets/amcl-particle-filter.svg)
+
+Each dot represents one particle (position hypothesis). Colour and size encode weight: orange/large = high plausibility, grey/small = low plausibility. After resampling, only the high-weight region survives and the cluster tightens around the robot's true location.
+
 | Phase | Particle cloud appearance in RViz |
 |---|---|
 | Initialisation (unknown position) | Dense green fog across entire map |
@@ -213,39 +258,7 @@ The global planner treats the occupancy grid map as a **graph**: each free cell 
 5. Repeat from step 2 until the goal node is visited.
 6. Trace the shortest path backwards from goal to start.
 
-**Worked example — warehouse routing:**
-
-Consider a simplified warehouse with six locations. Edge weights represent travel distance in metres.
-
-```
-  S ──2── A ──5── C
-  │       │       │
-  4       1       2
-  │       │       │
-  B ──3── D ──1── G
-```
-
-Nodes: **S** (Start), **A**, **B**, **C**, **D**, **G** (Goal)
-
-Edges: S→A: 2 · S→B: 4 · A→B: 1 · A→C: 5 · B→D: 3 · D→C: 1 · D→G: 6 · C→G: 2
-
-**Step-by-step execution:**
-
-| Step | Visited node | Cost at visit | Updated neighbours (new cost) | Unvisited set (node: cost) |
-|---|---|---|---|---|
-| Init | — | — | — | S:0, A:∞, B:∞, C:∞, D:∞, G:∞ |
-| 1 | **S** | 0 | A: 0+2=**2**, B: 0+4=**4** | A:2, B:4, C:∞, D:∞, G:∞ |
-| 2 | **A** | 2 | B: min(4, 2+1)=**3**, C: 2+5=**7** | B:3, C:7, D:∞, G:∞ |
-| 3 | **B** | 3 | D: 3+3=**6** | C:7, D:6, G:∞ |
-| 4 | **D** | 6 | C: min(7, 6+1)=**7**, G: 6+6=**12** | C:7, G:12 |
-| 5 | **C** | 7 | G: min(12, 7+2)=**9** | G:9 |
-| 6 | **G** | 9 | — | — |
-
-**Result:** Shortest path cost = **9 m**
-
-**Path trace (backwards):** G ← C ← A ← S → **S → A → C → G**
-
-The naive-looking route S → B → D → C → G would cost 4+3+1+2 = 10 m — Dijkstra correctly found the shorter alternative despite an initial detour through A.
+> **Worked example:** See the step-by-step Dijkstra example in the lecture slides (available on Moodle). The example walks through a small warehouse graph showing how the algorithm finds the shortest path between start and goal while correctly handling alternative routes with different edge weights.
 
 **Key takeaway for students:** Dijkstra always finds the globally optimal path, but it explores the entire map (or large parts of it) to do so. For small maps this is fine; for large grids it can be slow.
 
