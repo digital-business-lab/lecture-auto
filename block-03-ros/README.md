@@ -9,7 +9,7 @@ Given the non-programmer target group, student activities consist entirely of ru
 | Item | Description |
 |---|---|
 | `session-09.md` | Detailed lecturer reference: Session 9 agenda, preparation checklist |
-| `session-10.md` | Detailed lecturer reference: Session 10 agenda, grading, preparation checklist |
+| `session-10.md` | Detailed lecturer reference: Session 10 agenda, preparation checklist |
 | `assignments/` | Guided activity sheets handed out to students |
 | `scripts/` | Pre-written ROS launch files and scripts; students run these |
 | Lecture slides | Distributed via Moodle (contain third-party images) |
@@ -30,15 +30,16 @@ Given the non-programmer target group, student activities consist entirely of ru
 
 ---
 
-## Session 10 — SLAM, Navigation & TurtleBot3 Workflow (3 h) ★ Graded
+## Session 10 — SLAM, Navigation & TurtleBot3 Workflow (3 h)
 
 ### Content
 - The complete TurtleBot3 workflow: bring-up → teleoperation → SLAM mapping → save map → autonomous navigation
 - Students run through each step in the Gazebo simulation using provided launch files
 - Live hardware demo: same workflow on the real TurtleBot3
+- Plenary discussion: simulation vs. reality, intralogistics implications
 
 ### Deliverables
-- Written observation report documenting the workflow steps and explaining SLAM *(graded)*
+- None (ungraded)
 
 → See [`session-10.md`](session-10.md) for full details.
 
