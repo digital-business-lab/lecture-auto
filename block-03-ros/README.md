@@ -1,135 +1,62 @@
 # Block 3 — Autonomous AGVs with ROS
 
-Introduction to autonomous AGV technology and ROS (Robot Operating System) as the standard middleware for autonomous robots. Given the non-programmer target group, this block is structured around lecturer/hardware demos and guided student activities using pre-written scripts.
+Two interleaved themes: (1) the technical building blocks of autonomous navigation (sensors, localisation, path planning, SLAM) and (2) ROS as the middleware that ties these components together. The TurtleBot3 serves as a unifying example throughout — first in simulation (Gazebo), then as a live hardware demo.
 
-## Rationale
+Given the non-programmer target group, student activities consist entirely of running pre-written scripts and interpreting the output. Students observe and analyse — they do not write ROS code.
 
-Modern autonomous AGVs rely on sensor fusion, localisation, and path planning — and ROS is the de-facto middleware that ties all these components together. Exposure to both layers gives students literacy in the vocabulary and architecture of real-world autonomous systems, even without becoming proficient programmers.
+## Contents
 
-## Approach for Non-Programmers
-
-- Lecturer and hardware demos take centre stage; students observe, ask questions, and analyse.
-- Student activities consist of **running pre-written, pre-configured scripts** and interpreting the output.
-- The focus shifts from *building* to *understanding*: what does this component do, why does it work this way, what would change if…?
-- The complete TurtleBot3 workflow (simulation → real hardware) serves as a unifying red thread across both sessions.
-
-*Assumption:* Pre-configured VMs with a working ROS + Gazebo environment will be provided. Setting up ROS from scratch is not a student task. VM performance with Gazebo must be verified — not yet confirmed.
-
----
-
-## Unit 3.1 — Autonomous AGV Technology & ROS Fundamentals
-
-### Content: Autonomous AGV Technology (lecturer presentation)
-
-A conceptual introduction to the technical layers that make autonomous navigation possible. Embedded here as context for understanding what ROS manages.
-
-| Concept | Description |
+| Item | Description |
 |---|---|
-| **Sensors** | Laser scanner (LiDAR), camera, IMU, ultrasonic — what each measures and what it is good for |
-| **Dead reckoning (Koppelnavigation)** | Position estimate from wheel odometry; why it drifts over time |
-| **Landmark-based localisation (Peilen)** | Natural landmarks, reflector targets, AprilTags — how the robot corrects its position estimate |
-| **Probabilistic localisation** | Particle filter (AMCL), EKF — intuition without maths |
-| **Path planning** | Global planner (A\*, Dijkstra) vs. local planner (DWA) — difference and interplay |
-| **SLAM** | Simultaneous Localisation and Mapping — why it is needed and what it produces |
-
-### Content: ROS Basics (lecturer presentation)
-
-- Why ROS? Motivation, history, and industry relevance
-- Advantages of ROS: modularity, large community, hardware abstraction, reusability across platforms
-- ROS architecture: nodes, topics, messages, services, actions — conceptual overview
-- Packages and workspaces
-- Key packages and tools:
-
-| Package / Tool | Role |
-|---|---|
-| **Gazebo** | Physics-based robot simulator |
-| **RViz** | Visualisation of sensor data, maps, and robot state |
-| **Navigation Stack** | Combines AMCL, move\_base, costmaps for autonomous navigation |
-| **gmapping / Cartographer** | SLAM implementations |
-| **teleop\_twist\_keyboard** | Keyboard-based manual driving |
-
-- **Live demo:** TurtleBot3 sensor data (LiDAR, odometry) streamed as ROS topics; students observe in RViz in real time
-
-### Guided Student Activity
-
-- Open the pre-configured ROS environment on the VM (TurtleBot3 simulation in Gazebo)
-- Run provided launch scripts to start the simulated robot
-- Use `rostopic echo` and `rqt_graph` to inspect data flow — command execution only, no coding
-- Identify: which node publishes sensor data, which node subscribes, what message type is used
-
-**Deliverable:** Students can describe the node-topic architecture and identify what data is flowing in a given ROS system.
-
-**To do:** Write a guided activity sheet (→ AP5)
+| `session-09.md` | Detailed lecturer reference: Session 9 agenda, preparation checklist |
+| `session-10.md` | Detailed lecturer reference: Session 10 agenda, grading, preparation checklist |
+| `assignments/` | Guided activity sheets handed out to students |
+| `scripts/` | Pre-written ROS launch files and scripts; students run these |
+| Lecture slides | Distributed via Moodle (contain third-party images) |
 
 ---
 
-## Unit 3.2 — SLAM, Navigation, and the TurtleBot3 Workflow
+## Session 9 — AGV Technology & ROS Fundamentals (3 h)
 
-### Content: SLAM and Navigation (lecturer presentation, embedded into workflow)
+### Content
+- Autonomous AGV technology: sensors, dead reckoning, landmark localisation, probabilistic localisation, path planning (Dijkstra), SLAM
+- ROS architecture: nodes, topics, messages, key packages (Gazebo, RViz, Navigation Stack)
+- Live demo: TurtleBot3 sensor data streamed as ROS topics in RViz
 
-Rather than treating SLAM and path planning as abstract topics, they are introduced through the concrete TurtleBot3 workflow — theory and practice are interleaved.
+### Deliverables
+- None (ungraded introduction)
 
-**Workflow steps introduced:**
-
-1. **Bring up the robot** — launch file starts all hardware/simulation drivers and sensors
-2. **Teleoperation** — manually drive the robot using keyboard input; introduces odometry and velocity topics
-3. **SLAM mapping** — drive manually to build a map; observe gmapping constructing the occupancy grid in RViz
-4. **Save the map** — export the finished map as a file used by the navigation stack
-5. **Autonomous navigation** — load the saved map, launch AMCL for localisation, set a 2D navigation goal in RViz; observe the global path and local obstacle avoidance
-
-### Guided Student Activity
-
-- Launch a pre-configured SLAM session in **Gazebo** (TurtleBot3 world provided)
-- Step through the workflow above using provided launch files and scripts
-- Observe the map being built in RViz; then send a navigation goal and watch autonomous driving
-
-### Lecturer Demo — Real TurtleBot3
-
-- Repeat the same workflow on the physical TurtleBot3 in the lab
-- Students observe the difference between simulation and real-hardware behaviour (sensor noise, map quality)
-- Discussion: what assumptions did the simulation make that reality violates?
-
-**Deliverable:** Students can explain each step of the TurtleBot3 workflow and describe what SLAM achieves and one limitation of the approach.
-
-**To do:** Write a guided activity sheet with pre-configured launch files (→ AP6)
+→ See [`session-09.md`](session-09.md) for full details.
 
 ---
 
-## Unit 3.3 — Manipulation (Lecturer Demo Only)
+## Session 10 — SLAM, Navigation & TurtleBot3 Workflow (3 h) ★ Graded
 
-*This unit is a brief lecturer demonstration — there is no student activity.*
+### Content
+- The complete TurtleBot3 workflow: bring-up → teleoperation → SLAM mapping → save map → autonomous navigation
+- Students run through each step in the Gazebo simulation using provided launch files
+- Live hardware demo: same workflow on the real TurtleBot3
 
-### Content (lecturer demo)
+### Deliverables
+- Written observation report documenting the workflow steps and explaining SLAM *(graded)*
 
-- Introduction to robot arm control via ROS and MoveIt
-- **Live demo:** LoCoBot arm with gripper performing a pick-and-place sequence
-- Discussion: how does manipulation extend the intralogistics use case (goods-to-person, depalletising)?
-
-**Note:** This demo is time-permitting. If sessions run long, it can be dropped without affecting student deliverables.
+→ See [`session-10.md`](session-10.md) for full details.
 
 ---
 
 ## Hardware Demos (Lecturer)
 
-| Unit | Hardware | Demo content |
+| Session | Hardware | Demo content |
 |---|---|---|
-| 3.1 ROS Fundamentals | TurtleBot3 | Sensor data (LiDAR, odometry) streamed as live ROS topics |
-| 3.2 SLAM & Navigation | TurtleBot3 | Live SLAM mapping and autonomous navigation |
-| 3.3 Manipulation | LoCoBot (arm + gripper) | Pick-and-place sequence (time-permitting) |
+| 9 | TurtleBot3 | Sensor data (LiDAR, odometry) as live ROS topics in RViz |
+| 10 | TurtleBot3 | Full SLAM and autonomous navigation run on real hardware |
+| 10 (optional) | LoCoBot (arm + gripper) | Pick-and-place via ROS/MoveIt — time-permitting only |
 
 ---
 
-## Folder Structure
+## Pedagogy
 
-| Folder | Contents |
-|---|---|
-| `assignments/` | Guided activity sheets for students |
-| `scripts/` | Pre-written ROS scripts and launch files; students run these |
-
-## Activity Status
-
-| Unit | Activity Sheet | Scripts | Status |
-|---|---|---|---|
-| 3.1 ROS Fundamentals | `assignments/ros-fundamentals.md` | `scripts/` | ⏳ To do (AP5) |
-| 3.2 SLAM & Navigation | `assignments/slam-navigation.md` | `scripts/` | ⏳ To do (AP6) |
-| 3.3 Manipulation | — (demo only) | `scripts/locobot_motion.py` | ⏳ Demo script to prepare (AP7 revised) |
+- No from-scratch coding: students run provided launch files and scripts, modify parameters at most
+- Pre-configured VMs with ROS and Gazebo are required — students do not set up the environment
+- The TurtleBot3 workflow serves as a concrete red thread linking all theoretical concepts to observable behaviour
+- VM performance with Gazebo must be verified before the semester (→ `docs/semester-prep.md`)
