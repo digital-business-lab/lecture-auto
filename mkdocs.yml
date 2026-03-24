@@ -63,6 +63,8 @@ nav:
     - Session 6 — Line Following: block-02/session-06.md
   - Block 3 — ROS:
     - Overview: block-03/index.md
+    - Session 9 — AGV Technology & ROS Fundamentals: block-03/session-09.md
+    - Session 10 — SLAM, Navigation & TurtleBot3 Workflow: block-03/session-10.md
   - Block 4 — Simulation:
     - Overview: block-04/index.md
   - Assessment:
