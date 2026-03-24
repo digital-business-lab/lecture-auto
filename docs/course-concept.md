@@ -55,10 +55,9 @@ By the end of the course, students will be able to:
 | Block | Topic | Sessions | Approx. Duration | Assessment weight |
 |---|---|---|---|---|
 | 1 | Organisation & Foundations | 1–2 | 2 weeks | — |
-| 2 | Classical AGVs with Webots | 3–8 | 6 weeks | part of 70% |
-| — | Field trip | — | 1 day | — |
-| 3 | Autonomous AGVs with ROS | 9–10 | 2 weeks | part of 70% |
-| 4 | AGV Simulation | 11–13 | 3 weeks | part of 70% |
+| 2 | Classical AGVs with Webots | 3–7 | 5 weeks | part of 70% |
+| 3 | Autonomous AGVs with ROS | 8–9 | 2 weeks | part of 70% |
+| 4 | AGV Simulation | 10–12 | 3 weeks | part of 70% |
 | + | Business Case | semester break | — | 30% |
 
 **Assessment structure:**
@@ -79,7 +78,7 @@ Sessions 1–2 (3 hours each). Covers the organisational introduction and AGV te
 
 ## 6. Block 2 — Classical AGVs with Webots
 
-Sessions 3–8 (approx. 6 weeks). Students use the Webots robot simulator for two graded assignments: labyrinth solving (Sessions 4–5, 6 h) and line following (Session 7). A field trip to an industrial AGV site is embedded as Session 8. All coding uses pre-written templates with `TODO` gaps. A field trip to an industrial AGV site is embedded in this block.
+Sessions 3–7 (approx. 5 weeks). Students use the Webots robot simulator for two graded assignments: labyrinth solving (Sessions 4–5, 6 h) and line following (Session 7). All coding uses pre-written templates with `TODO` gaps.
 
 → **Full detail:** [`block-02-webots/README.md`](../block-02-webots/README.md)
 
@@ -87,7 +86,7 @@ Sessions 3–8 (approx. 6 weeks). Students use the Webots robot simulator for tw
 
 ## 7. Block 3 — Autonomous AGVs with ROS
 
-Sessions 9–10 (approx. 2 weeks). Two interleaved themes: (1) the technical building blocks of autonomous AGVs (sensors, dead reckoning, landmark localisation, SLAM, path planning) and (2) ROS as the middleware that integrates these components. Content is delivered through lecturer presentations and hardware demos; student activities use pre-written scripts and pre-configured VMs. The complete TurtleBot3 workflow (simulation in Gazebo → live hardware demo) serves as a unifying red thread. Students observe and run — they do not write ROS code.
+Sessions 8–9 (approx. 2 weeks). Two interleaved themes: (1) the technical building blocks of autonomous AGVs (sensors, dead reckoning, landmark localisation, SLAM, path planning) and (2) ROS as the middleware that integrates these components. Content is delivered through lecturer presentations and hardware demos; student activities use pre-written scripts and pre-configured VMs. The complete TurtleBot3 workflow (simulation in Gazebo → live hardware demo) serves as a unifying red thread. Students observe and run — they do not write ROS code.
 
 → **Full detail:** [`block-03-ros/README.md`](../block-03-ros/README.md)
 
@@ -95,7 +94,7 @@ Sessions 9–10 (approx. 2 weeks). Two interleaved themes: (1) the technical bui
 
 ## 8. Block 4 — AGV Simulation
 
-Sessions 11–13 (approx. 3 weeks). Students simulate a wave manufacturing scenario in two configurations (classical vs. AGV-supported) using **Plant Simulation (Siemens)**. GUI-based; no programming required. Institutional licence available.
+Sessions 10–12 (approx. 3 weeks). Students simulate a wave manufacturing scenario in two configurations (classical vs. AGV-supported) using **Plant Simulation (Siemens)**. GUI-based; no programming required. Institutional licence available.
 
 → **Full detail:** [`block-04-simulation/README.md`](../block-04-simulation/README.md)
 

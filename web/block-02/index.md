@@ -1,6 +1,6 @@
 # Block 2 — Classical AGVs with Webots
 
-**Sessions 3–8 · Duration: approx. 6 weeks**
+**Sessions 3–7 · Duration: approx. 5 weeks**
 
 This block introduces hands-on AGV simulation using [Webots](https://cyberbotics.com), a free and open-source robot simulator. You will model a robot, program its behaviour, and solve two graded assignments — all without prior programming experience, using pre-written code templates.
 
@@ -33,7 +33,6 @@ All assignments use **pre-written code templates** — you fill in the marked `T
 | [Sessions 4–5](session-04.md) | Labyrinth assignment | 6 h | **Yes** |
 | [Session 6](session-06.md) | Sensor extension | 3 h | No |
 | [Session 7](session-07.md) | Line following assignment | 3 h | **Yes** |
-| Session 8 | Field trip | — | No |
 
 ---
 

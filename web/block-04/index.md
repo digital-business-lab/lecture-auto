@@ -1,6 +1,6 @@
 # Block 4 — AGV Simulation
 
-**Sessions 11–13 · Duration: approx. 3 weeks**
+**Sessions 10–12 · Duration: approx. 3 weeks**
 
 !!! info "Content coming soon"
     The assignment sheet and Plant Simulation model files are being prepared. They will be made available here and in the [GitHub repository](https://github.com/digital-business-lab/lecture-auto/tree/main/block-04-simulation).

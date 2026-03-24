@@ -10,7 +10,6 @@ This checklist covers everything that must be verified, installed, or decided be
 
 - [ ] Confirm semester dates and session schedule
 - [ ] Map the four blocks onto the session calendar (see [`docs/course-concept.md`](./course-concept.md) for block durations)
-- [ ] Confirm field trip date and location (Block 2)
 - [ ] Set deadlines for all assignments and the business case
 - [ ] Assign student research topics for Block 1 (industry-specific AGV applications)
 - [ ] Communicate prerequisites and course structure to students before the first session

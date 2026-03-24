@@ -8,15 +8,15 @@ Given the non-programmer target group, student activities consist entirely of ru
 
 | Item | Description |
 |---|---|
+| `session-08.md` | Detailed lecturer reference: Session 8 agenda, preparation checklist |
 | `session-09.md` | Detailed lecturer reference: Session 9 agenda, preparation checklist |
-| `session-10.md` | Detailed lecturer reference: Session 10 agenda, preparation checklist |
 | `assignments/` | Guided activity sheets handed out to students |
 | `scripts/` | Pre-written ROS launch files and scripts; students run these |
 | Lecture slides | Distributed via Moodle (contain third-party images) |
 
 ---
 
-## Session 9 — AGV Technology & ROS Fundamentals (3 h)
+## Session 8 — AGV Technology & ROS Fundamentals (3 h)
 
 ### Content
 - Autonomous AGV technology: sensors, dead reckoning, landmark localisation, probabilistic localisation, path planning (Dijkstra), SLAM
@@ -26,11 +26,11 @@ Given the non-programmer target group, student activities consist entirely of ru
 ### Deliverables
 - None (ungraded introduction)
 
-→ See [`session-09.md`](session-09.md) for full details.
+→ See [`session-08.md`](session-08.md) for full details.
 
 ---
 
-## Session 10 — SLAM, Navigation & TurtleBot3 Workflow (3 h)
+## Session 9 — SLAM, Navigation & TurtleBot3 Workflow (3 h)
 
 ### Content
 - The complete TurtleBot3 workflow: bring-up → teleoperation → SLAM mapping → save map → autonomous navigation
@@ -41,7 +41,7 @@ Given the non-programmer target group, student activities consist entirely of ru
 ### Deliverables
 - None (ungraded)
 
-→ See [`session-10.md`](session-10.md) for full details.
+→ See [`session-09.md`](session-09.md) for full details.
 
 ---
 

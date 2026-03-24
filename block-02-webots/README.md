@@ -68,12 +68,6 @@ Hands-on simulation phase using the Webots robot simulator. Students complete ma
 
 ---
 
-## Field Trip
-
-Embedded within Block 2. Students visit an industrial site with AGVs in operation. Date and location to be confirmed.
-
----
-
 ## Pedagogy
 
 - Template-based ("Light Coding"): complete, working controllers with clearly marked `TODO` gaps — students never write from scratch
