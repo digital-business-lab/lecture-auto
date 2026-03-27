@@ -95,31 +95,6 @@ This section provides a step-by-step guide to creating the AGV-supported product
     - Watch products flow through the system via AGVs
     - Check that all statistics are being collected
 
-## Running Multiple Scenarios
-
-After building your model, you will run it with different scenarios:
-
-### Scenario 1: Single AGV
-- Set **Number of AGVs** → `1`
-- Run simulation 5 times with different random seeds
-- Collect data: throughput, lead time, WIP levels
-
-### Scenario 2: Two AGVs (Baseline)
-- Set **Number of AGVs** → `2`
-- Run simulation 5 times with different random seeds
-- Collect data: throughput, lead time, WIP levels
-
-### Scenario 3: Three AGVs
-- Set **Number of AGVs** → `3`
-- Run simulation 5 times with different random seeds
-- Collect data: throughput, lead time, WIP levels
-
-### Scenario 4: High Transport Times
-- Set **Number of AGVs** → `2`
-- Change transport times to: `randomUniform(3, 5)` minutes
-- Run simulation 5 times with different random seeds
-- Collect data: throughput, lead time, WIP levels
-
 ## Collecting Results
 
 ### Viewing Statistics
