@@ -94,7 +94,7 @@ Sessions 8–9 (approx. 2 weeks). Two interleaved themes: (1) the technical buil
 
 ## 8. Block 4 — AGV Simulation
 
-Sessions 10–12 (approx. 3 weeks). Students simulate a wave manufacturing scenario in two configurations (classical vs. AGV-supported) using **Plant Simulation (Siemens)**. GUI-based; no programming required. Institutional licence available.
+Sessions 10–12 (approx. 3 weeks). Students simulate a shaft manufacturing scenario in two configurations (classical vs. AGV-supported) using **Plant Simulation (Siemens)**. GUI-based; no programming required. Institutional licence available.
 
 → **Full detail:** [`block-04-simulation/README.md`](../block-04-simulation/README.md)
 
@@ -118,7 +118,7 @@ Two-component grading: 70% in-semester (Blocks 2–4) + 30% business case (semes
 | **ROS** | Software (free) | Block 3 middleware | Pre-configured VMs planned |
 | **Gazebo** | Software (free) | ROS simulation (Turtlebot3) | Pre-configured VMs planned |
 | **Computer lab VMs** | Infrastructure | Student workstations for all simulation | Specs and performance not yet confirmed |
-| **Plant Simulation (Siemens)** | Software (licensed) | Block 4 wave manufacturing simulation | Native install on lab computers |
+| **Plant Simulation (Siemens)** | Software (licensed) | Block 4 shaft manufacturing simulation | Native install on lab computers |
 
 ---
 

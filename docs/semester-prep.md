@@ -25,7 +25,7 @@ This checklist covers everything that must be verified, installed, or decided be
 
 ### Lab Computers (Plant Simulation)
 
-- [ ] **Plant Simulation:** Verify Plant Simulation is installed on all lab computers; configure licence server access; open the wave manufacturing model from `block-04-simulation/models/` and verify it runs
+- [ ] **Plant Simulation:** Verify Plant Simulation is installed on all lab computers; configure licence server access; open the shaft manufacturing model from `block-04-simulation/models/` and verify it runs
 
 ### Virtual Machines (ROS)
 
@@ -66,7 +66,7 @@ This checklist covers everything that must be verified, installed, or decided be
 ### Block 4 — Plant Simulation
 
 - [ ] Review the assignment sheet in `block-04-simulation/assignments/`
-- [ ] Open and test the wave manufacturing models in `block-04-simulation/models/` on the lab computers
+- [ ] Open and test the shaft manufacturing models in `block-04-simulation/models/` on the lab computers
 - [ ] Decide (if not yet done): individual or group assignment?
 - [ ] Decide (if not yet done): presentation, written report, or both?
 

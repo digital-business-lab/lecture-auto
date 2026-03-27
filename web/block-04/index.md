@@ -7,7 +7,7 @@
 
 ## Scenario
 
-You will simulate a **wave manufacturing** production environment in two configurations:
+You will simulate a **shaft manufacturing** production environment in two configurations:
 
 1. Classical layout — manual transport between stations
 2. AGV-supported layout — automated transport

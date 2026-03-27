@@ -1,12 +1,12 @@
 # Block 4 — AGV Simulation
 
-Students simulate a wave manufacturing scenario in two configurations (classical vs. AGV-supported) using **Plant Simulation (Siemens)**. They analyse throughput, lead times, and WIP, and draw business conclusions.
+Students simulate a shaft manufacturing scenario in two configurations (classical vs. AGV-supported) using **Plant Simulation (Siemens)**. They analyse throughput, lead times, and WIP, and draw business conclusions.
 
 ## Rationale
 
 Students apply their accumulated understanding by analysing a complete manufacturing simulation. The contrast between classical and AGV-supported production layouts provides a concrete, evaluable scenario that connects technical content to business decision-making.
 
-## Scenario — Wave Manufacturing
+## Scenario — Shaft Manufacturing
 
 Students work with a simulation of a production environment in two configurations:
 

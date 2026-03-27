@@ -62,7 +62,7 @@ mkdocs serve
 | AP5 | ROS activity: fundamentals + running provided scripts |
 | AP6 | ROS activity: SLAM & navigation in Gazebo (pre-configured) |
 | AP7 | ROS activity: modify a provided node (no from-scratch coding) |
-| AP8 | Plant Simulation assignment: wave manufacturing scenario |
+| AP8 | Plant Simulation assignment: shaft manufacturing scenario |
 | AP9 | Business case template + grading rubric |
 | AP10 | Finalise concept; align with semester schedule |
 
