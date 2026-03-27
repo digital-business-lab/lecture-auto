@@ -13,11 +13,15 @@ lecture-auto/
 │   └── semester-prep.md         # Semester preparation checklist
 ├── block-01-foundations/        # Organisation & AGV fundamentals
 ├── block-02-webots/             # Classical AGVs — Webots simulation
+│   ├── assignments/             # Assignment sheets
+│   ├── templates/               # Code templates with TODO gaps
+│   └── worlds/                  # Webots world files
 ├── block-03-ros/                # Autonomous AGVs — ROS
-│   ├── assets/                  # ROS assets and resources
-│   └── session-08.md            # ROS fundamentals
+│   ├── assignments/             # Guided activity sheets
+│   └── scripts/                 # Pre-written ROS scripts
 ├── block-04-simulation/         # AGV Simulation — Plant Simulation
-│   └── assignments/             # Assignment sheet
+│   ├── assignments/             # Assignment sheet
+│   └── models/                  # Plant Simulation model files
 └── assessment/                  # Business case (primary assessment)
     └── business-case/           # Template and grading rubric
 ```
