@@ -13,9 +13,10 @@ lecture-auto/
 │   └── semester-prep.md         # Semester preparation checklist
 ├── block-01-foundations/        # Organisation & AGV fundamentals
 ├── block-02-webots/             # Classical AGVs — Webots simulation
-│   ├── assignments/             # Assignment sheets
-│   ├── templates/               # Code templates with TODO gaps
-│   └── worlds/                  # Webots world files
+│   ├── session-03.md            # Webots introduction
+│   ├── session-04.md            # Labyrinth assignment
+│   ├── session-06.md            # Sensor extension
+│   └── session-07.md            # Line following
 ├── block-03-ros/                # Autonomous AGVs — ROS
 │   ├── assignments/             # Guided activity sheets
 │   └── scripts/                 # Pre-written ROS scripts
@@ -26,10 +27,24 @@ lecture-auto/
 │   └── business-case/           # Template and grading rubric
 └── web/                         # MkDocs source (docs_dir); deployed to GitHub Pages
    ├── block-01/                 # Block 1 content
+   │   ├── agv-fundamentals.md
+   │   ├── index.md
+   │   ├── session-01.md
+   │   └── session-02.md
    ├── block-02/                 # Block 2 content
+   │   ├── index.md
+   │   ├── session-03.md
+   │   ├── session-04.md
+   │   ├── session-06.md
+   │   └── session-07.md
    ├── block-03/                 # Block 3 content
+   │   ├── index.md
+   │   ├── session-08.md
+   │   └── session-09.md
    ├── block-04/                 # Block 4 content
+   │   └── index.md
    └── assessment/               # Assessment content
+      └── index.md
 ```
 
 ## Key Documents
