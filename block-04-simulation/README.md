@@ -13,7 +13,7 @@ Students work with a simulation of a production environment in two configuration
 1. **Classical layout** — manual transport between stations
 2. **AGV-supported layout** — automated internal transport
 
-They analyse throughput, lead times, WIP (work in progress), and bottlenecks, and draw conclusions about when and why AGV deployment creates value.
+Students build both models from scratch using Plant Simulation's GUI interface (no coding required), following step-by-step instructions. They then analyse throughput, lead times, WIP (work in progress), and bottlenecks, and draw conclusions about when and why AGV deployment creates value.
 
 ---
 
@@ -39,6 +39,18 @@ Institutional licences for Plant Simulation are available.
 
 ---
 
+## Assignment Overview
+
+Students will:
+
+1. **Build two Plant Simulation models from scratch** using the provided templates and step-by-step instructions
+2. **Run simulations** for 480 minutes (8-hour shift) with multiple repetitions
+3. **Collect and analyse data** on throughput, lead time, WIP, and bottlenecks
+4. **Compare classical vs. AGV-supported layouts** using charts and statistical analysis
+5. **Write a business report** with recommendations on whether AGV deployment creates value
+
+---
+
 ## Open Questions
 
 - Individual or group assignment?
@@ -51,12 +63,13 @@ Institutional licences for Plant Simulation are available.
 | Folder | Contents |
 |---|---|
 | `assignments/` | Assignment sheet with scenario description, tasks, and grading rubric |
-| `models/` | Plant Simulation model files (`.spp`) provided to students |
+| `models/` | Template files (`.spp`) with step-by-step building instructions and README guide |
 
 ## Status
 
 | Item | Status |
 |---|---|
-| Assignment sheet | ⏳ To do (AP8) |
-| Plant Simulation model — classical layout | ⏳ To do (AP8) |
-| Plant Simulation model — AGV layout | ⏳ To do (AP8) |
+| Assignment sheet | ✅ Done (AP8) |
+| Building instructions for classical layout | ✅ Done (`models/README.md`) |
+| Building instructions for AGV layout | ✅ Done (`models/README.md`) |
+| Template files (placeholders) | ✅ Done (`classical_layout.spp`, `agv_supported_layout.spp`) |
