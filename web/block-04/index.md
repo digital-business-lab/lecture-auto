@@ -2,17 +2,6 @@
 
 **Sessions 10–12 · Duration: approx. 3 weeks**
 
-## Scenario
-
-You will simulate a **shaft manufacturing** production environment in two configurations:
-
-1. Classical layout — manual transport between stations
-2. AGV-supported layout — automated transport
-
-Your task is to analyse and compare throughput, lead times, and bottlenecks.
-
-**Tool:** Siemens Plant Simulation (available on the lab computers)
-
 ## Assignment Overview
 
 In this assignment, you will build and analyze an **AGV-supported production line** using **Plant Simulation (Siemens)**. You will create a simulation model from scratch, then run multiple scenarios with different parameters to understand how AGV deployment affects production performance.
