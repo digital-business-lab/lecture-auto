@@ -10,26 +10,7 @@ Your task is to build the model, run simulations with varying parameters, collec
 
 ## Getting Started with Plant Simulation
 
-### Installation & Access
-
-Plant Simulation is pre-installed on all lab computers. If you need to access it:
-
-1. Log into a lab computer
-2. Launch Plant Simulation from the Start Menu or Applications folder
-3. If prompted, enter your institutional credentials
-
-### Creating Your First Model
-
-1. **Start a new model:**
-   - Open Plant Simulation
-   - Click `File` → `New Model` or press `Ctrl+N`
-
-2. **Save your model:**
-   - Click `File` → `Save As` or press `Ctrl+S`
-   - Save to this directory: `block-04-simulation/models/`
-   - Name it: `agv_supported_layout.spp`
-
-3. **Save frequently** — Plant Simulation can crash unexpectedly during development.
+For detailed instructions on setting up and using Plant Simulation, please refer to the [Getting Started guide](getting-started.md).
 
 ## Building the AGV-Supported Layout Model
 
