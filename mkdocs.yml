@@ -51,21 +51,22 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Block 1 — Foundations:
-    - Overview: block-01/index.md
-    - Session 1 — Organisation & AGV Foundations: block-01/session-01.md
-    - Session 2 — AGV Technology: block-01/session-02.md
-    - AGV Fundamentals: block-01/agv-fundamentals.md
+      - Overview: block-01/index.md
+      - Session 1 — Organisation & AGV Foundations: block-01/session-01.md
+      - Session 2 — AGV Technology: block-01/session-02.md
+      - AGV Fundamentals: block-01/agv-fundamentals.md
   - Block 2 — Webots:
-    - Overview: block-02/index.md
-    - Session 3 — Webots Tutorials: block-02/session-03.md
-    - Sessions 4–5 — Labyrinth: block-02/session-04.md
-    - Session 6 — Sensor Extension: block-02/session-06.md
-    - Session 7 — Line Following: block-02/session-07.md
+      - Overview: block-02/index.md
+      - Session 3 — Webots Tutorials: block-02/session-03.md
+      - Sessions 4–5 — Labyrinth: block-02/session-04.md
+      - Session 6 — Sensor Extension: block-02/session-06.md
+      - Session 7 — Line Following: block-02/session-07.md
   - Block 3 — ROS:
-    - Overview: block-03/index.md
-    - Session 8 — AGV Technology & ROS Fundamentals: block-03/session-08.md
-    - Session 9 — SLAM, Navigation & TurtleBot3 Workflow: block-03/session-09.md
+      - Overview: block-03/index.md
+      - Session 8 — AGV Technology & ROS Fundamentals: block-03/session-08.md
+      - Session 9 — SLAM, Navigation & TurtleBot3 Workflow: block-03/session-09.md
   - Block 4 — Simulation:
-    - Overview: block-04/index.md
+      - Overview: block-04/index.md
+      - Getting Started: block-04/getting-started.md
   - Assessment:
-    - Business Case: assessment/index.md
+      - Business Case: assessment/index.md
