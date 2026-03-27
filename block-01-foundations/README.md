@@ -8,7 +8,7 @@ This block covers the organisational introduction to the course and the technica
 |---|---|
 | `session-01.md` | Detailed lecturer reference: Session 1 agenda, group work details, preparation checklist |
 | `session-02.md` | Detailed lecturer reference: Session 2 agenda, group work details, preparation checklist |
-| `scenario-cards.pdf` | Printable scenario cards for the Session 1 suitability exercise |
+| `assignments/scenario-cards.pdf` | Printable scenario cards for the Session 1 suitability exercise |
 | Lecture slides | Distributed via Moodle (contain third-party images) |
 
 ---
