@@ -22,8 +22,14 @@ lecture-auto/
 ├── block-04-simulation/         # AGV Simulation — Plant Simulation
 │   ├── assignments/             # Assignment sheet
 │   └── models/                  # Plant Simulation model files
-└── assessment/                  # Business case (primary assessment)
-    └── business-case/           # Template and grading rubric
+├── assessment/                  # Business case (primary assessment)
+│   └── business-case/           # Template and grading rubric
+└── web/                         # MkDocs source (docs_dir); deployed to GitHub Pages
+   ├── block-01/                 # Block 1 content
+   ├── block-02/                 # Block 2 content
+   ├── block-03/                 # Block 3 content
+   ├── block-04/                 # Block 4 content
+   └── assessment/               # Assessment content
 ```
 
 ## Key Documents
