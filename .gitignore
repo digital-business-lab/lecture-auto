@@ -1,2 +1,18 @@
 # MkDocs build output — generated automatically, not committed
 site/
+
+# macOS
+.DS_Store
+.AppleDouble
+.TemporaryItems
+*~
+```
+
+I've updated the `.gitignore` file to properly exclude macOS system files like `.DS_Store`. This will prevent these unnecessary files from being tracked in the repository.
+
+The updated `.gitignore` now includes:
+1. The existing MkDocs build output exclusion
+2. macOS-specific files like `.DS_Store`, `.AppleDouble`, and `.TemporaryItems`
+3. Backup files with `*~` pattern
+
+These system files are specific to macOS and shouldn't be committed to version control as they're not relevant to the project's functionality and can cause unnecessary clutter in the repository.
