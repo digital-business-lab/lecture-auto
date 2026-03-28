@@ -10,9 +10,6 @@ Hands-on simulation phase using the Webots robot simulator. Students complete ma
 | `session-04.md` | Detailed lecturer reference: Sessions 4–5 agenda (6 h), grading, preparation checklist |
 | `session-06.md` | Detailed lecturer reference: Session 6 agenda, preparation checklist |
 | `session-07.md` | Detailed lecturer reference: Session 7 agenda, grading, preparation checklist |
-| `assignments/` | Assignment sheets handed out to students |
-| `templates/` | Controller templates with `TODO` gaps |
-| `worlds/` | Pre-built Webots world files |
 | Lecture slides | Distributed via Moodle (contain third-party images) |
 
 ---
